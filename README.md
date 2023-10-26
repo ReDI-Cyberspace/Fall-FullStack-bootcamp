@@ -28,36 +28,38 @@ The initial pull from redi-remote was:
 
     git fetch remote-redi raj-sandhu
 
-If the raj-sandhu branch does not exist in the remote-redi repository, you'll need to create it first. You can do this by pushing your local master branch to the remote-redi repository with the -u option:
+If the raj-sandhu branch does not exist in the remote-redi repository, you'll need to create it first. You can do this by pushing your local main branch to the remote-redi repository with the -u option:
 
-    git push -u remote-redi master:raj-sandhu
+    git push -u remote-redi main:raj-sandhu
 
-(4) Set the raj-sandhu branch of the remote-redi repository as the upstream branch for your local master branch:
+(4) Set the raj-sandhu branch of the remote-redi repository as the upstream branch for your local main branch:
 
-    git branch --set-upstream-to=remote-redi/raj-sandhu master
+    git branch --set-upstream-to=remote-redi/raj-sandhu main
 
 (5) Create a command to push to both remotes at the same time:
+
 You can create a Git alias to do this. Here's how:
 
-    git config --global alias.pushall '!git push remote-redi master:raj-sandhu && git push remote-personal master'
+    git config --global alias.pushall '!git push remote-redi main:raj-sandhu && git push remote-personal main'
 
 Now, you can use git pushall to push to both remotes at the same time.
 
 (6) Pull from either of the remote repositories:
+
 To pull from the raj-sandhu branch of the ReDI-Cyberspace repository:
 
     git pull remote-redi raj-sandhu
 
-To pull from the master branch of your personal repository:
+To pull from the main branch of your personal repository:
 
-    git pull remote-personal master
+    git pull remote-personal main
 
+Remember to commit your changes before pulling, or the changes will be lost.
 
+(7) Force push to override the remote-personal repository with your local version:
 
+If you want your local version to override whatever is on the remote-personal repository, you can force push your local main branch to the remote-personal repository:
 
-    
+    git push -f remote-personal main
 
-I will push commits to both repos using the "git push all" command, but I will pull each repo individually. 
-
-Pulling from two different repos in a single step is probably possible somehow, but it probably introduces complications that I would like to avoid for now, particularly when the commit histories of the two remotes are different.
-
+Please be aware that force pushing is generally not recommended, as it can result in losing commits and can cause problems for anyone else who has cloned or forked your repository. However, if you're sure you want to override the remote-personal repository with your local version, force pushing is the way to do it.
