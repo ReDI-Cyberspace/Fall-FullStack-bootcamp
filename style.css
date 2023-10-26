@@ -1,0 +1,192 @@
+:root {
+    --background-color: #314453;
+    --darker-background-color: #243848;
+    --accent-color: #41dce1;
+    --text-color: #ffffff;
+    --navbar-height: 80px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 22;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  nav {
+    height: var(--navbar-height);
+    background: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+  }
+  nav .logo {
+    margin-left: 30px;
+    height: 100%;
+    width: 100%;
+  
+    overflow: hidden;
+  }
+  nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    color: var(--text-color);
+  }
+  nav li {
+    height: 100%;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    color: var(--text-color);
+  }
+  nav li:hover {
+    background: var(--accent-color);
+  }
+  nav ul a {
+    height: 100%;
+    width: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  nav input[type="checkbox"] {
+    display: none;
+  }
+  .toggle_button {
+    width: 30px;
+    height: 23px;
+  
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bar {
+    height: 4px;
+    width: 100%;
+    background: var(--text-color);
+    border-radius: 100px;
+  }
+  @media (max-width: 800px) {
+    .toggle_button {
+      display: flex;
+    }
+    nav ul {
+      height: min-content;
+      width: 100%;
+      background: var(--background-color);
+  
+      display: none;
+      position: absolute;
+      top: var(--navbar-height);
+    }
+    nav li {
+      height: min-content;
+      width: 100%;
+    }
+    nav ul a {
+      padding: 30px 0;
+    }
+  
+    #toggle_button:checked ~ ul {
+      display: block;
+    }
+  }
+  .footer {
+    position: fixed;
+    padding: 30px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    text-align: center;
+  }
+  #footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .active {
+    background-color: var(--accent-color);
+  }
+  
+  #myForm {
+    max-width: 500px;
+    margin: 0 0 80px 80px;
+    padding: 50px 0 50px 0;
+  }
+  
+  /*Style inputs */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #e8ad54;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #aa88d1;
+  }
+  #required {
+    color: red;
+  }
+  
+  #send_message {
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    color: #aa88d1;
+    font-size: 30px;
+    margin: auto;
+  }
+  .navbar {
+    margin-right: 50px;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  #header {
+    color: violet;
+    text-align: center;
+    padding-top: 20px;
+  }
+  

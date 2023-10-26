@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <a href="#" class="logo"><img src="logo.png" /></a>
+        <input type="checkbox" id="toggle_button" />
+        <label for="toggle_button" class="toggle_button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="send_message"></div>
+    <div id="myForm">
+      <h3>Contact Us</h3>
+      <br />
+      <p>
+        Please provide your names, email, and message:
+      </p>
+      <p id="required">
+        <strong> Note: </strong> <em>All fields are required </em>
+      </p>
+      <br />
+
+      <form action="#">
+        <label for="fname"> First Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Your name ..."
+          required
+        /><br /><br />
+        <label for="lname"> Last Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Your last name ..."
+          required
+        /><br /><br />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your email ..."
+          required
+        /><br /><br />
+
+        <label for="message" class="message">Your Message:</label><br />
+        <textarea
+          name="message"
+          id="message"
+          rows="7"
+          placeholder="Write something ..."
+          required
+        >
+        </textarea
+        ><br /><br />
+
+        <input type="submit" onclick="myFunction()" value="Submit" />
+      </form>
+    </div>
+    <script>
+      function myFunction() {
+        document.getElementById("myForm").style.display = "none";
+        document.getElementById("send_message").innerHTML =
+          "Thank you!Your Message was successfully sent.";
+      }
+    </script>
+    <!--Footer.html integration with iframe-->
+    <footer>
+      <iframe
+        id="footer"
+        src="footer.html"
+        width="100%"
+        style="border: none;"
+      ></iframe>
+    </footer>
+  </body>
+</html>
