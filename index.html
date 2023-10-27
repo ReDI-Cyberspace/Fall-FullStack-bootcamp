@@ -7,12 +7,13 @@
         <meta name="description" content="Retrohub Shop">
         <meta name="keywords" content="Online shop, shop, retro shop, retro online shop, vintage online shop">
 
+<!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
 <!-- CSS Link -->
-        <link rel="stylesheet" href="./Core/style.css" />
+        <link rel="stylesheet" href="style.css" />
 
 <!-- Bootstrap links -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -33,29 +34,31 @@
 <!-- header -->
         <header class="header">
             <nav id="topnav">
-                <div>
-                    <a href="./Core/index.html">
-                        <img src="./Images/logo.png" alt="Logo" id="logo"/>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="./Shop/shop.html" class="active">Shop</a>
-                    <a href="./About/about.html" class="active">About</a>
-                    <a href="./Contact/contact.html" class="active">Contact</a>
-                </div>
-
-
+                <a href="index.html">
+                    <img src="./Images/logo.png" alt="Logo" id="logo"/>
+                </a>
                 
-            <nav class="header__menu">
+                <ul>
+                    <li>
+                        <a href="./Shop/shop.html" class="active">Shop</a>
+                    </li>
 
-            </nav>
+                    <li>
+                        <a href="./About/about.html" class="active">About</a>
+                    </li>
+
+                    <li>
+                        <a href="./Contact/contact.html" class="active">Contact</a>
+                    </li>
+                </ul>
+            </nav>                
         </header>
 
         <main>                   
             <div class="card">
                 <div class="card-header">
-                    <h1>Retro Hub</h1>
+                    <h1>Carousel</h1>
+                    <hr>
                 </div>
 
                 <div class="carousel">
@@ -68,6 +71,7 @@
             <!-- Categories -->
             <div>
                 <h3>Shop by category</h3>
+                <hr>
                 <div>
                     <a href="#">
                         <img src="#" alt="Furniture">
