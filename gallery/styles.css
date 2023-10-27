@@ -1,6 +1,50 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
+    font-family: "Ropa Sans", sans-serif;
+}
+
+.main-wrapper {
+    min-height: calc(100vh - 50px);
+}
+
+header {
+    height: 100px;
+    background-color: rgb(181, 188, 189);
+    margin-bottom: 10px;
+}
+
+.product-card-container {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 60vw;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-container {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-info-container {
+    order: 2;
+    margin: 10px;
+    padding: 10px;
+}
+
+footer {
+    height: 50px;
+    background-color: rgb(181, 188, 189);
 }
