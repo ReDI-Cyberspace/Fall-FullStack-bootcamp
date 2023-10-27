@@ -9,6 +9,10 @@
             href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap"
             rel="stylesheet"
         />
+        <script
+            src="https://kit.fontawesome.com/5ddbf505fe.js"
+            crossorigin="anonymous"
+        ></script>
         <link href="styles.css" rel="stylesheet" />
         <script type="text/javascript" src="scripts.js" defer></script>
 
@@ -17,17 +21,23 @@
     <body>
         <div class="main-wrapper">
             <header><nav class="navbar-header">NAVBAR PLACEHOLDER</nav></header>
-        <main>
-            <div class="product-card-container">
-                <div class="gallery-container">
-                    <div>
-                        <img
-                            src="https://fastly.picsum.photos/id/439/600/400.jpg?hmac=ADXTTJQsQxPUCwWNHgVEZPzyXLURYxzFc6QIrixpV8E"
-                            alt="carousel-picture"
-                        />
-                    </div>
-                    <!-- <ul> -->
-                    <!-- <li>
+            <main>
+                <div class="product-card-container">
+                    <div class="gallery-container">
+                        <div class="arrow">
+                            <p><<</p>
+                        </div>
+                        <div class="slide">
+                            <img
+                                src="https://fastly.picsum.photos/id/439/600/400.jpg?hmac=ADXTTJQsQxPUCwWNHgVEZPzyXLURYxzFc6QIrixpV8E"
+                                alt="carousel-picture"
+                            />
+                        </div>
+                        <div class="arrow">
+                            <p>>></p>
+                        </div>
+                        <!-- <ul> -->
+                        <!-- <li>
                             <img
                                 src="https://fastly.picsum.photos/id/998/600/400.jpg?hmac=WSpulgHbPkI--NfRvzZ_j14ie9vTF_dKquO5Wn6Fqo4"
                                 alt="carousel-picture"
@@ -71,6 +81,7 @@
                         </li>
                     </ul>
                 </div> -->
+                    </div>
                     <div class="product-info-container">
                         <h1>The Product</h1>
                         <span
@@ -80,12 +91,46 @@
                             sequi, rem quo delectus molestiae veniam eaque ad
                             recusandae.</span
                         >
+                        <table class="tg">
+                            <thead>
+                                <tr>
+                                    <th class="tg-field">Size</th>
+                                    <th class="tg-field">Color</th>
+                                    <th class="tg-field">Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tg-field">
+                                        <select name="size" id="size">
+                                            <option value="blue">S</option>
+                                            <option value="red">M</option>
+                                            <option value="olive">L</option>
+                                            <option value="black">XL</option>
+                                        </select><td class="tg-field">
+                                        <select name="product-color" id="product-color">
+                                            <option value="blue">Blue</option>
+                                            <option value="red">Red</option>
+                                            <option value="olive">Olive</option>
+                                            <option value="black">Black</option>
+                                        </select>
+                                    </td></td>
+                                    <td class="tg-field">
+                                        <select name="quantity" id="quantity">
+                                            <option value="blue">1</option>
+                                            <option value="red">2</option>
+                                            <option value="olive">3</option>
+                                            <option value="black">4</option>
+                                        </select>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
     </body>
-</div>
-<footer>FOOTER</footer>
-
+    <footer>FOOTER</footer>
 </html>
