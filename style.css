@@ -8,7 +8,7 @@ html {
 body {
     height: calc(100vh - 164px);
     color: #000;
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
 }
 
 h1,
@@ -17,4 +17,48 @@ h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.header {
+    background-color: #662C10;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    align-items: center;
+    padding: 1% 1% 1% 1%;
+}
+
+.nav-logo {
+    font-size: 280%;
+    opacity: 1;
+}
+
+img {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+#topnav {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Montserrat";
+}
+
+#topnav header {
+    margin-left: auto; /* This brings the menu to the left side */
+    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.active {
+    font-size: 20px;
+    font-weight: 600;
+    color: 	#7F9E8C;
+    text-decoration: none;
+}
+
+.active a {
+    margin-right: 20px; /* This provides space between the menu items */
 }
