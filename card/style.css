@@ -1,0 +1,14 @@
+@media (max-width: 767.98px) {
+  .border-sm-start-none {
+    border-left: none !important;
+  }
+}
+.product-card {
+  min-height: 350px; /* Set the minimum height for each card */
+  margin: 15px 0;
+}
+.product-image {
+  max-height: 150px; /* Set the maximum height for product images */
+  object-fit: cover; /* Ensure the image covers the container */
+  
+}

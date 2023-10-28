@@ -1,0 +1,191 @@
+:root {
+  --background-color: #314453;
+  --darker-background-color: #243848;
+  --accent-color: #41dce1;
+  --text-color: #ffffff;
+  --navbar-height: 60px;
+  
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav#nav {
+  height: var(--navbar-height);
+  background: var(--background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+}
+nav#nav .logo {
+  margin-left: 30px;
+  height: 60px;
+  width: 100%;
+
+  overflow: hidden;
+}
+nav#nav ul {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  color: var(--text-color);
+}
+nav#nav li {
+  height: 100%;
+  width: 100px;
+  text-align: center;
+  position: relative;
+  color: var(--text-color);
+}
+nav#nav li:hover {
+  background: var(--accent-color);
+}
+nav#nav ul a {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav#nav input[type="checkbox"] {
+  display: none;
+}
+.toggle_button1 {
+  width: 30px;
+  height: 23px;
+
+  position: absolute;
+  top: 20px;
+  right: 25px;
+
+  display: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bar1 {
+  height: 4px;
+  width: 100%;
+  background: var(--text-color);
+  border-radius: 100px;
+}
+@media (max-width: 800px) {
+  .toggle_button1 {
+    display: flex;
+  }
+
+  nav#nav ul {
+    height: min-content;
+    width: 100%;
+    background: var(--background-color);
+    padding: 0;
+
+    display: none;
+    position: absolute;
+    top: var(--navbar-height);
+  }
+  .navbar1 {
+    z-index: +1;
+  }
+  nav#nav li {
+    height: min-content;
+    width: 100%;
+  }
+  nav#nav ul a {
+    padding: 10px 0;
+  }
+
+  #toggle_button1:checked ~ ul {
+    display: block;
+  }
+}
+
+.active1 {
+  background-color: var(--accent-color);
+}
+
+#myForm {
+  max-width: 500px;
+  margin: 0 auto; /* Zentriere das Formular horizontal */
+  padding: 50px;
+  clear: both; /* Kläre floatende Elemente, um Überlappungen zu verhindern */
+}
+
+/*Style inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #e8ad54;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+input[type="submit"]:hover {
+  background-color: #aa88d1;
+}
+#required {
+  color: red;
+}
+
+#send_message {
+  display: none;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  color: #aa88d1;
+  font-size: 20px;
+}
+.navbar1 {
+  margin-right: 50px;
+  margin-bottom: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container1 {
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* Stil für deinen Footer */
+.footer {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 20px;
+}
+ section {
+  padding: 20px;
+}
+
+

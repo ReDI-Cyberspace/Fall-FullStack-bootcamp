@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+      $(function () {
+        // Funktion, um das aktive <a>-Element basierend auf dem Titel zu aktualisieren
+        function updateActiveLink() {
+          var path = window.location.pathname;
+          $(".navbar1 a").each(function () {
+            if ($(this).attr("href") === path) {
+              $(this).addClass("active1");
+            } else {
+              $(this).removeClass("active1");
+            }
+          });
+        }
+
+        // Führe die Funktion beim Laden der Seite aus
+        updateActiveLink();
+      });
+    </script>
+
+    <title>Header</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav id="nav">
+        <a href="#" class="logo"><img src="../images/logo.png" /></a>
+
+        <!--Hamburger Menu-->
+        <input type="checkbox" id="toggle_button1" />
+        <label for="toggle_button1" class="toggle_button1">
+          <span class="bar1"></span>
+          <span class="bar1"></span>
+          <span class="bar1"></span>
+        </label>
+        <ul class="navbar1">
+          <li><a id="home" href="/index.html">Home</a></li>
+          <li>
+            <a id="contact" href="/contact.html">Contact Us</a>
+          </li>
+          <li>
+            <a id="card" href="/card/card.html">Card</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
