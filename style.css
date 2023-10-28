@@ -33,7 +33,7 @@ h3 {
     opacity: 1;
 }
 
-img {
+.nav-logo img {
     float: left;
     width: 100px;
     height: 100px;
@@ -52,13 +52,82 @@ img {
     flex-wrap: wrap;
 }
 
+.navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilize os itens do menu para ficarem lado a lado */
+.navbar-links li {
+    display: inline; /* Os itens ficarão na mesma linha */
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+}
+
+.nav-item {
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+}
+
 .active {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
-    color: 	#7F9E8C;
+    color: 	#759b84;
     text-decoration: none;
 }
 
 .active a {
     margin-right: 20px; /* This provides space between the menu items */
+    padding-left: 10px;
+    color: #7F9E86;
+}
+
+/* Carousel slides */
+#productCarousel {
+    width: 100%;
+}
+
+#productCarousel img {
+    width: 100%;
+    height: auto; /* Maintains the original aspect ratio */
+}
+
+.carousel-slide {
+    display: block;
+    padding: 1.5rem;
+    position: relative;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border: solid #dee2e6;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+/* Previous and Next Buttons */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+button {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 0;
 }

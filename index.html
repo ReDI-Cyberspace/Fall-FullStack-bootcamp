@@ -27,7 +27,7 @@
         <link rel="icon" type="image/x-icon"
         href="./Images/favicon-32x32.png">
 
-        <title>Retrohub Shop</title>
+        <title>RetroHub Shop</title>
     </head>
 
     <body>
@@ -46,10 +46,10 @@
                             <a href="./Shop/shop.html" class="active">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./About/about.html" class="active">About</a>
+                            <a href="#" class="active">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./Contact/contact.html" class="active">Contact</a>
+                            <a href="#" class="active">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -95,35 +95,46 @@
                     </ul>
                 </div>
 -->
-
             </nav>                
         </header>
 
         <main>       
-        <!-- Carousel starts here -->                
-            <div id="productCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel starts here -->   
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
                 <div class="carousel-inner">
-                    <img src="1" alt="image1">
-                    <img src="2" alt="image2">
-                    <img src="3" alt="image3">
+                    <div class="carousel-item active">
+                        <img src="./Images/caroussel1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                
+                    <div class="carousel-item">
+                        <img src="./Images/caroussel2.png" class="d-block w-100" alt="...">
+                    </div>
+                
+                    <div class="carousel-item">
+                        <img src="./Images/caroussel4.jpg" class="d-block w-100" alt="...">
+                    </div>
                 </div>
 
                 <!-- Previous and Next Buttons -->
-                <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Prev</span>
-                </a>
-                <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
             <!-- Categories -->
-            <a href="product-gallery.html" class="btn btn-primary">Explore More</a>
-
-
-            <div>
+            <div category-container>
                 <h3>Shop by category</h3>
                 <hr>
                 <div>
@@ -160,4 +171,4 @@
                 <button>Click Me</button>
                 <div class="tooltip">Tooltip Text</div>
             </div>
-            -->
+-->
