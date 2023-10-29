@@ -29,7 +29,6 @@ hr {
     justify-content: space-between;
     margin-top: 0;
     align-items: center;
-    padding: 1% 1% 1% 1%;
 }
 
 .nav-logo {
@@ -58,8 +57,8 @@ hr {
 
 .navbar-links {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding-top: 50px;
 }
 
 /* Estilize os itens do menu para ficarem lado a lado */
@@ -90,7 +89,8 @@ hr {
 
 /* Carousel slides */
 #productCarousel {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #productCarousel img {
@@ -109,7 +109,6 @@ hr {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
 }
-
 
 /* Previous and Next Buttons */
 .carousel-control-prev, .carousel-control-next {
@@ -141,8 +140,9 @@ button {
 
 /* Shop categories */
 #category-container {
-    background-color: #DDB166;
     padding-bottom: 3rem;
+    margin: 20px auto;
+    width: 90%;
 }
 
 .category-grid {
@@ -192,6 +192,7 @@ h4 {
 
 h3 {
     font-size: 1.75rem;
+    text-align: center;
 }
 
 

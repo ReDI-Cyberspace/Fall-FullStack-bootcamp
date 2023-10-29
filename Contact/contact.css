@@ -11,13 +11,17 @@ body {
     /*font-family: 'Montserrat', sans-serif;*/
 }
 
+body.contact .alert {
+    display: block;
+}
+
 h1,
 h2,
 h3 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     color:#759b84;
-
+    text-align: center;
 }
 
 hr {
@@ -30,7 +34,6 @@ hr {
     justify-content: space-between;
     margin-top: 0;
     align-items: center;
-    padding: 1% 1% 1% 1%;
 }
 
 .nav-logo {
@@ -59,8 +62,8 @@ hr {
 
 .navbar-links {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding-top: 50px;
 }
 
 /* Estilize os itens do menu para ficarem lado a lado */
@@ -103,7 +106,7 @@ hr {
     color:#662C10;
     font-weight: bold;
     width: 80%;
-    margin: 0 auto; /* To centralize in horizontal position */
+    margin: 20px auto; /* To centralize in horizontal position */
 }
 
 form {
@@ -111,9 +114,11 @@ form {
     width: auto;
 }
 
-h1 .presentation__content__title {
+h3 .presentation__content__title {
     font-size: 60px;
     font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    padding-top: 10px;
 }
 
 input[type="text"],
@@ -122,11 +127,12 @@ textarea {
     font-family: Montserrat, sans-serif;
     color: #000;
     width: 100%;
-    background:#acacac;
+    background:#f1fef4;
     border: none;
     resize: none;
     margin: 10px 0;
     padding: 10px 20px;
+    border: 1px solid #dabdb0;
     border-radius: 5px;
     font-size: 16px; 
 }
@@ -140,7 +146,7 @@ input[type="submit"] {
     font-size: 1em;
     font-weight: bold;
     color: #662C10;
-    background:#DDB166;
+    background:#7F9E86;
     border: none;
     margin: 10px;
     padding: 10px 40px;
