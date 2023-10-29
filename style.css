@@ -15,7 +15,6 @@ h1,
 h2,
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -130,4 +129,74 @@ button {
     font-size: inherit;
     line-height: inherit;
     border-radius: 0;
+}
+
+/* Categories */
+#category-container {
+    background-color: #DDB166;
+    padding-bottom: 3rem;
+}
+
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0.25rem;
+
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+
+
+/* Footer starts here */
+.footer {
+    padding: 10px;
+    background-color: #662C10;
+    color:#759b84;
+}
+
+.social-network {
+    text-align: center;
+}
+
+.social-network > li {
+    display: inline;
+}
+
+.social-network i {
+    padding: 25px;
+    color: #759b84;
+}
+
+#footer {
+    color: #759b84;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+}
+
+
+/* Media queries */
+/* For screens larger then 600px: makes 2 colums */
+@media (min-width: 600px) {
+    .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For screens larger then 000px: makes 3 colums */
+@media (min-width: 900px) {
+    .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    }
 }
