@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Roboto:wght@300;400;500&display=swap');
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: calc(100vh - 164px);
+    color: #000;
+    /*font-family: 'Montserrat', sans-serif;*/
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color:#759b84;
+
+}
+
+hr {
+    color: #759b84;
+}
+
+.header {
+    background-color: #662C10;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    align-items: center;
+    padding: 1% 1% 1% 1%;
+}
+
+.nav-logo {
+    font-size: 280%;
+    opacity: 1;
+}
+
+.nav-logo img {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+#topnav {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Montserrat";
+}
+
+#topnav header {
+    margin-left: auto; /* This brings the menu to the left side */
+    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilize os itens do menu para ficarem lado a lado */
+.navbar-links li {
+    display: inline; /* Os itens ficarão na mesma linha */
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+}
+
+.nav-item {
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+}
+
+.active {
+    font-size: 25px;
+    font-weight: 600;
+    color: 	#759b84;
+    text-decoration: none;
+}
+
+.active a {
+    margin-right: 20px; /* This provides space between the menu items */
+    padding-left: 10px;
+    color: #7F9E86;
+}
+
+
+/* Contact form */
+.contact {
+    height: auto;
+    margin-bottom: 30px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#form {
+    display: inherit;
+    font-family: Montserrat, sans-serif;
+    color:#662C10;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 auto; /* To centralize in horizontal position */
+}
+
+form {
+    font-weight: bold;
+    width: auto;
+}
+
+h1 .presentation__content__title {
+    font-size: 60px;
+    font-family: Montserrat, sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: Montserrat, sans-serif;
+    color: #000;
+    width: 100%;
+    background:#acacac;
+    border: none;
+    resize: none;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px; 
+}
+
+label {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    font-size: 1em;
+    font-weight: bold;
+    color: #662C10;
+    background:#DDB166;
+    border: none;
+    margin: 10px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    color: rgba(104, 100, 100, 0.3);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+placeholder {
+    color: #acacac;
+}
+
+
+/* Footer starts here */
+.footer {
+    padding: 10px;
+    background-color: #662C10;
+    color:#759b84;
+}
+
+.social-network {
+    text-align: center;
+}
+
+.social-network > li {
+    display: inline;
+}
+
+.social-network i {
+    padding: 25px;
+    color: #759b84;
+}
+
+#footer {
+    color: #759b84;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+}
+
+
+/* Media queries */
+/* For screens larger then 600px: makes 2 colums */
+@media (max-width: 600px) {
+    .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For screens larger then 000px: makes 3 colums */
+@media (min-width: 900px) {
+    .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    }
+}

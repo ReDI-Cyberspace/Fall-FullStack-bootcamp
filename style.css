@@ -16,6 +16,11 @@ h2,
 h3 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    color:#759b84;
+}
+
+hr {
+    color: #759b84;
 }
 
 .header {
@@ -82,6 +87,7 @@ h3 {
     color: #7F9E86;
 }
 
+
 /* Carousel slides */
 #productCarousel {
     width: 100%;
@@ -103,6 +109,7 @@ h3 {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
 }
+
 
 /* Previous and Next Buttons */
 .carousel-control-prev, .carousel-control-next {
@@ -131,17 +138,35 @@ button {
     border-radius: 0;
 }
 
-/* Categories */
+
+/* Shop categories */
 #category-container {
     background-color: #DDB166;
     padding-bottom: 3rem;
 }
 
 .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 5px 18px 5px 18px;
+}
+
+.category-grid .card {
     display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    color:#662C10;
+    text-decoration: none;
 }
 
 .card {
@@ -149,7 +174,20 @@ button {
     flex-direction: column;
     background-color: #fff;
     border-radius: 0.25rem;
+}
 
+.category-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 h3 {
@@ -188,15 +226,15 @@ h3 {
 
 /* Media queries */
 /* For screens larger then 600px: makes 2 colums */
-@media (min-width: 600px) {
-    .photo-grid {
+@media (max-width: 600px) {
+    .category-grid {
     grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* For screens larger then 000px: makes 3 colums */
 @media (min-width: 900px) {
-    .photo-grid {
+    .category-grid {
     grid-template-columns: repeat(3, 1fr);
     }
 }
