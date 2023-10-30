@@ -25,6 +25,10 @@ The footer information and copyright notice.
 
 A thank-you page for successfully submitted contact forms.
 
+### product gallery  with `products.html`` and `products.css` with pagination
+
+A product gallery page with bootstrap.
+
 ### `style.css`
 
 The CSS style sheet that defines the website's appearance and layout.
