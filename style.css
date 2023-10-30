@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Audiowide", sans-serif;
+  
+}
+#body{
+  height: 150vh;
+}
+
+#navbarSupportedContent {
+  flex-grow: unset;
+}
+
+#logo {
+  width: 4rem;
+  border-radius: 1.5rem;
+}
+
+.nav-item {
+  font-size: 1.2rem;
+  
+}
+
+.nav-item:hover .nav-link {
+  color: aqua !important;
+}
+
+
+#submitted {
+  text-align: center;
+  margin: 4rem 2rem;
+}
+
+
+
+
+@media (min-width: 992px) {
+ .container{
+  margin-top: -6rem;
+  
+ 
+ }
+}
