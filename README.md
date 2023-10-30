@@ -25,7 +25,7 @@ The footer information and copyright notice.
 
 A thank-you page for successfully submitted contact forms.
 
-### product gallery  with `products.html`` and `products.css` with pagination
+### product gallery  with `products.html` and `products.css` with pagination
 
 A product gallery page with bootstrap.
 
