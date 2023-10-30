@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Below viewport settings are for mobile browsers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GEOPHYSICO</title>
+
+    <!--Link to Bootstrap library-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <!--<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>-->
+    <script src="../JS/Scripts/jQuery_3.7.1.js"></script>
+
+    <!-- You can add a link to your stylesheet here if needed -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- Include the Header -->
+    <script>
+        $(function(){
+            // Load header.html and append it to the body
+            $("#header").load("header.html");
+
+            // Load footer.html and append it to the body
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+    <div id="header"></div>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Bootstrap Carousel -->
+                <div id="geophysicoCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/Geophysico1-720x329.jpg" class="d-block w-100" alt="Geophysico Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/Geophysico2-720x329.jpg" class="d-block w-100" alt="Geophysico Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/Geophysico3-720x329.jpg" class="d-block w-100" alt="Geophysico Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/Geophysico4-720x329.jpg" class="d-block w-100" alt="Geophysico Image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional content -->
+                <div class="mt-2 text-center">
+                    <h2>EXPERIENCED GEOPHYSICAL SERVICES AND CONSULTING</h2>
+                    <p>Our objective is to offer clients project-specific, multidisciplinary and data-driven solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include the Footer -->
+    <div id="footer"></div> 
+    
+</body>
+</html>

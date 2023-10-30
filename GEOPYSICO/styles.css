@@ -1,0 +1,186 @@
+/* Reset some default styles for better consistency across browsers */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+/* Carousel Styles */
+.carousel-inner {
+    border-radius: 8px;
+    overflow: hidden; /* Ensure the images don't extend beyond the rounded corners */
+}
+
+.carousel-item {
+    text-align: center; /* Center the content inside each carousel item */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+/* Main Content Section Styles */
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure child elements don't extend beyond the rounded corners */
+}
+
+/* Image Wrapper Styles */
+.image-wrapper {
+    border-radius: 8px;
+    overflow: hidden; /* Ensure the image doesn't extend beyond the rounded corners */
+}
+
+/* Image Styles */
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below the image */
+    margin: 0 auto; /* Center the image within its container */
+}
+
+/* Form Section Styles */
+.form-container {
+    position: relative;
+    padding: 20px;
+    background-image: url("images/Contact1-320x320.jpg");
+    background-size: cover;
+    z-index: 1;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+
+.img-container {
+    width: 100%;
+    height: 410px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    /* font-weight: bold; */ 
+    /* Make labels bold for consistency */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd; /* Add a border for a cleaner look */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+    font-size: 16px; /* Adjust font size to match the rest of the HTML */
+    outline: none; /* Remove the default focus border */
+
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px; /* Add border-radius for rounded corners */
+    font-size: 16px; /* Match the font size with the rest of the HTML */
+}
+
+/* Adjust placeholder style for consistency */
+input::placeholder, textarea::placeholder {
+    color: #777;
+    font-weight: normal; /* Remove bold style for placeholder text */
+    font-family: 'Arial', sans-serif; /* Set the desired font family */
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Anchor Styles */
+a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add a smooth transition for color changes */
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #ccc; /* Set your desired hover color */
+}
+
+/* Footer Styles */
+footer {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add a smooth transition for color changes */
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #ccc; /* Set your desired hover color */
+}
+

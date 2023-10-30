@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="../JS/Scripts/jQuery_3.7.1.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+    <div id="header"></div>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-3 mb-lg-0">
+                <form action="submit-form.php" method="post" class="form-container">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" name="message" placeholder="Enter your message" rows="4" required></textarea>
+                    </div>
+    
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
+            </div>
+    
+            <div class="col-lg-6">
+                <div class="img-container">
+                    <img src="images/Contact2-320x320.jpg" class="img-fluid" alt="Contact Us">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="footer"></div>
+
+</body>
+</html>
