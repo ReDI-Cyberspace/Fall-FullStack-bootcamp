@@ -1,0 +1,11 @@
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+.my-carousel {
+  margin: 10rem 0;
+  padding: 2rem 0;
+  width: 100%;
+  background-color: black;
+}
