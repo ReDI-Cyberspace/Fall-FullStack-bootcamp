@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P Website</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header id="header" class="d-flex flex-row">
+  <script src="/header.js"></script>
+</header>
+<main class="mx-auto flex-shrink-0">
+<section class="mt-20">
+  <div class="mx-auto px-16 text-white py-6" id="card">
+    <div class="flex justify-end">
+        <a href="/Homepage/index.html"><i class="fa-solid fa-xmark" id="x"></i></a>
+    </div>
+    <div class="title">
+        <h1 class="text-xl my-4">Contact us</h1>
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+        </span>
+    </div>
+    <p class="text-base mb-4">We'd love to hear from you.<br />Please drop your name, email and message.</p>
+    <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        <label for="message">Message:</label>
+        <textarea class="text-black" id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+        <!-- <input type="submit" value="Submit"/> -->
+        <button id="btn" type="submit" class="btn btn-primary px-4 m-2 me-md-2 fw-bold" style="--bs-btn-bg: blue;">Submit</button>
+    </form>
+    <div class="space-x-8 my-6 flex justify-center">
+        <a class="socials" href="linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+        <a class="socials" href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        <a class="socials" href="discord.com"><i class="fa-brands fa-discord"></i></a>
+    </div>
+    <div class="my-3">
+        <p>Go back to ...</p>
+        <ul class="list">
+            <a><li>Homepage</li></a>
+            <a><li>Gallery</li></a>
+            <a><li>Learn</li></a>
+        </ul>
+    </div>
+</div>
+</section>
+</main>
+<div id="footer">
+  <script src="/footer.js"></script>
+</div>
+</body>
+</html>

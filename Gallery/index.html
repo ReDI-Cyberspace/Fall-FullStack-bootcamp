@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <header id="header">
+    <script async src="/header.js"></script>
+  </header>
+  <main class="flex-shrink-0 mb-4">
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner bg-primary align-items-stretch object-fit-cover">
+        <div class="carousel-item active">
+          <a class="img-cont" href="https://unsplash.com/@nuvaproductions?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"><img class="img-fluid sm-w-300 sm-h-300" src="/Assets/javier-miranda-bDFP8PxzW1Q-unsplash.jpg" alt=""></a>
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Title</h1>
+              <p class="opacity-75">Have you ever wished to explore distant galaxies, uncover ancient civilizations,<br>or bring your imagination to life? </p>
+              <p><a class="btn btn-lg btn-primary" id="a" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a class="img-cont" href="https://unsplash.com/@fakurian?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"><img class="img-fluid sm-h-300 sm-w-300" src="/Assets/milad-fakurian-k4WPhf596b4-unsplash.jpg" alt=""></a>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Title</h1>
+              <p>Let your ideas soar and watch as they come to life right before your eyes.</p>
+              <p><a class="btn btn-lg btn-primary"  id="b" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a class="img-cont" href="https://unsplash.com/@birhatjiyad?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"><img class="img-fluid sm-h-300 sm-w-300" src="/Assets/birhat-jiyad-OMGORs5og5M-unsplash.jpg"/></a><!-- style="object-fit:contain; -->"
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Title</h1>
+              <p>Explore and discover the perfect assets that<br>will elevate your projects to new heights.</p>
+              <p><a class="btn btn-lg btn-primary" id="c" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/Assets/cdd20-9-dkDEXWGzI-unsplash.jpg"/>
+          <h2 class="fw-normal">Objects</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, deserunt hic vel maxime laudantium.</p>
+          <p class="bt"><a class="btn btn-secondary" href="#">View more &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/Assets/amr-taha-qJit4JqiYLU-unsplash.jpg"/>
+          <h2 class="fw-normal">Scenes</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, culpa tempore dolorem laudantium, pariatur nisi vel iste veniam esse.</p>
+          <p class="bt"><a class="btn btn-secondary" href="#">View more &raquo;</a></p>
+        </div>
+        <div class="col-lg-4 justify-center">
+          <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/Assets/simon-lee-vYsX30q0ARE-unsplash.jpg"/>
+          <h2 class="fw-normal">Abstracts</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa accusamus sunt dolorem itaque alias, totam illum fuga libero ab, voluptatum eveniet deleniti.</p>
+          <p class="bt"><a class="btn btn-secondary" href="#">View more &raquo;</a></p>
+        </div>
+      </div>
+      <!-- START THE FEATURETTES -->
+        <h1 class="fw-semibold mt-4">Featured</h1>
+          <hr id="featured" class="featurette-divider">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">Title</h2>
+              <h5 class="text-body-secondary">Creator</h5>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga impedit consequatur, repudiandae, alias nesciunt molestiae, magnam exercitationem inventore amet ullam nobis facilis. Eligendi ipsam quasi quisquam amet, voluptates iusto quam!</p>
+            </div>
+            <div class="col-md-5">
+              <img src="/Assets/gaspar-uhas-j_DmMNZK-jo-unsplash.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
+            </div>
+          </div>
+          <hr class="featurette-divider">
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1">Title</h2>
+              <h5 class="text-body-secondary">Creator</h5>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid sequi rerum aperiam, atque explicabo, repellendus consequatur labore suscipit unde quibusdam reprehenderit dolorem nesciunt. Aliquam iste nulla aut unde praesentium!</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img src="/Assets/rohit-choudhari-udrlQcvkckE-unsplash.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
+            </div>
+          </div>
+          <hr class="featurette-divider">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">Title</h2>
+              <h5 class="text-body-secondary">Creator</h5>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ad deserunt itaque cupiditate ullam quidem accusamus esse voluptatem, dicta facere saepe iusto optio. Fugiat delectus et dicta culpa dolor. Dolores?</p>
+            </div>
+            <div class="col-md-5">
+              <img src="/Assets/simon-lee-U00xWfo5yJA-unsplash.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
+            </div>
+          </div>
+          <!-- /END THE FEATURETTES -->
+        </div>
+  </main>
+  <!-- FOOTER -->
+    <div id="footer" class="justify-content-between">
+      <script src="/footer.js"></script>
+    </div>
+</body>
+</html>

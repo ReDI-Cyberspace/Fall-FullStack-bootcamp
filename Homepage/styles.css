@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Poppins, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: overlay;
+  }
+  /* code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  } */
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    display: flex;
+  }
+
+  h1 {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  h3, small, .col-10 img {
+    filter: drop-shadow(1px 2px 2px black);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s ease;
+  }
+  h3:hover, .col-10 img:hover{
+    -webkit-transform:scale(1.05);
+    transform:scale(1.05);
+  }
+
+  #search {
+    border: 1px solid blue;
+    color: blue;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s ease;
+  }
+  #search:hover {
+    background-color: blue;
+    color: #fff;
+    -webkit-transform:scale(1.05);
+    transform:scale(1.05);
+  }
+
+  #signup-btn {
+    background-color: blue;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s ease;
+    border: none;
+  }
+  #signup-btn:hover {
+    -webkit-transform:scale(1.05);
+    transform:scale(1.05);
+    background-color: mediumblue;
+  }
+
+  #login-btn {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s ease;
+  }
+  #login-btn:hover {
+    -webkit-transform:scale(1.05);
+    transform:scale(1.05);
+  }
+
+  #cont {
+    overflow: hidden;
+  }
+  #logo{
+    transition: 2s;
+  }
+  #logo:hover{
+    transform: scale(1.1);
+  }

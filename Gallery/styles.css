@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: overlay;
+    padding-bottom: 3rem;
+  }
+
+  #search {
+    border: 1px solid blue;
+    color: blue;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s ease;
+  }
+  #search:hover {
+    background-color: blue;
+    color: #fff;
+    -webkit-transform:scale(1.05);
+    transform:scale(1.05);
+  }
+
+  #cont {
+    overflow: hidden;
+  }
+  #logo{
+    -webkit-transition: -webkit-transform 2s;
+    transition: 2s;
+  }
+  #logo:hover{
+    -webkit-transform:scale(1.1);
+    transform: scale(1.1);
+  }
+
+  #a, #b, #c {
+    background-color: blue;
+    border: none;
+  }
+  #a:hover, #b:hover, #c:hover {
+    background-color: mediumblue;
+  }
+  p > .btn {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s ease;
+  }
+  p > .btn:hover {
+    -webkit-transform:scale(1.05);
+    transform:scale(1.05);
+  }
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+
+  .carousel-item {
+    height: 32rem;
+  }
+
+  .img-cont > img {
+    /* display: block;
+    position: absolute; */
+    min-height: 100%;
+    /*min-width: 100%;-no aspect ratio*/
+    /* width: auto; */
+    /* max-height:100%; */
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+  }
+
+  .col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  /* rtl:begin:ignore */
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+ 
+  /* Featurettes
+  ------------------------- */
+  .col-md-5 img {
+    cursor: pointer;
+  }
+  #featured {
+    margin-top: 1rem;
+  }
+
+  .featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+
+  .featurette-heading {
+    letter-spacing: -.05rem;
+  }
+
+  /* rtl:end:remove */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    justify-self: center;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  @media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
