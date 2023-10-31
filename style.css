@@ -141,11 +141,6 @@ hr {
     transition: background-color 0.3s ease;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    color: #7F9E86;
-    font-size: 30px;
-}
-
 .button-text {
     font-weight: 600;
 }

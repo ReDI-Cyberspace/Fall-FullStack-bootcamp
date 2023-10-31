@@ -114,6 +114,58 @@ form {
     width: auto;
 }
 
+/* Alert message style */
+/* P.S. This alert message isn't working properly */
+/*
+.alert {
+    display: none;
+    color: #fff;
+    background-color: #7F9E86;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.alert svg {
+    fill: #fff;
+    margin-right: 10px;
+}
+
+.nav-item:last-child a:focus + .alert {
+    animation: showAlert 2s ease;
+    display: block;
+}
+*/
+
+/* Hides the message after 2sec */
+/*
+@keyframes hideAlert {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+*/
+
+/* Alert message animation */
+/*
+.alert.show-alert {
+    animation: hideAlert 2s linear 4s forwards;
+}
+*/
+
 h3 .presentation__content__title {
     font-size: 60px;
     font-family: Montserrat, sans-serif;
