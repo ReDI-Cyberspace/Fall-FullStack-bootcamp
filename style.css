@@ -11,6 +11,11 @@ body {
     /*font-family: 'Montserrat', sans-serif;*/
 }
 
+main {
+    height: auto;
+    background-color: #fcd89c;
+}
+
 h1,
 h2,
 h3 {
@@ -88,12 +93,12 @@ hr {
 
 
 /* Carousel slides */
-#productCarousel {
+#productCarouselIndicators {
     width: 80%;
     margin: 0 auto;
 }
 
-#productCarousel img {
+#productCarouselIndicators img {
     width: 100%;
     height: auto; /* Maintains the original aspect ratio */
 }
@@ -122,11 +127,27 @@ hr {
     width: 15%;
     padding: 0;
     color: #fff;
+    font-size: 25px;
     text-align: center;
     background: 0 0;
-    border: 0;
+    border: none;
+    border-radius: 50%;
     opacity: .5;
     transition: opacity .15s ease;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(111, 109, 109, 0.3); /* Altere a cor de fundo no hover */
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    color: #7F9E86;
+    font-size: 30px;
+}
+
+.button-text {
+    font-weight: 600;
 }
 
 button {
