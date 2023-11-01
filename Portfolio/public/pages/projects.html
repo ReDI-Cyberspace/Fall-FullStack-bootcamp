@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="../output.css" rel="stylesheet" />
+        <script
+            src="https://kit.fontawesome.com/5ddbf505fe.js"
+            crossorigin="anonymous"
+        ></script>
+        <script type="text/javascript" src="scripts.js" defer></script>
+
+        <title>My Projects</title>
+    </head>
+    <body class="bg gray-100 min-h-screen flex justify-center">
+        <div class="min-h-screen basis-full">
+            <iframe src="header.html" width="100%" height="500"> </iframe>
+            <main
+                class="flex flex-col items-center justify-center h-screen gap-y-12"
+            >
+                <p>A selection of my projects</p>
+                <div
+                    id="pagination-container "
+                    class="flex flex-col justify-center"
+                >
+                    <div id="pagination-projects">
+                        <a href="#" id="pagination-button"
+                            ><i class="fa-solid fa-arrow-left fa-2xs"></i
+                        ></a>
+                        <a
+                            href="#React-Project"
+                            id="pagination-button"
+                            class="active"
+                            title="React Project"
+                            >1</a
+                        >
+                        <a
+                            href="#NodeJS-Project"
+                            id="pagination-button"
+                            title="NodeJS Project"
+                            >2</a
+                        >
+                        <a
+                            href="#HTML+JS+CSS-Project"
+                            id="pagination-button"
+                            title="HTML JS HTML"
+                            >3</a
+                        >
+
+                        <a href="#" id="pagination-button"
+                            ><i class="fa-solid fa-arrow-right fa-2xs"></i
+                        ></a>
+                    </div>
+                </div>
+
+                <div class="w-1/2 grid grid-cols-2 gap-x-12 gap-y-12">
+                    <!-- Project 1 -->
+                    <div
+                        class="bg-gray-300 h-32 rounded-md flex items-center justify-center m-10"
+                    >
+                        <div
+                            class="bg-white rounded-lg overflow-hidden ring-4 ring-gray-200 ring-opacity-40 max-w-full h-96 p-5 hover:shadow-xl"
+                            id="React-Project"
+                        >
+                            <div class="flex flex-column w-36">
+                                <img
+                                    src="../../resources/img/tech-stack/React logo.png"
+                                    alt="react"
+                                    class="aspect-square object-contain w-36"
+                                />
+                            </div>
+                            <div class="flex-1 p-4 w-7">
+                                <h3 class="text-lg font-medium mb-2 w-15">
+                                    React Project
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-4 w-64">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Duis vitae ante vel eros
+                                    fermentum faucibus sit amet euismod lorem.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Quidem autem sed cum
+                                    soluta, repudiandae hic dolor perspiciatis
+                                    id necessitatibus, velit culpa facilis harum
+                                    error in fuga deserunt vel numquam eveniet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div
+                        class="bg-gray-300 h-32 rounded-md flex items-center justify-center m-10"
+                    >
+                        <div
+                            class="bg-white rounded-lg overflow-hidden ring-4 ring-gray-200 ring-opacity-40 p-5 hover:shadow-xl"
+                            id="NodeJS-Project"
+                        >
+                            <div class="flex flex-column w-36">
+                                <img
+                                    src="../../resources/img/tech-stack/nodejs-1-logo-png-transparent.png"
+                                    alt="nodejs"
+                                    class="aspect-square object-contain w-36"
+                                />
+                            </div>
+
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium mb-2 w-15">
+                                    NodeJS Project
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-4 w-64">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Duis vitae ante vel eros
+                                    fermentum faucibus sit amet euismod lorem.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Quidem autem sed cum
+                                    soluta, repudiandae hic dolor perspiciatis
+                                    id necessitatibus, velit culpa facilis harum
+                                    error in fuga deserunt vel numquam eveniet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+
+                    <div
+                        class="bg-gray-300 h-32 rounded-md flex items-center justify-center m-10"
+                    >
+                        <div
+                            class="bg-white rounded-lg overflow-hidden ring-4 ring-gray-200 ring-opacity-40 max-w-full p-5 hover:shadow-xl"
+                            id="HTML+JS+CSS-Project"
+                        >
+                            <div class="flex flex-column w-36">
+                                <img
+                                    src="../../resources/img/tech-stack/HTML JS CSS.png"
+                                    alt="html+js+css"
+                                    class="aspect-square object-contain w-36"
+                                />
+                            </div>
+
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium mb-2 w-15">
+                                    HTML JS CSS Project
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-4 w-64">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Duis vitae ante vel eros
+                                    fermentum faucibus sit amet euismod lorem.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Quidem autem sed cum
+                                    soluta, repudiandae hic dolor perspiciatis
+                                    id necessitatibus, velit culpa facilis harum
+                                    error in fuga deserunt vel numquam eveniet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div
+                    id="pagination-container "
+                    class="flex flex-col justify-center"
+                >
+                    <div id="pagination-projects">
+                        <a href="#" id="pagination-button"
+                            ><i class="fa-solid fa-arrow-left fa-2xs"></i
+                        ></a>
+                        <a
+                            href="#React-Project"
+                            id="pagination-button"
+                            class="active"
+                            title="React Project"
+                            >1</a
+                        >
+                        <a
+                            href="#NodeJS-Project"
+                            id="pagination-button"
+                            title="NodeJS Project"
+                            >2</a
+                        >
+                        <a
+                            href="#HTML+JS+CSS-Project"
+                            id="pagination-button"
+                            title="HTML JS HTML"
+                            >3</a
+                        >
+
+                        <a href="#" id="pagination-button"
+                            ><i class="fa-solid fa-arrow-right fa-2xs"></i
+                        ></a>
+                    </div>
+                </div>
+            </main>
+            <iframe
+                src="footer.html"
+                class="sticky top-[100vh]"
+                width="100%"
+            ></iframe>
+        </div>
+    </body>
+</html>

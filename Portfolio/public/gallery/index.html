@@ -1,0 +1,284 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap"
+            rel="stylesheet"
+        />
+
+        <script
+            src="https://kit.fontawesome.com/5ddbf505fe.js"
+            crossorigin="anonymous"
+        ></script>
+        <link href="styles.css" rel="stylesheet" />
+        <script type="text/javascript" src="scripts.js" defer></script>
+
+        <title>Product Page</title>
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <iframe src="../pages/header.html" width="100%" height="300">
+            </iframe>
+            <main>
+                <div class="product-card-container">
+                    <!--Bootstrap Carousel component-->
+                    <div
+                        id="carousel-wrapper"
+                        class="w-4/5 absolute overflow-hidden"
+                    >
+                        <div
+                            id="carouselExampleIndicators"
+                            class="carousel slide w-4/5 p-0 relative"
+                            data-bs-ride="carousel"
+                        >
+                            <div class="carousel-indicators">
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="0"
+                                    class="active"
+                                    aria-current="true"
+                                    aria-label="Slide 1"
+                                ></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="1"
+                                    aria-label="Slide 2"
+                                ></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="2"
+                                    aria-label="Slide 3"
+                                ></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="3"
+                                    aria-label="Slide 4"
+                                ></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="4"
+                                    aria-label="Slide 5"
+                                ></button>
+                            </div>
+                            <div class="carousel-inner overflow-hidden">
+                                <div
+                                    id="slide"
+                                    class="carousel-item active overflow-hidden"
+                                >
+                                    <img
+                                        src="../../resources/img/merch/Tshirt/t-shirt_main.png"
+                                        class="d-block border rounded mx-0 p-0"
+                                        alt="carousel-picture"
+                                    />
+                                </div>
+                                <div
+                                    id="slide"
+                                    class="carousel-item overflow-hidden"
+                                >
+                                    <img
+                                        src="../../resources/img/merch/Tshirt/t-shirt_black.png"
+                                        class="d-block border rounded mx-0 p-0"
+                                        alt="carousel-picture"
+                                    />
+                                </div>
+                                <div
+                                    id="slide"
+                                    class="carousel-item overflow-hidden"
+                                >
+                                    <img
+                                        src="../../resources/img/merch/Tshirt/t-shirt_red.png"
+                                        class="d-block border rounded mx-0 p-0"
+                                        alt="carousel-picture"
+                                    />
+                                </div>
+                                <div
+                                    id="slide"
+                                    class="carousel-item overflow-hidden"
+                                >
+                                    <img
+                                        src="../../resources/img/merch/Tshirt/t-shirt_blue.png"
+                                        class="d-block border rounded mx-0 p-0"
+                                        alt="carousel-picture"
+                                    />
+                                </div>
+                                <div
+                                    id="slide"
+                                    class="carousel-item overflow-hidden"
+                                >
+                                    <img
+                                        src="../../resources/img/merch/Tshirt/t-shirt_olive.png"
+                                        class="d-block border rounded mx-0 p-0"
+                                        alt="carousel-picture"
+                                    />
+                                </div>
+                            </div>
+                            <button
+                                class="carousel-control-prev absolute"
+                                type="button"
+                                data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="prev"
+                            >
+                                <span
+                                    class="carousel-control-prev-icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button
+                                class="carousel-control-next absolute"
+                                type="button"
+                                data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="next"
+                            >
+                                <span
+                                    class="carousel-control-next-icon"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- <div class="gallery-container">
+                        <div class="arrow">
+                            <p><<</p>
+                        </div>
+                        <div class="slide">
+                            <img
+                                src="https://fastly.picsum.photos/id/439/600/400.jpg?hmac=ADXTTJQsQxPUCwWNHgVEZPzyXLURYxzFc6QIrixpV8E"
+                                alt="carousel-picture"
+                            />
+                        </div>
+                        <div class="arrow">
+                            <p>>></p>
+                        </div>
+                        <ul>
+                        <li>
+                            <img
+                                src="https://fastly.picsum.photos/id/998/600/400.jpg?hmac=WSpulgHbPkI--NfRvzZ_j14ie9vTF_dKquO5Wn6Fqo4"
+                                alt="carousel-picture"
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="https://fastly.picsum.photos/id/193/600/400.jpg?hmac=lM_2bb_GrFBPaav-4SCdFBd85WELoeimeW-id0JzEbQ"
+                                alt="carousel-picture"
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="https://fastly.picsum.photos/id/776/600/400.jpg?hmac=0XG-_4lX7ArCx6MVYltN3Fmwx7OORuNpktDmEPXwUfk"
+                                alt="carousel-picture"
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="https://fastly.picsum.photos/id/61/600/400.jpg?hmac=XZhafTXVEqP5sXhZWM9lUSyWuRS3J0kri_of6fW2Ffo"
+                                alt="carousel-picture"
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="https://fastly.picsum.photos/id/830/600/400.jpg?hmac=Uw37yaGTNsni_dncP11I94IUhXBC5Qkvz9hS6r_StgY"
+                                alt="carousel-picture"
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="https://fastly.picsum.photos/id/487/600/400.jpg?hmac=Rw_4bDRzk0G9ODcHQA46sf9Z42Qkf214SX39H3alFTs"
+                                alt="carousel-picture"
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="https://fastly.picsum.photos/id/568/600/400.jpg?hmac=AC6_PWP-eHtGmBwHnwlj8RTFzHuCK3EWYYFcVAuSxwk"
+                                alt="carousel-picture"
+                            />
+                        </li>
+                    </ul> -->
+                    <div class="product-info-container">
+                        <h1>The Product</h1>
+                        <span
+                            >Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Esse hic dolores architecto repellendus nisi
+                            repellat eius eum, placeat aperiam sed temporibus
+                            sequi, rem quo delectus molestiae veniam eaque ad
+                            recusandae.</span
+                        >
+                        <table class="tg">
+                            <thead>
+                                <tr>
+                                    <th class="tg-field">Size</th>
+                                    <th class="tg-field">Color</th>
+                                    <th class="tg-field">Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tg-field">
+                                        <select name="size" id="size">
+                                            <option value="small">S</option>
+                                            <option value="medium">M</option>
+                                            <option value="large">L</option>
+                                            <option value="extra-large">
+                                                XL
+                                            </option>
+                                        </select>
+                                    </td>
+
+                                    <td class="tg-field">
+                                        <select
+                                            name="product-color"
+                                            id="product-color"
+                                        >
+                                            <option value="blue">Blue</option>
+                                            <option value="red">Red</option>
+                                            <option value="olive">Olive</option>
+                                            <option value="black">Black</option>
+                                        </select>
+                                    </td>
+
+                                    <td class="tg-field">
+                                        <select name="quantity" id="quantity">
+                                            <option value="one">1</option>
+                                            <option value="two">2</option>
+                                            <option value="three">3</option>
+                                            <option value="four">4</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+    <iframe
+        src="../pages/footer.html"
+        class="sticky top-[100vh]"
+        width="100%"
+    ></iframe>
+</html>

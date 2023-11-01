@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../output.css" />
+        <script type="text/javascript" src="../scripts.js" defer></script>
+
+        <title>Contact Me</title>
+    </head>
+
+    <body class="min-h-screen flex justify-center">
+        <div class="min-h-screen basis-full">
+            <iframe src="header.html" class="header" width="100%" height="300">
+            </iframe>
+            <main
+                class="text-gray-500 flex items-center justify-center space-x-5 mx-15"
+            >
+                <div
+                    class="w-100 h-200 border rounded-md shadow-3xl py-5 px-5 z-0"
+                >
+                    <form>
+                        <div class="p-5">
+                            <h1 class="text-black font-bold">Get in touch</h1>
+                        </div>
+                        <div
+                            class="flex items-center justify-center flex-row my-5"
+                        >
+                            <input
+                                class="bg-gray-100 border border-black text-black rounded h-8 basis-1/8 px-2 mx-3"
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Name"
+                                autocomplete="off"
+                                size="19"
+                                required
+                            />
+
+                            <input
+                                class="bg-gray-100 border border-black text-black rounded h-8 basis-1/8 px-2 mx-3"
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Email"
+                                autocomplete="off"
+                                size="19"
+                                required
+                            />
+                        </div>
+
+                        <input
+                            class="bg-gray-100 border border-black text-black rounded h-8 px-2 m-3"
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Subject"
+                            autocomplete="off"
+                            size="45"
+                            required
+                        />
+                        <br />
+
+                        <textarea
+                            class="bg-gray-100 border border-black text-black rounded px-2 m-3"
+                            name="feedback"
+                            id="feedback"
+                            placeholder="Message"
+                            required
+                            rows="7"
+                            cols="45"
+                        ></textarea>
+                        <br />
+                        <input
+                            type="submit"
+                            value="Submit"
+                            class="border border-black round-md text-black bold w-20 m-5"
+                        />
+                    </form>
+                </div>
+            </main>
+            <iframe
+                src="footer.html"
+                class="sticky top-[100vh]"
+                width="100%"
+            ></iframe>
+        </div>
+    </body>
+</html>

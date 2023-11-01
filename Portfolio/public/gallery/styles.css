@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Ropa Sans", sans-serif;
+    color: rgb(138, 129, 129);
+}
+
+.main-wrapper {
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card-container {
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 60vw;
+    height: auto;
+    padding: 20px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 13px 15px 7px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-container {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.carousel-inner {
+    width: 75%;
+    object-fit: contain;
+    margin: 0 100px 0 100px;
+    overflow: hidden;
+}
+
+#slide {
+    width: 600px;
+    height: 400px;
+    object-fit: fill;
+}
+
+img {
+    width: 100%; /* or any custom size */
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgb(199, 196, 196);
+    border-radius: 30px;
+    margin: 0;
+}
+.product-info-container {
+    order: 2;
+    margin: 20px;
+    padding: 20px;
+}
+
+.product-info-container h1 {
+    margin-bottom: 25px;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    color: gray;
+}
+
+th {
+    background-color: rgb(240, 240, 240);
+    color: gray;
+    padding-top: 15px;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.tg td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-field {
+    text-align: left;
+    vertical-align: top;
+}
+
+.select {
+    background-color: transparent;
+}
+
+option[value="blue"] {
+    background-color: blue;
+    color: transparent;
+}
+
+option[value="red"] {
+    background-color: rgb(255, 0, 0);
+    color: transparent;
+}
+
+option[value="olive"] {
+    background-color: rgb(1, 51, 28);
+    color: transparent;
+}
+
+option[value="black"] {
+    background-color: rgb(0, 0, 0);
+    color: transparent;
+}
