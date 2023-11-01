@@ -1,0 +1,131 @@
+.content{
+    border: 10px solid gray;
+    padding: 20px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    font-size: 100px bold left;
+}
+/* Link with images gallery */
+.gallery{
+    border: 1px solid #ccc;
+}
+.gallery:hover{
+    border: 5px solid orange;
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+.desc{
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+*{box-sizing: border-box;}
+.responsive{
+    padding: 0 6px;
+    float: left;
+    width: 24.999%;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Slideshow or Carousel of accident types */
+#slideCaptions{
+    max-width: 700px;
+    position: relative;
+    margin: auto;
+}
+
+/* Fit images and texts to screen */
+@media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+/* ------------------style the contact us form-------------------------- */
+Contact Us.card{
+    background-color: #E3F9A6;
+    margin: 10px;
+    border: 10px solid orange;
+    padding: 30px;
+}
+h2{
+    font-family: "Arial", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 1px;
+}
+form{
+    margin-bottom: 20px;
+}
+form label{
+display: block; 
+padding: 1px;
+color: blueviolet;
+font-family: "Arial", sans-serif;
+font-size: 20px;
+font-weight: normal;
+margin-bottom: 10px;
+margin-top: 30px;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea{
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+form input[type="submit"]{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+form input[type="submit"]:hover{
+    background-color: green;
+}
+/*---------------style table-----------------------------*/
+.table{
+    border-collapse: collapse;
+    width: 100%;
+}
+td,th{
+    border: 1px solid darkgrey;
+    padding: 5px;
+    background-color: transparent;
+    text-align: left;
+    color: darkgrey;
+}
+th{
+    font-weight: bold;
+}
+/* style About text */
+About.aboutText{
+    border: 10px solid gray;
+    padding: 20px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
