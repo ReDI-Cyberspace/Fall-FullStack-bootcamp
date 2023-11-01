@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
+ <!--jQuery link-->   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!--Bootstrap links-->   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -17,11 +20,12 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
+  <!--My CSS link--> 
     <link rel="stylesheet" href="styles.css" />
     <title>My Website</title>
   </head>
   <body>
+  <!--Include external Pages with jQuery Function load()--> 
     <script>
       $(function () {
         $("#header").load("header.html");
@@ -30,11 +34,12 @@
         $("#products").load("card/products.html");
       });
     </script>
-    <!--Header.html Integration with jQuery load() function-->
+  <!--Header.html Integration with jQuery load() function-->
     <header class="header">
       <div id="header"></div>
     </header>
     <div class="container1">
+  <!--Photos Carousel with Bootstrap--> 
       <section>
         <div
           id="carouselExampleIndicators"
@@ -106,30 +111,13 @@
           </button>
         </div>
       </section>
+<!--Products List and Products Table from Card Ordner--> 
       <section>
         <div id="products"></div>
       </section>
-      
-      <section>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">Next</a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-      
-      
     </div>
 
-    <!--Footer.html integration with jQuery load() function-->
+<!--Footer.html integration with jQuery load() function-->
     <footer class="footer">
       <div id="footer"></div>
     </footer>

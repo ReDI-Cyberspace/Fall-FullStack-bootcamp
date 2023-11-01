@@ -2,11 +2,13 @@
 <html>
 <head>
     <title>Product List Example</title>
-    <!-- Link Bootstrap CSS (Be sure to include the correct path to your Bootstrap CSS file) -->
+    <!-- Link Bootstrap CSS (Be sure to include the correct path to my Bootstrap CSS file) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--My CSS into Card-->
     <link rel="stylesheet" href="card/style.css" />
 </head>
 <body>
+<!--Products List-->
     <div class="container">
         <h1>Product List</h1>
         
@@ -21,8 +23,9 @@
                         <p class="card-price">$19.99</p>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                     </div>
+                    
                 </div>
-            </div>
+                </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="container">
@@ -42,8 +45,8 @@
                 <div class="card product-card h-100 d-flex">
                     <img src="card/images/pexels-pixabay-71128.jpg" class="card-img-top product-image" alt="Product Image 2">
                     <div class="card-body">
-                        <h5 class="card-title">Product 2</h5>
-                        <p class="card-text">Description of Product 2</p>
+                        <h5 class="card-title">Product 3</h5>
+                        <p class="card-text">Description of Product 3</p>
                         <p class="card-price">$29.99</p>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                     </div>
@@ -55,8 +58,8 @@
                 <div class="card product-card h-100 d-flex">
                     <img src="card/images/pexels-pixabay-60560.jpg" class="card-img-top product-image" alt="Product Image 2">
                     <div class="card-body">
-                        <h5 class="card-title">Product 2</h5>
-                        <p class="card-text">Description of Product 2</p>
+                        <h5 class="card-title">Product 4</h5>
+                        <p class="card-text">Description of Product 4</p>
                         <p class="card-price">$29.99</p>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                     </div>
@@ -64,7 +67,23 @@
                 </div>
             </div>
         </div>
-
+<!--Pagination-->
+        <div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+    <!--Products Table-->
         <h2>Product Table</h2>
         <table class="table table-bordered">
             <thead>
@@ -85,12 +104,22 @@
                     <td>Description of Product 2</td>
                     <td>$29.99</td>
                 </tr>
+                <tr>
+                    <td>Product 3</td>
+                    <td>Description of Product 3</td>
+                    <td>$19.99</td>
+                </tr>
+                <tr>
+                    <td>Product 4</td>
+                    <td>Description of Product 4</td>
+                    <td>$29.99</td>
+                </tr>
                 <!-- Add more product rows as needed -->
             </tbody>
         </table>
     </div>
 
-    <!-- Include Bootstrap JavaScript (optional, if you need JavaScript functionality) -->
+    <!-- Include Bootstrap JavaScript (optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
