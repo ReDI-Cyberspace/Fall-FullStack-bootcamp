@@ -35,9 +35,9 @@ let productsFiltered = (propertyName, propertyValue) => {
 console.log(filterProducts("color", "Olive"));
 
 // Implement your sorting function. Array.toSorted()
-let sortProducts = (propertyName) => {
-    if (propertyName === products.color) {
-        // Use the localeCompare function to sort by color
+
+let productsSorted = (propertyName) => {
+    if (propertyName === "color") {
         return products.toSorted((a, b) => a.color.localeCompare(b.color));
     } else if (propertyName === "size") {
         const sizeOrder = ["S", "M", "L", "XL"];
@@ -51,7 +51,7 @@ let sortProducts = (propertyName) => {
     }
 };
 
-console.log(sortProducts("size"));
+console.log(productsSorted("color"));
 
 // 2. Loop through your array to create the content of your page. For each item in
 // the list:
@@ -60,10 +60,10 @@ console.log(sortProducts("size"));
 // c. Append any child elements you desire (make sure to create them first!)
 // d. Set the text content!
 
-let mapCreateTable = () => {
+let mapCreateTable = (arr) => {
     const table = document.getElementById("product-table-body");
 
-    let rows = products.map(
+    let rows = arr.map(
         (elem) => `
         <tr>
           <td>${product.id}</td>
