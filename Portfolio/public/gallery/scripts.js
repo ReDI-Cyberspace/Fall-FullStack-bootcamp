@@ -27,7 +27,7 @@ function filterProducts(propertyName, propertyValue) {
     return products.filter((item) => item[propertyName] === propertyValue);
 }
 
-// Arrow fn🧮
+// Arrow fn
 let productsFiltered = (propertyName, propertyValue) => {
     products.filter((item) => item[propertyName] === propertyValue);
 };
@@ -35,7 +35,7 @@ let productsFiltered = (propertyName, propertyValue) => {
 console.log(filterProducts("color", "Olive"));
 
 // Implement your sorting function. Array.toSorted()
-function sortProducts(propertyName) {
+let sortProducts = (propertyName) => {
     if (propertyName === products.color) {
         // Use the localeCompare function to sort by color
         return products.toSorted((a, b) => a.color.localeCompare(b.color));
@@ -49,7 +49,37 @@ function sortProducts(propertyName) {
         };
         return products.toSorted(compareBySize);
     }
-}
+};
 
 console.log(sortProducts("size"));
-console.log("products[1].size", products[0].size);
+
+// 2. Loop through your array to create the content of your page. For each item in
+// the list:
+// a. Create an element
+// b. Attach any properties or attributes you wish to it
+// c. Append any child elements you desire (make sure to create them first!)
+// d. Set the text content!
+
+let mapCreateTable = () => {
+    const table = document.getElementById("product-table-body");
+
+    let rows = products.map(
+        (elem) => `
+        <tr>
+          <td>${product.id}</td>
+          <td>${product.size}</td>
+          <td>${product.color}</td>
+          <td>${product.type}</td>
+        </tr>
+      `
+    );
+
+    table.innerHTML = rows.join("");
+};
+
+console.log("Table Map", mapCreateTable());
+
+//  Add some buttons at the top to filter your items, for example, to show only
+// dogs or cats.
+// 4. Add some buttons at the top to sort your items, for example by age, or by name
+// (alphabetically).
