@@ -5,7 +5,7 @@
     font-family: "Audiowide", sans-serif;
   }
   body{
-    height: 220vh;
+    height: 160vh;
   }
   
   .card{
@@ -17,17 +17,31 @@
     /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
   }
- 
+  
+  .nav {
+    height: 14rem;
+  }
+  
+  
   
   @media (max-width: 575px) {
     body {
-        height: 380vh;
+        height: 420vh;
+    }
+  }
+  @media (max-width: 389px) {
+    body {
+        height: 500vh;
     }
   }
 
   @media (min-width: 575px) and (max-width: 768px) {
     body {
-      height: 160vh;
+      height: 200vh;
+    }
+
+    .sideBar{
+      display: block !important;
     }
   }
   

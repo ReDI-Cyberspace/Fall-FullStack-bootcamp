@@ -17,6 +17,9 @@
   width: 4rem;
   border-radius: 1.5rem;
 }
+.nav {
+  height: 14rem;
+}
 
 .nav-item {
   font-size: 1.2rem;
