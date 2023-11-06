@@ -2,20 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Audiowide", sans-serif;
+    /*font-family: "Audiowide", sans-serif;*/
   }
-  body{
-    height: 220vh;
+  body {
+    font-size: 16px;
+    background-color: #ebe5d5;
+    text-align: center;
   }
   
-  .card{
+   .card{
     border: none !important;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
-  .card:hover{
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+   box-shadow:  7px 37px -8px #3AA383;
+  } 
+  img{
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 20px !important; 
+    height: 200px;
     
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+  .card:hover 
+  {
+    box-shadow:9px 8px 21px -8px #3AA383;
+  }
+  
+  .btn:hover{
+    background-color: #3AA383;
   }
  
   
@@ -30,14 +46,116 @@
       height: 160vh;
     }
   }
+/*
+  .card {
+    width: 300px; 
+    border: 1px solid #ccc;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    max-height: 3em; 
+    overflow: hidden;
+}
+
+.read-more-button {
+    display: none;
+}
+
+.card:hover .read-more-button {
+    display: block;
+}
+   */
   
   
   
   
-  
-  
+  /* Stil für den Container der Kräuter *
+.herb {
+  border: 1px solid #c14d4d;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+
+}
+
+/* Stil für die Kräuterbilder *
+.herb img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Stil für den Namen der Kräuter *
+.herb h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Stil für den Preis der Kräuter *
+.herb h4 {
+  font-size: 1rem;
+  color: #007bff;
+}
+
+/* Stil für das Ablaufdatum der Kräuter *
+.herb h4:last-child {
+  color: #555;
+}
  
+ */ 
   
+  .btn{
+    position: relative;
+    background-color:#96772e;
+    border:none;
+  }
+
+h1, h2{
+  color :#875f01;
+  text-align: center;
+  margin: 40px 10px 20px 10px;
+}
+.button-gallery{
+  color: white;
+  background-color: #3AA383;
+  text-align: center;
+  border:none;
+  padding: 10px 20px;
+  margin: 10px 10px 30px 10px;
+  border-radius: 8px;
+  width: 150px;
+}
+
+.page-link{
+  color :#3AA383;
+  border: 1px solid #3AA383;
+}
+.disabled>.page-link{
+  color:white !important;
+  background-color: #3AA383;
+  border: 1px solid#3AA383;
+}
+
+.pagination{
+--bs-pagination-hover-border-color:#3AA383;
+--bs-pagination-focus-color:#96772e;
+--bs-pagination-focus-box-shadow: 0 0 0 0.25rem #3AA383;
+
+}
+.table{
   
-  
-  
+ margin-bottom: 40px;
+}
+th{
+  color:white !important;
+  background-color: #3AA383 !important;
+}
+
+
