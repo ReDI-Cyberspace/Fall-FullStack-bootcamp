@@ -109,7 +109,7 @@ console.log("Table Map", mapTable());
 // (alphabetically).
 
 // SIZE
-let selectSize = document.getElementById("selectSize");
+let selectSize = document.getElementById("size-select");
 
 var sizeOptions = select.getElementsByTagName("option");
 
@@ -118,3 +118,93 @@ for (var i = 0; i < sizeOptions.length; i++) {
         console.log("Selected option value: " + this.value);
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const colorSelect = document.getElementById("color-select");
+    const sizeSelect = document.getElementById("size-select");
+    const typeSelect = document.getElementById("type-select");
+    const sortSelect = document.getElementById("sort-select");
+    const productGallery = document.querySelector(".product-gallery");
+
+    colorSelect.addEventListener("change", filterProducts);
+    sizeSelect.addEventListener("change", filterProducts);
+    typeSelect.addEventListener("change", filterProducts);
+    sortSelect.addEventListener("change", sortProducts);
+
+    function filterProducts() {
+        const colorFilter = colorSelect.value;
+        const sizeFilter = sizeSelect.value;
+        const typeFilter = typeSelect.value;
+
+        const productItems = productGallery.querySelectorAll(".product-item");
+        productItems.forEach(function (item) {
+            const itemColor = item.getAttribute("data-color");
+            const itemSize = item.getAttribute("data-size");
+            const itemType = item.getAttribute("data-type");
+
+            if (
+                (colorFilter === "all" || itemColor === colorFilter) &&
+                (sizeFilter === "all" || itemSize === sizeFilter) &&
+                (typeFilter === "all" || itemType === typeFilter)
+            ) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+
+    function sortProducts() {
+        const sortOption = sortSelect.value;
+        const productItems = Array.from(
+            productGallery.querySelectorAll(".product-item")
+        );
+
+        if (sortOption === "name") {
+            productItems.sort((a, b) => {
+                const nameA = a.querySelector("h3").textContent;
+                const nameB = b.querySelector("h3").textContent;
+                return nameA.localeCompare(nameB);
+            });
+        } else if (sortOption === "price") {
+            productItems.sort((a, b) => {
+                const priceA = parseFloat(a.getAttribute("data-price"));
+                const priceB = parseFloat(b.getAttribute("data-price"));
+                return priceA - priceB;
+            });
+        }
+
+        productItems.forEach((item) => productGallery.appendChild(item));
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const productContainer = document.getElementById("product-container"); // Assuming you have a div with the id "product-container" in your HTML.
+
+    products.forEach(function (product) {
+        // Create a product item div element
+        const productItem = document.createElement("div");
+        productItem.classList.add("product-item"); // You can add CSS classes for styling
+
+        // Create and set the product name (type) as an h3 element
+        const productName = document.createElement("h3");
+        productName.textContent = product.type;
+
+        // Create and set size, color, and id
+        const size = document.createElement("p");
+        size.textContent = "Size: " + product.size;
+        const color = document.createElement("p");
+        color.textContent = "Color: " + product.color;
+        const productId = document.createElement("p");
+        productId.textContent = "ID: " + product.id;
+
+        // Append the child elements to the product item
+        productItem.appendChild(productName);
+        productItem.appendChild(size);
+        productItem.appendChild(color);
+        productItem.appendChild(productId);
+
+        // Append the product item to the product container
+        productContainer.appendChild(productItem);
+    });
+});
