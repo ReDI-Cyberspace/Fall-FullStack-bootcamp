@@ -114,7 +114,7 @@ input::placeholder, textarea::placeholder {
     font-family: 'Arial', sans-serif; /* Set the desired font family */
 }
 
-/* Hover effect for the submit button */
+/* Hover effect for the submit button*/
 input[type="submit"]:hover {
     background-color: #555;
 }
@@ -183,4 +183,3 @@ footer a:hover {
     text-decoration: none;
     color: #ccc; /* Set your desired hover color */
 }
-

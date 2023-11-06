@@ -63,6 +63,27 @@
 
     <!-- Include the Footer -->
     <div id="footer"></div> 
+
+<!--     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to load external content
+            function loadContent(url, targetId) {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        // Set the innerHTML of the target element with the loaded content
+                        document.getElementById(targetId).innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading content:', error));
+            }
+
+            // Load header.html and append it to the body
+            loadContent('header.html', 'header');
+
+            // Load footer.html and append it to the body
+            loadContent('footer.html', 'footer');
+        });
+    </script> -->
     
 </body>
 </html>
