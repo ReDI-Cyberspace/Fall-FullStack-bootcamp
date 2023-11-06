@@ -35,7 +35,7 @@
                     <!--Bootstrap Carousel component-->
                     <div
                         id="carousel-wrapper"
-                        class="w-4/5 absolute overflow-hidden"
+                        class="w-4/5 absolute overflow-hidden none"
                     >
                         <div
                             id="carouselExampleIndicators"
@@ -84,7 +84,8 @@
                                     <img
                                         src="../../resources/img/merch/Tshirt/t-shirt_main.png"
                                         class="d-block border rounded mx-0 p-0"
-                                        alt="carousel-picture"
+                                        id="main"
+                                        alt="main-tshirt"
                                     />
                                 </div>
                                 <div
@@ -94,7 +95,8 @@
                                     <img
                                         src="../../resources/img/merch/Tshirt/t-shirt_black.png"
                                         class="d-block border rounded mx-0 p-0"
-                                        alt="carousel-picture"
+                                        id="black"
+                                        alt="black-tshirt"
                                     />
                                 </div>
                                 <div
@@ -104,7 +106,8 @@
                                     <img
                                         src="../../resources/img/merch/Tshirt/t-shirt_red.png"
                                         class="d-block border rounded mx-0 p-0"
-                                        alt="carousel-picture"
+                                        id="red"
+                                        alt="red-tshirt"
                                     />
                                 </div>
                                 <div
@@ -114,7 +117,8 @@
                                     <img
                                         src="../../resources/img/merch/Tshirt/t-shirt_blue.png"
                                         class="d-block border rounded mx-0 p-0"
-                                        alt="carousel-picture"
+                                        id="blue"
+                                        alt="blue-tshirt"
                                     />
                                 </div>
                                 <div
@@ -124,7 +128,8 @@
                                     <img
                                         src="../../resources/img/merch/Tshirt/t-shirt_olive.png"
                                         class="d-block border rounded mx-0 p-0"
-                                        alt="carousel-picture"
+                                        id="olive"
+                                        alt="olive-tshirt"
                                     />
                                 </div>
                             </div>
@@ -155,63 +160,6 @@
                         </div>
                     </div>
 
-                    <!-- <div class="gallery-container">
-                        <div class="arrow">
-                            <p><<</p>
-                        </div>
-                        <div class="slide">
-                            <img
-                                src="https://fastly.picsum.photos/id/439/600/400.jpg?hmac=ADXTTJQsQxPUCwWNHgVEZPzyXLURYxzFc6QIrixpV8E"
-                                alt="carousel-picture"
-                            />
-                        </div>
-                        <div class="arrow">
-                            <p>>></p>
-                        </div>
-                        <ul>
-                        <li>
-                            <img
-                                src="https://fastly.picsum.photos/id/998/600/400.jpg?hmac=WSpulgHbPkI--NfRvzZ_j14ie9vTF_dKquO5Wn6Fqo4"
-                                alt="carousel-picture"
-                            />
-                        </li>
-                        <li>
-                            <img
-                                src="https://fastly.picsum.photos/id/193/600/400.jpg?hmac=lM_2bb_GrFBPaav-4SCdFBd85WELoeimeW-id0JzEbQ"
-                                alt="carousel-picture"
-                            />
-                        </li>
-                        <li>
-                            <img
-                                src="https://fastly.picsum.photos/id/776/600/400.jpg?hmac=0XG-_4lX7ArCx6MVYltN3Fmwx7OORuNpktDmEPXwUfk"
-                                alt="carousel-picture"
-                            />
-                        </li>
-                        <li>
-                            <img
-                                src="https://fastly.picsum.photos/id/61/600/400.jpg?hmac=XZhafTXVEqP5sXhZWM9lUSyWuRS3J0kri_of6fW2Ffo"
-                                alt="carousel-picture"
-                            />
-                        </li>
-                        <li>
-                            <img
-                                src="https://fastly.picsum.photos/id/830/600/400.jpg?hmac=Uw37yaGTNsni_dncP11I94IUhXBC5Qkvz9hS6r_StgY"
-                                alt="carousel-picture"
-                            />
-                        </li>
-                        <li>
-                            <img
-                                src="https://fastly.picsum.photos/id/487/600/400.jpg?hmac=Rw_4bDRzk0G9ODcHQA46sf9Z42Qkf214SX39H3alFTs"
-                                alt="carousel-picture"
-                            />
-                        </li>
-                        <li>
-                            <img
-                                src="https://fastly.picsum.photos/id/568/600/400.jpg?hmac=AC6_PWP-eHtGmBwHnwlj8RTFzHuCK3EWYYFcVAuSxwk"
-                                alt="carousel-picture"
-                            />
-                        </li>
-                    </ul> -->
                     <div class="product-info-container">
                         <h1>The Product</h1>
                         <span
@@ -232,7 +180,7 @@
                             <tbody>
                                 <tr>
                                     <td class="tg-field">
-                                        <select name="size" id="size">
+                                        <select name="size" id="selectSize">
                                             <option value="small">S</option>
                                             <option value="medium">M</option>
                                             <option value="large">L</option>
@@ -265,6 +213,131 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+
+                <div id="thumbnail-container" class="grid-flow-col">
+                    <div class="filters">
+                        <label for="color-select">Filter by Color:</label>
+                        <select id="color-select">
+                            <option value="all">All</option>
+                            <option value="blue">Blue</option>
+                            <option value="red">Red</option>
+                            <option value="olive">Olive</option>
+                            <option value="black">Black</option>
+                        </select>
+
+                        <label for="size-select">Filter by Size:</label>
+                        <select id="size-select">
+                            <option value="all">All</option>
+                            <option value="small">S</option>
+                            <option value="medium">M</option>
+                            <option value="large">L</option>
+                            <option value="extra-large">XL</option>
+                        </select>
+
+                        <label for="type-select">Filter by Type:</label>
+                        <select id="type-select">
+                            <option value="all">All</option>
+                            <option value="shirt">T-shirt</option>
+                            <option value="hoodie">Hoodie</option>
+                            <option value="cap">Cap</option>
+                        </select>
+
+                        <label for="sort-select">Sort by:</label>
+                        <select id="sort-select">
+                            <option value="type">Type</option>
+                            <option value="color">Color</option>
+                        </select>
+                    </div>
+                    <div id="display-products-thumbnails">
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/Tshirt/t-shirt_black.png"
+                                alt="image description"
+                            />
+                            <p>Size: S</p>
+                        </div>
+
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/Tshirt/t-shirt_olive.png"
+                                alt="image description"
+                            />
+                            <p>Size: S</p>
+                        </div>
+
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/Tshirt/t-shirt_black.png"
+                                alt="image description"
+                            />
+                            <p>Size: S</p>
+                        </div>
+
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/Tshirt/t-shirt_blue.png"
+                                alt="image description"
+                            />
+                            <p>Size: S</p>
+                        </div>
+
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/hoodie/black-hoodie.jpg"
+                                alt="image description"
+                            />
+                            <p>Size: S</p>
+                        </div>
+
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/hoodie/red-hoodie.jpg"
+                                alt="image description"
+                            />
+                            <p>Size: S</p>
+                        </div>
+
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/hoodie/blue-hoodie.jpg"
+                                alt="image description"
+                            />
+                            <p>Size: S</p>
+                        </div>
+
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/hoodie/black-hoodie.jpg"
+                                alt="image description"
+                            />
+                            <p>Size: S</p>
+                        </div>
+
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/cap/black-cap.jpg"
+                                alt="image description"
+                            />
+                            <p>Size: One-Fits-All</p>
+                        </div>
+
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/cap/olive-cap.jpg"
+                                alt="image description"
+                            />
+                            <p>Size: One-Fits-All</p>
+                        </div>
+
+                        <div id="thumbnail">
+                            <img
+                                src="../../resources/img/merch/cap/red-cap.jpg"
+                                alt="image description"
+                            />
+                            <p>Size: One-Fits-All</p>
+                        </div>
                     </div>
                 </div>
             </main>

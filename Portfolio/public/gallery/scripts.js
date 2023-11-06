@@ -15,31 +15,57 @@ const products = [
     { id: 14, size: "M", color: "Olive", type: "T-shirt" },
     { id: 15, size: "L", color: "Olive", type: "T-shirt" },
     { id: 16, size: "XL", color: "Olive", type: "T-shirt" },
+    { id: 17, size: "S", color: "Black", type: "Hoodie" },
+    { id: 18, size: "M", color: "Black", type: "Hoodie" },
+    { id: 19, size: "L", color: "Black", type: "Hoodie" },
+    { id: 20, size: "XL", color: "Black", type: "Hoodie" },
+    { id: 21, size: "S", color: "Blue", type: "Hoodie" },
+    { id: 22, size: "M", color: "Blue", type: "Hoodie" },
+    { id: 23, size: "L", color: "Blue", type: "Hoodie" },
+    { id: 24, size: "XL", color: "Blue", type: "Hoodie" },
+    { id: 25, size: "S", color: "Red", type: "Hoodie" },
+    { id: 26, size: "M", color: "Red", type: "Hoodie" },
+    { id: 27, size: "L", color: "Red", type: "Hoodie" },
+    { id: 28, size: "XL", color: "Red", type: "Hoodie" },
+    { id: 29, size: "S", color: "Olive", type: "Hoodie" },
+    { id: 30, size: "M", color: "Olive", type: "Hoodie" },
+    { id: 31, size: "L", color: "Olive", type: "Hoodie" },
+    { id: 32, size: "XL", color: "Olive", type: "Hoodie" },
+    { id: 36, size: "one-size", color: "Olive", type: "cap" },
+    { id: 37, size: "one-size", color: "Olive", type: "cap" },
+    { id: 38, size: "one-size", color: "Olive", type: "cap" },
+    { id: 39, size: "one-size", color: "Olive", type: "cap" },
+    { id: 40, size: "one-size", color: "Black", type: "cap" },
+    { id: 41, size: "one-size", color: "Black", type: "cap" },
+    { id: 42, size: "one-size", color: "Black", type: "cap" },
+    { id: 43, size: "one-size", color: "Black", type: "cap" },
+    { id: 44, size: "one-size", color: "Red", type: "cap" },
+    { id: 45, size: "one-size", color: "Red", type: "cap" },
+    { id: 46, size: "one-size", color: "Red", type: "cap" },
+    { id: 47, size: "one-size", color: "Red", type: "cap" },
+    { id: 47, size: "one-size", color: "Red", type: "cap" },
 ];
 
-// Implement your filtering function. Your function should take one
-// argument/parameter which tells it what to filter by, so you can re-use the same
-// function for all buttons.
-
-console.log(products.size);
-
-function filterProducts(propertyName, propertyValue) {
-    return products.filter((item) => item[propertyName] === propertyValue);
-}
-
-// Arrow fn
-let productsFiltered = (propertyName, propertyValue) => {
-    products.filter((item) => item[propertyName] === propertyValue);
+// Implement your filtering function:
+let productsFiltered = (value) => {
+    // Check if the value is present in the object
+    if (products.some((item) => Object.values(item).includes(`${value}`))) {
+        return products.filter((item) =>
+            Object.values(item).includes(`${value}`)
+        );
+    } else {
+        console.log(
+            "Property or value does not exist. Product does not exist."
+        );
+        return [];
+    }
 };
 
-console.log(filterProducts("color", "Olive"));
-
-// Implement your sorting function. Array.toSorted()
-
-let productsSorted = (propertyName) => {
-    if (propertyName === "color") {
+// Implement sorting function with Array.toSorted()
+let productsSorted = (property) => {
+    if (property === "color") {
         return products.toSorted((a, b) => a.color.localeCompare(b.color));
-    } else if (propertyName === "size") {
+    } else if (property === "size") {
         const sizeOrder = ["S", "M", "L", "XL"];
         const compareBySize = (a, b) => {
             const sizeA = sizeOrder.indexOf(a.size);
@@ -51,8 +77,6 @@ let productsSorted = (propertyName) => {
     }
 };
 
-console.log(productsSorted("color"));
-
 // 2. Loop through your array to create the content of your page. For each item in
 // the list:
 // a. Create an element
@@ -60,7 +84,7 @@ console.log(productsSorted("color"));
 // c. Append any child elements you desire (make sure to create them first!)
 // d. Set the text content!
 
-let mapCreateTable = (arr) => {
+let mapTable = (arr) => {
     const table = document.getElementById("product-table-body");
 
     let rows = arr.map(
@@ -77,9 +101,20 @@ let mapCreateTable = (arr) => {
     table.innerHTML = rows.join("");
 };
 
-console.log("Table Map", mapCreateTable());
+console.log("Table Map", mapTable());
 
 //  Add some buttons at the top to filter your items, for example, to show only
 // dogs or cats.
 // 4. Add some buttons at the top to sort your items, for example by age, or by name
 // (alphabetically).
+
+// SIZE
+let selectSize = document.getElementById("selectSize");
+
+var sizeOptions = select.getElementsByTagName("option");
+
+for (var i = 0; i < sizeOptions.length; i++) {
+    sizeOptions[i].addEventListener("click", function () {
+        console.log("Selected option value: " + this.value);
+    });
+}
