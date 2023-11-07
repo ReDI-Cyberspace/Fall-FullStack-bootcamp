@@ -239,6 +239,16 @@ const products = [
     },
 ];
 
+let products2 = [
+    {
+        id: 35,
+        size: "one-size",
+        color: "Red",
+        type: "Cap",
+        url: "../../resources/img/merch/cap/red-cap.jpg",
+    },
+];
+
 document.addEventListener("DOMContentLoaded", function () {
     // create the thumbnail gallery from the whole product array of objects
 
@@ -268,6 +278,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     displayThumbnails(products);
+
+    // displayThumbnails(products2);
 
     // define filtering function returning an filtered array of products
 
@@ -308,6 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const colorSelected = e.target.value;
         let filteredByColor = productsFiltered(colorSelected);
         console.log(filteredByColor);
+        displayThumbnails(filteredByColor);
     });
     // Filter by size:
     document.getElementById("size-select").addEventListener("change", (e) => {
@@ -323,6 +336,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let filteredByType = productsFiltered(typeSelected);
         console.log(filteredByType);
         displayThumbnails(filteredByType);
+    });
+
+    // Sort products
+    document.getElementById("sort-select").addEventListener("change", (e) => {
+        const sortValue = e.target.value;
+        let sortedByValue = productsFiltered(sortValue);
+        console.log(sortedByValue);
+        displayThumbnails(sortedByValue);
     });
 });
 
