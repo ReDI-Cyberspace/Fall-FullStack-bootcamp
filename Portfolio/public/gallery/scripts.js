@@ -239,47 +239,29 @@ const products = [
     },
 ];
 
-let products2 = [
-    {
-        id: 35,
-        size: "one-size",
-        color: "Red",
-        type: "Cap",
-        url: "../../resources/img/merch/cap/red-cap.jpg",
-    },
-];
-
 document.addEventListener("DOMContentLoaded", function () {
     // create the thumbnail gallery from the whole product array of objects
 
     let displayThumbnails = (productsArray) => {
-        const thumbnailContainer = document.getElementById(
+        const displayProductsThumbnails = document.getElementById(
             "display-products-thumbnails"
         );
+        displayProductsThumbnails.innerHTML = "";
+
         productsArray.forEach(function (product) {
             const thumbnail = document.createElement("div");
             thumbnail.id = "thumbnail";
 
-            const thumbnailImage = document.createElement("img");
-            thumbnailImage.setAttribute("src", `${product.url}`);
-            thumbnailImage.setAttribute(
-                "alt",
-                `${product.color} ${product.type}`
-            );
+            thumbnail.innerHTML = `
+            <img src="${product.url}" alt="${product.color} ${product.type}"/>
+            <p>size: ${product.size}</p>
+            `;
 
-            const thumbnailText = document.createElement("p");
-            thumbnailText.textContent = `size: ${product.size}`;
-
-            thumbnail.appendChild(thumbnailImage);
-            thumbnail.appendChild(thumbnailText);
-
-            thumbnailContainer.appendChild(thumbnail);
+            displayProductsThumbnails.appendChild(thumbnail);
         });
     };
 
     displayThumbnails(products);
-
-    // displayThumbnails(products2);
 
     // define filtering function returning an filtered array of products
 
@@ -341,10 +323,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Sort products
     document.getElementById("sort-select").addEventListener("change", (e) => {
         const sortValue = e.target.value;
-        let sortedByValue = productsFiltered(sortValue);
-        console.log(sortedByValue);
+        console.log("sort value", typeof sortValue, sortValue);
+        let sortedByValue = productsSorted(e.target.value);
+        console.log("sorted arr", sortedByValue);
         displayThumbnails(sortedByValue);
     });
 });
-
-// do the above with map() and innerHTML
