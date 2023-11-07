@@ -174,3 +174,7 @@ option[value="black"] {
     width: 100%;
     margin: 5px;
 }
+
+#thumbnail p {
+    padding-top: 10px;
+}
