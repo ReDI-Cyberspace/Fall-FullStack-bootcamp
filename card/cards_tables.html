@@ -14,6 +14,7 @@
    
 </head>
 <body>
+  
   <h1>Herbs Gallery</h1>
     <!-- Buttons -->
 
@@ -23,6 +24,8 @@
     <button class = "button-gallery" id="sort-name">Sort by Name</button>
    <!--Sort Array Herbs by Price-->
     <button class = "button-gallery" id="herbals-price">Sort by Price</button>
+     <!--Sort Array Herbs by Best-before-date-->
+     <button class = "button-gallery" id="best-before">Best before 2025</button>
     <!-- Reset All-->
     <button class = "button-gallery" id="reset">Reset</button>
     
@@ -41,12 +44,15 @@
         <li class="page-item"><a class="page-link" href="#">Next</a></li>
       </ul>
 </div>
+
+
 <!--Products Table List-->
 <h2>Products Table</h2>
 
 <div id="products-table"></div>
 
 </div>
+
     <script>
       const herbs = [
   {
@@ -248,6 +254,28 @@ document.getElementById("reset").addEventListener("click", function () {
   resetTable.innerHTML="";
   resetCards.innerHTML="";
 }); 
+
+// EventListener / Product-List and Products-Table rendering with JavaScript
+document.getElementById("best-before").addEventListener("click", function () {
+    let fromDate = "2023-01-01";
+    let toDate = "2025-12-31";
+
+const filteredData = (data, key, startDate, endDate) => {     
+     startDate = new Date(startDate);
+     endDate = new Date(endDate);
+  
+  return data.filter( d => {
+    let time = new Date(d[key]);
+    return ( startDate < time && time < endDate )
+  });
+}
+const sortHerbs = filteredData (herbs,"best_before_date", fromDate, toDate); 
+
+createProductCards(sortHerbs);
+drowTable(sortHerbs);
+  //renderTable(sortHerbs);
+});
+
 
 //Render Products Table with JavaScript 
  /* function renderTable(array){
