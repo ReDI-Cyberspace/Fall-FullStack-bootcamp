@@ -1,0 +1,20 @@
+.activeTab {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.contactForm {
+  border: 1px solid #dac0a3;
+  margin: 6rem;
+  padding: 5rem;
+}
+
+.sendButton {
+  background-color: #0f2c59;
+  border: none;
+}
+
+.sendButton:hover {
+  background-color: #113946;
+  border: none;
+}

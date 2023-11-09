@@ -1,0 +1,59 @@
+body {
+  font-family: "Crimson Pro", serif;
+  background-color: #f8f0e5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home-header {
+  letter-spacing: 0.3rem;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  border: 1px solid #dac0a3;
+  padding-top: 1rem;
+
+  .footer-list {
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.homepageContent {
+  display: flex;
+  justify-content: space-around;
+}
+
+.homepageTitle {
+  text-align: center;
+  margin-top: 1rem;
+  color: #1a1613;
+}
+
+.homepageText {
+  width: 55%;
+  padding: 3rem 5rem;
+  color: #1a1613;
+}
+
+.homepageCaroulse {
+  width: 45%;
+  align-self: center;
+}
+
+.myCarousel {
+  width: 800px;
+}
+
+.homepageTextFooter {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
