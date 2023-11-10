@@ -24,6 +24,10 @@ table.table-bordered > tbody > tr > td {
   color: #1a1613;
 }
 
+.buttons {
+  margin-bottom: 2rem;
+}
+
 .ourPets {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
