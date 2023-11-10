@@ -222,6 +222,17 @@ filterTurtlesButton.addEventListener("click", () => filter("turtle"));
 const filterRabbitsButton = document.getElementById("filter-rabbits");
 filterRabbitsButton.addEventListener("click", () => filter("rabbit"));
 
+let sorted = false;
+const sortByNameButton = document.getElementById("sort-by-name");
+sortByNameButton.addEventListener("click", () => {
+  renderAnimals(
+    sorted
+      ? pets.sort((a, b) => b.name.localeCompare(a.name))
+      : pets.sort((a, b) => a.name.localeCompare(b.name))
+  );
+  sorted = !sorted;
+});
+
 document.getElementById("reset").addEventListener("click", () => {
   renderAnimals(pets);
 });
