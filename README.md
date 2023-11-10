@@ -1,3 +1,4 @@
+
 # Creative Tech Website
 
 Welcome to the Creative Tech website! This repository contains the HTML, CSS and BOOTSTRAP files that make up the website. Each file serves a specific purpose in the website's structure and appearance.
@@ -43,3 +44,4 @@ The CSS style sheet that defines the website's appearance and layout.
 - `style.css` defines the appearance and layout of the website.
 
 Feel free to explore the code and modify it to meet your specific needs. Enjoy using the Creative Tech website!
+
