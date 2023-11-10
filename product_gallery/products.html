@@ -22,6 +22,19 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Audiowide"
     />
+   
+<!-- JavaScript -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+
   </head>
   <body>
     <!-- Navigation Bar - Loaded from "header.html" -->
@@ -30,6 +43,7 @@
       src="../header.html"
       name="nav-iframe"
       width="100%"
+      height="10%"
       frameborder="0"
     ></iframe>
 
@@ -68,7 +82,7 @@
     </div>
     
 
-      <div class="container">
+      <div class="container mb-2">
         <div class="row" id="card-container">
           <!-- This is where the cards will be displayed -->
         </div>
@@ -77,21 +91,11 @@
 
    
 
-    <!-- Pagination -->
-    <div class="pagination_containers d-flex justify-content-center">
-      <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-      </ul>
-    </div>
-    <!-- Pagination -->
+   
 
     <!-- Footer - Loaded from "footer.html" -->
     <iframe
-      class="fixed-bottom"
+      class="fixed-bottom mt-2"
       src="../footer.html"
       width="100%"
       height="5%"
@@ -105,5 +109,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="products.js"></script>
+    <!-- Alertify.js CDN -->
+
+
   </body>
 </html>

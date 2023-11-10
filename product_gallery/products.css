@@ -5,7 +5,7 @@
     font-family: "Audiowide", sans-serif;
   }
   body{
-    height: 160vh;
+    height: 190vh;
   }
   
   .card{
@@ -18,9 +18,7 @@
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
   }
   
-  .nav {
-    height: 14rem;
-  }
+  
   
   
   
@@ -28,23 +26,34 @@
     body {
         height: 420vh;
     }
+    .nav {
+      height: 20rem;
+    }
+    
   }
   @media (max-width: 389px) {
     body {
         height: 500vh;
     }
+    .nav {
+      height: 20rem;
+    }
+    
   }
 
-  @media (min-width: 575px) and (max-width: 768px) {
+  @media (min-width: 576px) and (max-width: 991px) {
     body {
-      height: 200vh;
+      height: 220vh;
+    }
+    .nav {
+      height: 20rem;
     }
 
     .sideBar{
       display: block !important;
     }
   }
-  
+ 
   
   
   
