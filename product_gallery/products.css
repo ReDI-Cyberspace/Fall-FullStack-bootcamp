@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Audiowide", sans-serif;
+  }
+  body{
+    height: 190vh;
+  }
+  
+  .card{
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .card:hover{
+    
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+  
+  
+  
+  
+  
+  @media (max-width: 575px) {
+    body {
+        height: 420vh;
+    }
+    .nav {
+      height: 20rem;
+    }
+    
+  }
+  @media (max-width: 389px) {
+    body {
+        height: 500vh;
+    }
+    .nav {
+      height: 20rem;
+    }
+    
+  }
+
+  @media (min-width: 576px) and (max-width: 991px) {
+    body {
+      height: 220vh;
+    }
+    .nav {
+      height: 20rem;
+    }
+
+    .sideBar{
+      display: block !important;
+    }
+  }
+ 
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
