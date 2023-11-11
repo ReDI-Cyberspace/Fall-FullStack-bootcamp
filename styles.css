@@ -1,59 +1,77 @@
-body {
-  font-family: "Crimson Pro", serif;
-  background-color: #f8f0e5;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-.home-header {
-  letter-spacing: 0.3rem;
-}
-
-.footer {
-  margin-top: auto;
-  display: flex;
-  border: 1px solid #dac0a3;
-  padding-top: 1rem;
-
-  .footer-list {
-    width: 100%;
-    align-items: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     list-style: none;
+}
+
+body{
+    background-color: rgb(124, 207, 200);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+.carousel .carousel-inner {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.btn{
+    display:block;
+   ;
+}
+.button{
+    border-radius: 5px;
+    background-color: rgb(61, 60, 60);
+    color: white;
+    padding: 3px 38px;
+    
+}
+.travel-cards{
+    padding: 20px;
     display: flex;
-    justify-content: space-around;
-  }
+    justify-content: space-evenly;
+    margin-top: 30px;
 }
 
-.homepageContent {
-  display: flex;
-  justify-content: space-around;
+.travel-card{
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 20px 15px;
+    width: 220px;
 }
 
-.homepageTitle {
-  text-align: center;
-  margin-top: 1rem;
-  color: #1a1613;
+
+.content{   
+    background-color: aliceblue;
+    padding: 10px;
+    justify-content: space-between;
+    min-height: 300px;
 }
 
-.homepageText {
-  width: 55%;
-  padding: 3rem 5rem;
-  color: #1a1613;
+.year{
+    font-size: 12px
+}
+.blog-2 .blog-3 .blog-4 .blog-5 .blog-6{
+    margin-top: 20px;
 }
 
-.homepageCaroulse {
-  width: 45%;
-  align-self: center;
+@media (max-width:576px){
+.container img {
+    max-width: 100%;
+    display: none;
+    margin: 0;
+    padding: 0;
+    
 }
-
-.myCarousel {
-  width: 800px;
+.travel-cards{
+display:grid;
 }
-
-.homepageTextFooter {
-  padding-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.travel-card{
+    min-width: 350px;
+}
 }
