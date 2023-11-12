@@ -200,13 +200,6 @@ alertify.success('Product added to cart');
 
     // Save the updated cartItems to localStorage
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-
-   
-    
-  //  // Sayfayı yeniden yükle
-  //  location.reload();
- 
 }
 
 }
@@ -244,10 +237,10 @@ document.getElementById("business").addEventListener("click", function () {
       <div class="d-flex justify-content-end">
         <p class="card-text fs-3 text-danger">${item.price} €</p>
       </div>
-      
-      <div class="cardbtn d-flex justify-content-center">
-        <a href="#" class="btn btn-primary">add cart</a>
-      </div>
+      <form class="d-flex flex-column">
+          <input class="w-25 align-self-center fs-3 text-center" type="number" name="number" min="1" value="1" id="productQuantity-${item.id}">
+          <button type="button" class="btn btn-primary mt-2" onclick="addToCart(${item.id})">Add to Cart</button>
+        </form>
     </div>
   </div>
 `;
@@ -283,10 +276,10 @@ document.getElementById("gaming").addEventListener("click", function () {
       <div class="d-flex justify-content-end">
         <p class="card-text fs-3 text-danger">${item.price} €</p>
       </div>
-      
-      <div class="cardbtn d-flex justify-content-center">
-        <a href="#" class="btn btn-primary">add cart</a>
-      </div>
+      <form class="d-flex flex-column">
+          <input class="w-25 align-self-center fs-3 text-center" type="number" name="number" min="1" value="1" id="productQuantity-${item.id}">
+          <button type="button" class="btn btn-primary mt-2" onclick="addToCart(${item.id})">Add to Cart</button>
+        </form>
     </div>
   </div>
 `;
@@ -326,10 +319,10 @@ document.getElementById("increasePrice").addEventListener("click", function () {
     <div class="d-flex justify-content-end">
       <p class="card-text fs-3 text-danger">${item.price} €</p>
     </div>
-    
-    <div class="cardbtn d-flex justify-content-center">
-      <a href="#" class="btn btn-primary">add cart</a>
-    </div>
+    <form class="d-flex flex-column">
+          <input class="w-25 align-self-center fs-3 text-center" type="number" name="number" min="1" value="1" id="productQuantity-${item.id}">
+          <button type="button" class="btn btn-primary mt-2" onclick="addToCart(${item.id})">Add to Cart</button>
+        </form>
   </div>
 </div>
 `;
@@ -368,10 +361,10 @@ document.getElementById("decreasePrice").addEventListener("click", function () {
     <div class="d-flex justify-content-end">
       <p class="card-text fs-3 text-danger">${item.price} €</p>
     </div>
-    
-    <div class="cardbtn d-flex justify-content-center">
-      <a href="#" class="btn btn-primary">add cart</a>
-    </div>
+    <form class="d-flex flex-column">
+          <input class="w-25 align-self-center fs-3 text-center" type="number" name="number" min="1" value="1" id="productQuantity-${item.id}">
+          <button type="button" class="btn btn-primary mt-2" onclick="addToCart(${item.id})">Add to Cart</button>
+        </form>
   </div>
 </div>
 `;

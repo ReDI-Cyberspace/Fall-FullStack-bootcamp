@@ -12,16 +12,16 @@ function renderItems() {
     var totalPriceDiv = document.getElementById("totalPrice");
     totalPriceDiv.textContent = totalPrice + "€";
   
-    // Eğer cartItems varsa ve içinde ürünler varsa, HTML'e ekle
+    //If you have cartItems and there are products in it, add it to the HTML
     if (cartItems && cartItems.length > 0) {
       var cartItemsContainer = document.getElementById("cartItemsContainer");
   
-      // Temizleme işlemi
+      // Cleaning process
       cartItemsContainer.innerHTML = "";
   
-      // Her ürün için döngü oluştur
+      // Loop for each product
       cartItems.forEach(function (item) {
-        // Yeni bir cart item oluştur
+        // Create a new cart item
         var cartItemDiv = document.createElement("div");
         cartItemDiv.className = "cart-item d-flex justify-content-between";
         cartItemDiv.innerHTML = `
@@ -38,11 +38,11 @@ function renderItems() {
           </form>
         `;
   
-        // Oluşturulan cart item'i container'a ekle
+        // Add the created cart item to the container
         cartItemsContainer.appendChild(cartItemDiv);
       });
     } else {
-      // Eğer cartItems boş ise, sepeti temizle
+      // If cartItems is empty, clear cart
       var cartItemsContainer = document.getElementById("cartItemsContainer");
       cartItemsContainer.innerHTML = "";
     }
@@ -50,7 +50,7 @@ function renderItems() {
   
   
   
-  renderItems(); // İlk başta sayfa yüklenirken sepeti render etmek için
+  renderItems(); // To initially render the cart when the page loads
 
 
 
@@ -61,18 +61,18 @@ function renderItems() {
   // alertify.notify( message, 'error', [wait, callback]);
   alertify.error('Product deleted');
 
-    // localStorage'dan cartItems'ı al
+    // takes cartItems from localStorage
     var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
   
-    // Silinecek ürünün index'ini bul
+    // find the index of deleted ıtem
     var indexToRemove = cartItems.findIndex((item) => item.id === itemId);
   
-    // Eğer index bulundu ise, ürünü cartItems dizisinden ve localStorage'dan kaldır
+    // If index found, remove item from cartItems array and localStorage
     if (indexToRemove !== -1) {
-      cartItems.splice(indexToRemove, 1); // Diziden kaldır
-      localStorage.setItem("cartItems", JSON.stringify(cartItems)); // localStorage güncelle
+      cartItems.splice(indexToRemove, 1);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems)); 
   
-      // Sepeti güncelle
+      // Update cart
       renderItems();
     }
   }
