@@ -1,0 +1,83 @@
+/* sstyle for navigation bar */
+nav {
+  background-color:burlywood;
+  color: white;
+  display:flex ;
+  justify-content: space-between; 
+  padding: 10px 20px;
+}
+/* style for logo */
+.logo img {
+  width: 60px; /* Set the width of the logo */
+  height: auto; /* Maintain the aspect ratio of the logo */
+}
+/* style for the menu items */
+ul {
+  list-style-type: none;
+  display: flex; 
+}
+li {
+  
+  margin-right: 20px; /* Spacing between menu items */
+} 
+a {
+  text-decoration: none; 
+  color: white;
+}
+/* Styles for the footer */
+footer {
+  background-color:sienna;
+  color:#fff; 
+  padding: 20px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h2 {
+  font-size: 1.5rem;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social li {
+  margin: 8px 0;
+}
+
+.social a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+.newsletter button {
+  background-color: burlywood;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Styles for the footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
