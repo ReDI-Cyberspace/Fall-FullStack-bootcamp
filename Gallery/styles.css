@@ -24,6 +24,9 @@
     padding-bottom: 3rem;
   }
 
+  #header {
+    background-color: transparent;
+  }
   #search {
     border: 1px solid blue;
     color: blue;
@@ -64,10 +67,11 @@
     -webkit-transform:scale(1.05);
     transform:scale(1.05);
   }
+
   .carousel {
     margin-bottom: 4rem;
   }
-  /* Since positioning the image, we need to help out the caption */
+
   .carousel-caption {
     bottom: 3rem;
     z-index: 10;
@@ -89,6 +93,15 @@
     object-fit: cover;
   }
 
+  .img-3d {
+    -webkit-transition: -webkit-transform 2s;
+    transition: transform 2s ease-in-out;
+  }
+  .img-3d:hover{
+    -webkit-transform:scale(1.02);
+    transform: scale(1.02);
+  }
+
   .col-lg-4 {
     display: flex;
     flex-direction: column;
@@ -104,23 +117,6 @@
     margin-right: .75rem;
     margin-left: .75rem;
   }
- 
-  /* Featurettes
-  ------------------------- */
-  .col-md-5 img {
-    cursor: pointer;
-  }
-  #featured {
-    margin-top: 1rem;
-  }
-
-  .featurette-divider {
-    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-  }
-
-  .featurette-heading {
-    letter-spacing: -.05rem;
-  }
 
   /* rtl:end:remove */
 .bd-placeholder-img {
@@ -132,6 +128,34 @@
     justify-self: center;
   }
 
+  .btn-gl{
+    display: inline-flex;
+    margin: 0.8rem;
+    position: relative;
+    line-height: 24px;
+  }
+.btn-gl::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  left: 50%;
+  bottom: -3px;
+  transition: 0.3s;
+  }
+.btn-gl:hover::before {
+  background-color:  black;
+  width: 100%;
+  left: 0;
+}
+.btn.gl.focus {
+  color: black;
+}
+.btn-gl:focus::before {
+  background-color:  black;
+  width: 100%;
+  left: 0;
+}
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
@@ -144,15 +168,5 @@
       margin-bottom: 1.25rem;
       font-size: 1.25rem;
       line-height: 1.4;
-    }
-
-    .featurette-heading {
-      font-size: 50px;
-    }
-  }
-
-  @media (min-width: 62em) {
-    .featurette-heading {
-      margin-top: 7rem;
     }
   }

@@ -1,7 +1,7 @@
 let footer = `
     <footer class="footer d-flex flex-row flex-wrap justify-content-between align-items-center py-4 px-3 my-4 border-top"
     <div>
-    <div class="col-md-2 d-flex space-x-6">
+    <div class="col-md-2 d-flex space-x-4">
         <a href="/Homepage/index.html" id='cont' class="text-body-secondary text-decoration-none lh-1 rounded-circle">
           <img id="logo" class="h-8 w-auto" src="/Assets/bynd.png" alt="Logo">
         </a>
