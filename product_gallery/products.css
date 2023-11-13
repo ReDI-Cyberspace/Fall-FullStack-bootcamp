@@ -5,7 +5,18 @@
     font-family: "Audiowide", sans-serif;
   }
   body{
-    height: 190vh;
+   
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+  
+  }
+
+  .footer-iframe {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    border: none;
   }
   
   .card{
@@ -23,18 +34,14 @@
   
   
   @media (max-width: 575px) {
-    body {
-        height: 420vh;
-    }
+    
     .nav {
       height: 20rem;
     }
     
   }
   @media (max-width: 389px) {
-    body {
-        height: 500vh;
-    }
+    
     .nav {
       height: 20rem;
     }
@@ -42,9 +49,7 @@
   }
 
   @media (min-width: 576px) and (max-width: 991px) {
-    body {
-      height: 220vh;
-    }
+   
     .nav {
       height: 20rem;
     }
