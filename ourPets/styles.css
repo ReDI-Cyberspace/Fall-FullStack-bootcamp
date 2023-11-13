@@ -24,11 +24,14 @@ table.table-bordered > tbody > tr > td {
   color: #1a1613;
 }
 
+.buttons {
+  margin-bottom: 2rem;
+}
+
 .ourPets {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 
 .ourPetsCards {
