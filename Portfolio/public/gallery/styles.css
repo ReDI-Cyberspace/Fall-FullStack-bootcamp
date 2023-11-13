@@ -73,6 +73,26 @@ img {
     color: gray;
 }
 
+#table-container {
+    display: grid;
+}
+
+.product-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+#table-container button {
+    border: 1 black solid;
+    border-radius: 3px;
+    width: 100px;
+    height: 60px;
+}
+
 th {
     background-color: rgb(240, 240, 240);
     color: gray;

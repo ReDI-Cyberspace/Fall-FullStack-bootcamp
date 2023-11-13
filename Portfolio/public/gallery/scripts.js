@@ -285,7 +285,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const compareBySize = (a, b) => {
                 const sizeA = sizeOrder.indexOf(a.size);
                 const sizeB = sizeOrder.indexOf(b.size);
-
                 return sizeA - sizeB;
             };
             return products.toSorted(compareBySize);
@@ -320,9 +319,62 @@ document.addEventListener("DOMContentLoaded", function () {
     // Sort products
     document.getElementById("sort-select").addEventListener("change", (e) => {
         const sortValue = e.target.value;
-        console.log("sort value", typeof sortValue, sortValue);
-        let sortedByValue = productsSorted(e.target.value);
-        console.log("sorted arr", sortedByValue);
+        let sortedByValue = productsSorted(sortValue);
         displayThumbnails(sortedByValue);
+    });
+
+    // Add items to basket
+    const addButton = document.getElementById("add-item");
+
+    addButton.addEventListener("click", () => {
+        let productBasket;
+        if (!localStorage.productBasket) {
+            savedProduct = {};
+        }
+
+        let productType = "The Product";
+
+        let size = "small";
+        document
+            .getElementById("product-size")
+            .addEventListener("change", (e) => {
+                console.log(e.target.value);
+                return (size = e.target.value);
+            });
+
+        let color = "blue";
+        document
+            .getElementById("product-color")
+            .addEventListener("change", (e) => {
+                console.log(e.target.value);
+                return (color = e.target.value);
+            });
+
+        let quantity = 1;
+        document
+            .getElementById("product-quantity")
+            .addEventListener("change", (e) => {
+                console.log(e.target.value);
+                return (quantity = e.target.value);
+            });
+
+        productBasket = {
+            product: `${productType}`,
+            size: `${size}`,
+            color: `${color}`,
+            quantity: `${quantity}`,
+        };
+
+        let productStringified = JSON.stringify(productBasket);
+        localStorage.setItem("productBasket", productStringified);
+        console.log(localStorage.productBasket);
+    });
+
+    // Remove Items from basket
+    const removeButton = document.getElementById("remove-item");
+    removeButton.addEventListener("click", () => {
+        if (localStorage.productBasket) {
+            localStorage.removeItem("productBasket");
+        }
     });
 });
