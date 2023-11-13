@@ -12,9 +12,10 @@
     </head>
     <body>
         <header
-            class="flex flex-row items-center justify-center bg-black min-h-max absolute z-10"
+            class="flex flex-row items-center justify-center bg-black min-h-max absolute"
         >
-            <div id="header-logo" class="relative mx-auto bg-black basis-1/2">
+            <!-- Logo Left -->
+            <div id="header-logo" class="relative mx-auto bg-black basis-1/4">
                 <img
                     src="../../resources/img/jr_dev.png"
                     alt="site-logo"
@@ -22,58 +23,46 @@
                     class="relative mx-auto rounded-md bg-black"
                 />
             </div>
-
-            <div id="header-middle" class="basis-1/2"></div>
-
-            <div
-                id="hamburger-menu"
-                class="flex flex-row items-center border-2 border-red bg-black basis-1/4"
-            >
-                <nav class="group h-fit my-16">
-                    <div>
+            <!-- Right The Menu -->
+            <div id="wrapper-menu" class="basis-1/2 relative">
+                <nav class="group h-fit my-16 flex items-center relative">
+                    <!-- Hamburger Icon -->
+                    <!-- <div class="visible group-hover:invisible">
                         <img
                             src="../../resources/img/hamburger menu.png"
                             alt="hamburger-menu"
                             width="80"
                             height="100"
                         />
-                    </div>
+                    </div> -->
+                    <!-- Nav Links -->
+
                     <div
-                        id="drop-down-menu"
-                        class="hidden group-hover:absolute group-hover:block bg-black w-full h-52 min-h-max ease-in duration-300 p-5 z-10 overflow-visible"
+                        class="flex items-center absolute overflow-visible gap-5"
                     >
-                        <h1 class="font-bold uppercase text-gray-500">
-                            Page contents:
-                        </h1>
-                        <ul class="text-red-400">
-                            <li class="p-3 hover:bg-gray-200">
-                                <a href="../index.html" target="_parent"
-                                    >Home</a
-                                >
-                            </li>
-                            <li class="p-3 hover:bg-gray-200">
-                                <a href="about.html" target="_parent"
-                                    >About me</a
-                                >
-                            </li>
+                        <div class="p-3 bg-black hover:bg-gray-200 w-32 h-10">
+                            <a href="../index.html" target="_parent">Home</a>
+                        </div>
+                        <div class="p-3 bg-black hover:bg-gray-200 w-32 h-10">
+                            <a href="about.html" target="_parent">About me</a>
+                        </div>
 
-                            <li class="p-3 hover:bg-gray-200">
-                                <a href="projects.html" target="_parent"
-                                    >Projects</a
-                                >
-                            </li>
+                        <div class="p-3 bg-black hover:bg-gray-200 w-32 h-10">
+                            <a href="projects.html" target="_parent"
+                                >Projects</a
+                            >
+                        </div>
 
-                            <li class="p-3 hover:bg-gray-200">
-                                <a href="../gallery/index.html" target="_parent"
-                                    >Gallery</a
-                                >
-                            </li>
-                            <li class="p-3 hover:bg-gray-200">
-                                <a href="contact.html" target="_parent"
-                                    >Contact me</a
-                                >
-                            </li>
-                        </ul>
+                        <div class="p-3 bg-black hover:bg-gray-200 w-32 h-10">
+                            <a href="../gallery/index.html" target="_parent"
+                                >Gallery</a
+                            >
+                        </div>
+                        <div class="p-3 bg-black hover:bg-gray-200 w-32 h-10">
+                            <a href="contact.html" target="_parent"
+                                >Contact me</a
+                            >
+                        </div>
                     </div>
                 </nav>
             </div>

@@ -247,7 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
             "display-products-thumbnails"
         );
         displayProductsThumbnails.innerHTML = "";
-
         productsArray.forEach(function (product) {
             const thumbnail = document.createElement("div");
             thumbnail.id = "thumbnail";
@@ -256,7 +255,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="${product.url}" alt="${product.color} ${product.type}"/>
             <p>size: ${product.size}</p>
             `;
-
             displayProductsThumbnails.appendChild(thumbnail);
         });
     };
@@ -264,7 +262,6 @@ document.addEventListener("DOMContentLoaded", function () {
     displayThumbnails(products);
 
     // define filtering function returning an filtered array of products
-
     let productsFiltered = (value) => {
         // Check if the value is present in the object
         if (products.some((item) => Object.values(item).includes(`${value}`))) {
@@ -296,7 +293,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Add event handlers to dropdown menu options to apply filtering and sorting:
-
     // Filter by color:
     document.getElementById("color-select").addEventListener("change", (e) => {
         const colorSelected = e.target.value;
@@ -304,6 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(filteredByColor);
         displayThumbnails(filteredByColor);
     });
+
     // Filter by size:
     document.getElementById("size-select").addEventListener("change", (e) => {
         const sizeSelected = e.target.value;
