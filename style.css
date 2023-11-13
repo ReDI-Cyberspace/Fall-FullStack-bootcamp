@@ -6,18 +6,20 @@
   
 }
 
-body{
+.body{
    
   margin-bottom: 5%;
   padding-bottom: 5%;
 
 }
+
 .footer-iframe {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 5%;
   border: none;
+  overflow: hidden;
 }
 
 #navbarSupportedContent {

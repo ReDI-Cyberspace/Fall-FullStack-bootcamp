@@ -1,24 +1,46 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Audiowide", sans-serif;
-  }
-  body{
-   
-    margin-bottom: 5%;
-    padding-bottom: 5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Audiowide", sans-serif;
   
-  }
+}
 
-  .footer-iframe {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 5%;
-    border: none;
-  }
+.body{
+   
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+
+}
+.footer-iframe {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  border: none;
+}
+
+#navbarSupportedContent {
+  flex-grow: unset;
+}
+
+#logo {
+  width: 4rem;
+  border-radius: 1.5rem;
+}
+.nav {
+  height: 14rem;
+}
+
+.nav-item {
+  font-size: 1.2rem;
   
+}
+
+.nav-item:hover .nav-link {
+  color: aqua !important;
+}
+
   .card{
     border: none !important;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -33,31 +55,8 @@
   
   
   
-  @media (max-width: 575px) {
-    
-    .nav {
-      height: 20rem;
-    }
-    
-  }
-  @media (max-width: 389px) {
-    
-    .nav {
-      height: 20rem;
-    }
-    
-  }
 
-  @media (min-width: 576px) and (max-width: 991px) {
-   
-    .nav {
-      height: 20rem;
-    }
 
-    .sideBar{
-      display: block !important;
-    }
-  }
  
   
   
