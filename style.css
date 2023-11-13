@@ -20,6 +20,8 @@
   height: 5%;
   border: none;
   overflow: hidden;
+  
+  padding-top: 1rem;
 }
 
 #navbarSupportedContent {
