@@ -19,6 +19,38 @@ main {
     align-items: center;
 }
 
+#shopping-cart {
+    display: flex;
+    justify-content: center;
+    width: 75px;
+    height: 90px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+#shopping-cart img {
+    object-fit: scale-down;
+    position: absolute;
+    z-index: 2;
+}
+
+#cart-quantity {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    color: goldenrod;
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: 30%;
+    left: 40%;
+    z-index: 10;
+}
+
 .product-card-container {
     border: 1px solid gray;
     border-radius: 4px;

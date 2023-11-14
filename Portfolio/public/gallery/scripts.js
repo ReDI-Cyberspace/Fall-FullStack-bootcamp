@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addButton.addEventListener("click", () => {
         let productBasket;
         if (!localStorage.productBasket) {
-            savedProduct = {};
+            productBasket = {};
         }
 
         let productType = "The Product";
@@ -367,8 +367,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let productStringified = JSON.stringify(productBasket);
         localStorage.setItem("productBasket", productStringified);
-        console.log(localStorage.productBasket);
     });
+
+    // if localStorage.productBasket in not Empty render the basket icon with number of products
+    TODO: if (Object.keys(localStorage.productBasket).length !== 0) {
+        // render the basket icon
+        document.getElementById("shopping-cart").style.visibility = "visible";
+        let cartQuantity = document.getElementById("cart-quantity");
+        cartQuantity.innerHTML = `${quantity}`;
+        console.log("storage is not empty");
+    } else console.log("storage is empty");
 
     // Remove Items from basket
     const removeButton = document.getElementById("remove-item");
