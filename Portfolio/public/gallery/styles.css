@@ -19,7 +19,15 @@ main {
     align-items: center;
 }
 
+.cart {
+    display: inline;
+}
+.hidden {
+    display: none;
+}
+
 #shopping-cart {
+    right: -30%;
     display: flex;
     justify-content: center;
     width: 75px;

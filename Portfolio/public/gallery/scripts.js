@@ -323,66 +323,74 @@ document.addEventListener("DOMContentLoaded", function () {
         displayThumbnails(sortedByValue);
     });
 
-    // Add items to basket
+    // Add product properties to productCart object
+    let productCart = {};
+
+    console.log("Product cart object on page load", productCart);
+    let productType = "The Product";
+
+    let size = "small";
+    document.getElementById("product-size").addEventListener("change", (e) => {
+        size = e.target.value;
+        productCart.size = size;
+        return size;
+    });
+
+    let color = "blue";
+    document.getElementById("product-color").addEventListener("change", (e) => {
+        color = e.target.value;
+        productCart.color = color;
+        return color;
+    });
+
+    let quantity = 1;
+    document
+        .getElementById("product-quantity")
+        .addEventListener("change", (e) => {
+            quantity = e.target.value;
+            productCart.quantity = quantity;
+            return quantity;
+        });
+
+    productCart = {
+        size: `${size}`,
+        color: `${color}`,
+        quantity: `${quantity}`,
+    };
+
+    // Add items to cart
     const addButton = document.getElementById("add-item");
-
     addButton.addEventListener("click", () => {
-        let productBasket;
-        if (!localStorage.productBasket) {
-            productBasket = {};
-        }
-
-        let productType = "The Product";
-
-        let size = "small";
-        document
-            .getElementById("product-size")
-            .addEventListener("change", (e) => {
-                console.log(e.target.value);
-                return (size = e.target.value);
-            });
-
-        let color = "blue";
-        document
-            .getElementById("product-color")
-            .addEventListener("change", (e) => {
-                console.log(e.target.value);
-                return (color = e.target.value);
-            });
-
-        let quantity = 1;
-        document
-            .getElementById("product-quantity")
-            .addEventListener("change", (e) => {
-                console.log(e.target.value);
-                return (quantity = e.target.value);
-            });
-
-        productBasket = {
-            product: `${productType}`,
-            size: `${size}`,
-            color: `${color}`,
-            quantity: `${quantity}`,
-        };
-
-        let productStringified = JSON.stringify(productBasket);
-        localStorage.setItem("productBasket", productStringified);
+        let productStringified = JSON.stringify(productCart);
+        localStorage.setItem("productCartSaved", productStringified);
     });
 
     // if localStorage.productBasket in not Empty render the basket icon with number of products
-    TODO: if (Object.keys(localStorage.productBasket).length !== 0) {
+    let cartNumber = () => {
+        if (document.getElementById("shopping-cart").classList === "hidden") {
+            document.getElementById("shopping-cart").classList.remove("hidden");
+        } else {
+            document.getElementById("shopping-cart").classList.add("hidden");
+        }
+    };
+
+    if (localStorage.productCartSaved) {
         // render the basket icon
-        document.getElementById("shopping-cart").style.visibility = "visible";
+        // document.getElementById("shopping-cart").classList.remove("hidden");
+        cartNumber();
         let cartQuantity = document.getElementById("cart-quantity");
-        cartQuantity.innerHTML = `${quantity}`;
+        let parsedStoreData = JSON.parse(localStorage.productCartSaved);
+        cartQuantity.innerHTML = `${parsedStoreData.quantity}`;
         console.log("storage is not empty");
     } else console.log("storage is empty");
 
     // Remove Items from basket
     const removeButton = document.getElementById("remove-item");
     removeButton.addEventListener("click", () => {
-        if (localStorage.productBasket) {
-            localStorage.removeItem("productBasket");
+        if (localStorage.productCartSaved) {
+            localStorage.removeItem("productCartSaved");
+            // document.getElementById("shopping-cart").classList.add("hidden");
+            cartNumber();
         }
     });
 });
