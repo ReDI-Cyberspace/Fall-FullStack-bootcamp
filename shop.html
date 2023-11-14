@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+    <link href="shop.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/24e3e64df5.js" crossorigin="anonymous"></script>
-    <title>Ceylon Ayurveda Therapy and Store</title>
+
+    <title>Shop</title>
 </head>
 
 <body class="vh-100 overflow-hidden">
     <!--NAVBAR-->
 
-    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg bg-light ">
         <div class="container">
             <!--LOGO-->
 
@@ -40,11 +41,11 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="shop.html">Shop</a>
+                            <a class="nav-link active" aria-current="page" href="#">Shop</a>
                         </li>
 
                         <li class="nav-item">
@@ -72,40 +73,30 @@
         </div>
     </nav>
 
-    <!--Carousel-->
-
-
-
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active c-item">
-                <img src="https://images.unsplash.com/photo-1451443700141-5ddb6d85a8fc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fHNwYXxlbnwwfHwwfHx8MA%3D%3D"
-                    class="d-block w-100 c-img" alt="...">
-            </div>
-            <div class="carousel-item c-item">
-                <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    class="d-block w-100 c-img" alt="...">
-            </div>
-            <div class="carousel-item c-item">
-                <img src="https://images.unsplash.com/photo-1489659639091-8b687bc4386e?q=80&w=2946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    class="d-block w-100 c-img" alt="...">
-            </div>
+    <!--Shopping list and cart-->
+    <div class="container">
+        <div class="container" id="listContainer">
+            <h1>Shopping list</h1>
+            <ul id="shoppingList">
+                <!--Shopping List items-->
+            </ul>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        <div class="container" id="cartContainer">
+            <h1>Shopping Cart</h1>
+            <ul id="shoppingCart">
+                <!--Shopping Cart items-->
+            </ul>
+        </div>
     </div>
+
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+    <script src="shop.js"></script>
 </body>
 
 </html>

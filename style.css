@@ -1,0 +1,13 @@
+body{
+    background-color:black;
+}
+
+.c-item{
+height: 750px;
+}
+
+.c-img{
+height: 100%;
+object-fit: cover;
+filter: brightness(0.6);
+}
