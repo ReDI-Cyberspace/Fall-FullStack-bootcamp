@@ -7,7 +7,7 @@ import {
 
 
 import Home from "./pages/Home";
-import Form from "./pages/Subscription";
+import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
@@ -22,7 +22,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        <Route path="form" element={<Form/>}/>
+        <Route path="contact" element={<Contact/>}/>
         <Route path="products" element={<Products/>}/>
         <Route path="cart" element={<Cart/>}/>
         <Route path="*" element={<NotFound />} />

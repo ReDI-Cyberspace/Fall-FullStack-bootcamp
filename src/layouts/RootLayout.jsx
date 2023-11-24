@@ -36,7 +36,7 @@ export default function RootLayout() {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="form">
+                  <NavLink className="nav-link" to="contact">
                     <FontAwesomeIcon icon={faEnvelope} size="lg" />
                   </NavLink>
                 </li>

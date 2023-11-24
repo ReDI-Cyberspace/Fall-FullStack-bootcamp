@@ -15,7 +15,7 @@ function Footer() {
     <footer className="footer mt-auto bg-light">
       <Container>
         <h5 className="text-center">
-          © {date} Copyright created by Onur TÜfekci
+          © {date} Copyright created by Onur Tüfekci
           <a href="https://github.com/onurtufekci34">
             {" "}
             <FontAwesomeIcon icon={faGithub} size="2xl" />
