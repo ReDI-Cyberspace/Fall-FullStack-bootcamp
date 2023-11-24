@@ -1,6 +1,6 @@
-# Project Title
+# Creative Tech Shop
 
-This project is a web application built using React. [Project Description...]
+This project is a web application built using React. 
 
 ## Installation
 
@@ -33,7 +33,8 @@ public/: Public files (favicon, index.html)
 -React
 -React Router
 -Bootstrap
--React Bootstrap 
+-React Bootstrap
+-Vite 
 ```
 ## Additional Information
 
