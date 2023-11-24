@@ -9,10 +9,10 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 function Footer() {
   const date = new Date().getFullYear();
 
-  console.log(date);
+  // console.log(date);
 
   return (
-    <footer className="footer mt-auto bg-light">
+    <footer className="footer mt-auto bg-light mt-5">
       <Container>
         <h5 className="text-center">
           © {date} Copyright created by Onur Tüfekci

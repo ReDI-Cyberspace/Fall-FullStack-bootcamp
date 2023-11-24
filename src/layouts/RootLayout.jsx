@@ -5,7 +5,11 @@ import { faShop, faHouse, faEnvelope, faCartShopping } from '@fortawesome/free-s
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Footer from "../components/Footer";
 
-export default function RootLayout() {
+export default function RootLayout(props) {
+
+  //console.log("root quantity",props.totalQuantity)
+ 
+
   return (
     <div className="root-layout">
       <header>
@@ -47,7 +51,7 @@ export default function RootLayout() {
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="cart">
-                    <FontAwesomeIcon icon={faCartShopping} size="lg" />
+                    <FontAwesomeIcon icon={faCartShopping} size="lg" />{props.totalQuantity >0 && <span className="ms-2 text-success">{props.totalQuantity}</span>}
                   </NavLink>
                 </li>
               </ul>
@@ -55,7 +59,7 @@ export default function RootLayout() {
           </div>
         </nav>
       </header>
-      <main>
+      <main className="mb-5">
         <Outlet />
       </main>
       <Footer/>
