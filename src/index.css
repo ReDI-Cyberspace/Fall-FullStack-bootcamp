@@ -11,7 +11,7 @@
   border-radius: 1rem;
 }
 
-.navbarContainer,.footeContainer{
+.header,.footer{
   background-color: rgb(204, 199, 199);
 }
 
