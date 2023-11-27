@@ -1,0 +1,154 @@
+
+/* Custom CSS for changing the font size of headings */
+h2 {
+  font-size: 28px;
+}
+
+/* sstyle for navigation bar */
+nav {
+  background-color:burlywood;
+  color:#007bff;
+  display:flex ;
+  justify-content: space-between; 
+  padding: 20px 20px;
+}
+/* style for logo */
+.logo img {
+  width: 60px; /* Set the width of the logo */
+  height: auto; /* Maintain the aspect ratio of the logo */
+}
+/* style for the menu items */
+ul {
+  list-style-type: none;
+  display: flex; 
+}
+li {
+  
+  margin-right: 20px; /* Spacing between menu items */
+} 
+a {
+  text-decoration: none; 
+  color: white;
+}
+
+
+.small-text {
+  font-size: 14px;
+  text-align: center
+}
+
+/* Custom CSS for changing the font size of headings */
+h2 {
+  font-size: 28px;
+  
+}
+.text{
+  font-family: arial;
+  font-size: 50px;
+  color: red;
+}
+
+.click {
+background-color: blue;
+color: white;
+}
+
+/* Gallery page style */
+.container  {
+  text-align: center;
+    padding: 20px;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  
+}
+/* Buttons and reset button styles */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add more styles as needed */
+
+/* Styles for the footer */
+footer {
+  background-color:sienna;
+  color:#fff; 
+  padding: 20px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h2 {
+  font-size: 1.5rem;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social li {
+  margin: 8px 0;
+}
+
+.social a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+.newsletter button {
+  background-color: burlywood;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Styles for the footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
