@@ -1,4 +1,7 @@
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
+import alertify from 'alertifyjs';
+import 'alertifyjs/build/css/alertify.css';
+
 
 import {
   Route,
@@ -152,11 +155,10 @@ const initialProducts = [
 function App() {
 
   const [cart, setCart] = useState([]);
-
+ 
 
  
-  const addToCart = (productId, quantity) => {
-    // Sepete ürün ekleme işlemi
+  const addToCart = (productId, quantity) => {   
     const productToAdd = initialProducts.find((product) => product.id === productId);
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
@@ -166,6 +168,8 @@ function App() {
       } else {
         updatedCart.push({ id: productId, quantity: quantity, product: productToAdd });
       }
+
+      alertify.success(productToAdd.title + " added to cart")
       return updatedCart;
     });
   };
@@ -174,12 +178,9 @@ function App() {
     return total + item.quantity;
   }, 0);
 
-  console.log("Total Quantity:", totalQuantity);
+  
 
-  useEffect(() => {
-    console.log("Cart Content:", cart);
-    
-  }, [cart]);
+
   
  
   
@@ -195,7 +196,11 @@ function App() {
     )
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    
+      <RouterProvider router={router} />
+    
+  );
 }
 
 export default App

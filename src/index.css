@@ -6,11 +6,14 @@
 }
 
 
-.root-layout img {
+#logo {
   width: 5rem;
   border-radius: 1rem;
 }
 
+.navbarContainer,.footeContainer{
+  background-color: rgb(204, 199, 199);
+}
 
 @media (max-width: 459px) {
   .container {
@@ -20,9 +23,9 @@
 }
 
 
-/* Form.css */
+/* formSubscription.css */
 
-.formContainer {
+.formSubscription {
   max-width: 25rem;
   margin: 1rem auto;
   padding: 1rem;
@@ -31,23 +34,23 @@
   background-color: #f9f9f9;
 }
 
-.formContainer form {
+.formSubscription form {
   display: flex;
   flex-direction: column;
 }
 
-.formContainer label {
+.formSubscription label {
   margin-bottom: 1rem;
 }
 
-.formContainer input[type="email"] {
+.formSubscription input[type="email"] {
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 0.5rem;
   border: 1px solid #ccc;
 }
 
-.formContainer button {
+.formSubscription button {
   padding: 0.7rem;
   background-color: #333;
   color: #fff;
@@ -56,18 +59,18 @@
   cursor: pointer;
 }
 
-.formContainer button:hover {
+.formSubscription button:hover {
   background-color: #555;
 }
 
-.formContainer div {
+.formSubscription div {
   text-align: center;
   
 }
 
 
 
-.formContainer p {
+.formSubscription p {
   font-size: 1rem;
   color:tomato
 }
@@ -93,4 +96,10 @@
   
   /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+
+.carouselContainer{
+  display: grid;
+  place-items: center;
 }

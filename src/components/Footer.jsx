@@ -12,8 +12,8 @@ function Footer() {
   // console.log(date);
 
   return (
-    <footer className="footer mt-auto bg-light mt-5">
-      <Container>
+    <footer className="footer mt-auto mt-5">
+      <Container className="footeContainer">
         <h5 className="text-center">
           © {date} Copyright created by Onur Tüfekci
           <a href="https://github.com/onurtufekci34">

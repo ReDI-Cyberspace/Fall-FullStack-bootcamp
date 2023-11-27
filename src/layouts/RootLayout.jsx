@@ -2,7 +2,6 @@ import { NavLink, Outlet } from "react-router-dom";
 import Logo from "../images/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShop, faHouse, faEnvelope, faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Footer from "../components/Footer";
 
 export default function RootLayout(props) {
@@ -12,11 +11,11 @@ export default function RootLayout(props) {
 
   return (
     <div className="root-layout">
-      <header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="container">
+      <header className="header">
+        <nav className="navbar navbar-expand-lg navbar-light">
+          <div className="container navbarContainer">
             <NavLink className="navbar-brand p-0" to="/">
-              <img src={Logo} alt="firma logo" />
+              <img id="logo" src={Logo} alt="firma logo" />
               
             </NavLink>
             <h1>Creative Tech</h1>
