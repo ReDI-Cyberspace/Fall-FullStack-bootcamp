@@ -8,7 +8,7 @@ export default function NotFound() {
         <h1 className="display-4">404</h1>
         <p className="lead">Oops! Page not found.</p>
         <p>Sorry, the page you are looking for might have been removed or doesn't exist.</p>
-        <img src={Notfoundgif} alt="not found gif" />
+        <img className='w-25' src={Notfoundgif} alt="not found gif" />
       </div>
     </div>
   </div>
