@@ -7,18 +7,22 @@ This project is a web application built using React.
 1. Clone the repository: `git clone https://github.com/ReDI-Cyberspace/Fall-FullStack-bootcamp.git`
 2. Navigate to the project directory: `cd project`
 3. Install dependencies: `npm install`
+4. Install json-server `npm install -g json-server`
 
 ## How to Run
 
 After installing project dependencies, start the project using the following command:
 
 ```bash
+json-server --watch ./data/db.json --port 3000
+
 npm run dev
 
 ```
 
 ## Project Structure
 ```   
+data/: db.json 
 src/: Source code of the project
 pages/: Page components
 layouts/: Page layouts
