@@ -1,7 +1,6 @@
-import {useState} from 'react'
-import alertify from 'alertifyjs';
-import 'alertifyjs/build/css/alertify.css';
-
+import { useState } from "react";
+import alertify from "alertifyjs";
+import "alertifyjs/build/css/alertify.css";
 
 import {
   Route,
@@ -10,18 +9,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 
-import RootLayout from "./layouts/RootLayout"
-
-
-
-
+import RootLayout from "./layouts/RootLayout";
 
 const initialProducts = [
   {
@@ -153,54 +147,101 @@ const initialProducts = [
 ];
 
 function App() {
-
   const [cart, setCart] = useState([]);
- 
 
- 
-  const addToCart = (productId, quantity) => {   
-    const productToAdd = initialProducts.find((product) => product.id === productId);
+  const addToCart = (productId, quantity) => {
+    const productToAdd = initialProducts.find(
+      (product) => product.id === productId
+    );
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
       const existingProduct = updatedCart.find((item) => item.id === productId);
       if (existingProduct) {
         existingProduct.quantity += quantity;
       } else {
-        updatedCart.push({ id: productId, quantity: quantity, product: productToAdd });
+        updatedCart.push({
+          id: productId,
+          quantity: quantity,
+          product: productToAdd,
+        });
       }
 
-      alertify.success(productToAdd.title + " added to cart")
+      alertify.success(productToAdd.title + " added to cart");
       return updatedCart;
     });
   };
+
+  const decreaseQuantity = (productId) => {
+    setCart((prevCart) => {
+      const updatedCart = prevCart
+        .map((item) => {
+          if (item.id === productId) {
+            return { ...item, quantity: item.quantity - 1 };
+          }
+          return item;
+        })
+        .filter((item) => item.quantity > 0);
+
+      return updatedCart;
+    });
+  };
+
+  const increaseQuantity = (productId) => {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.map((item) => {
+        if (item.id === productId) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
+        return item;
+      });
+
+      return updatedCart;
+    });
+  };
+
+  const removeFromCart = (productId) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+    alertify.error("Product deleted");
+  };
+
+  const clearCart =() => {
+    setCart([]); // Sepeti boş bir dizi olarak güncelle
+    alertify.success("The order was placed successfully");
+  }
 
   const totalQuantity = cart.reduce((total, item) => {
     return total + item.quantity;
   }, 0);
 
-  
-
-
-  
- 
-  
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<RootLayout totalQuantity={totalQuantity}/>}>
+      <Route path="/" element={<RootLayout totalQuantity={totalQuantity} />}>
         <Route index element={<Home />} />
-        <Route path="contact" element={<Contact/>}/>
-        <Route path="products" element={<Products initialProducts={initialProducts} addToCart={addToCart}/>}/>
-        <Route path="cart" element={<Cart cart={cart}/>}/>
+        <Route path="contact" element={<Contact />} />
+        <Route
+          path="products"
+          element={
+            <Products initialProducts={initialProducts} addToCart={addToCart} />
+          }
+        />
+        <Route
+          path="cart"
+          element={
+            <Cart
+              cart={cart}
+              decreaseQuantity={decreaseQuantity}
+              increaseQuantity={increaseQuantity}
+              removeFromCart={removeFromCart}
+              clearCart={clearCart}
+            />
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Route>
     )
   );
 
-  return (
-    
-      <RouterProvider router={router} />
-    
-  );
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

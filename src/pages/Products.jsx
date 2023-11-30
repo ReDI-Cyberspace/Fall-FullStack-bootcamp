@@ -52,7 +52,7 @@ export default function Products(props) {
   const renderCards = () => {
     return filteredProducts.map((item) => (
       <div key={item.id} className="col-sm-4 d-flex align-items-center justify-content-center mb-5">
-        <div className="card">
+        <div id="card" className="card">
           <div className="cardimage d-flex justify-content-center">
             <img src={item.image} className="card-img-top w-50" alt={item.description} />
           </div>
