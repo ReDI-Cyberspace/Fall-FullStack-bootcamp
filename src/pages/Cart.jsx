@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import useWindowSize from 'react-use/lib/useWindowSize';
+import Confetti from 'react-confetti'
 
 export default function Cart(props) {
   const cartItems = props.cart;
@@ -6,6 +8,9 @@ export default function Cart(props) {
   const [orderTotalAmout,setOrderTotalAmount] = useState(0)
 
   const [showSummary, setShowSummary] = useState(false);
+
+  const { width, height } = useWindowSize();
+  const [paymentCompleted, setPaymentCompleted] = useState(false);
 
   const totalAmount = cartItems.reduce(
     (total, item) => total + item.product.price * item.quantity,
@@ -29,11 +34,23 @@ export default function Cart(props) {
     setOrderTotalAmount(totalAmount)
     setShowSummary(true);
     props.clearCart();
+    setPaymentCompleted(true);
+
   };
+
+  useEffect(() => {
+    if (paymentCompleted) {
+     
+      setTimeout(() => {
+        setPaymentCompleted(false);
+      }, 6000); 
+    }
+  }, [paymentCompleted]);
 
   if (showSummary) {
     return (
       <div className="container">
+        {paymentCompleted && <Confetti width={width} height={height} />}
         <h1>Order Summary</h1>
         <table className="table">
           <thead>
