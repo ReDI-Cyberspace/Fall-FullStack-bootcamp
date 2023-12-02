@@ -22,7 +22,7 @@ const SearchByName = () => {
 
   return (
     <div className="centerBox">
-      <h1>My Pets</h1>
+      <h1>My Pets by Name</h1>
       <input
         type="search"
         placeholder="Search Pet"
