@@ -2,11 +2,11 @@ function Main() {
   return (
     <div>
       <div>
-        <h1 class="homepageTitle">
+        <h1 className="homepageTitle">
           🐾 Welcome to Little Paws - Where Love Finds a Home 🐾
         </h1>
-        <div class="homepageContent">
-          <div class="homepageText">
+        <div className="homepageContent">
+          <div className="homepageText">
             <span>
               At Little Paws, we believe that every furry (or not so much)
               friend deserves a chance at a loving and forever home. We are a
@@ -15,7 +15,7 @@ function Main() {
               these little loving souls with families who will cherish and care
               for them.
             </span>
-            <h3 class="homepageTitle">Our Home, Their Haven:</h3>
+            <h3 className="homepageTitle">Our Home, Their Haven:</h3>
             <span>
               Little Paws is more than just a shelter; it's a temporary home
               filled with warmth, compassion, and wagging tails. We rescue and
@@ -24,7 +24,7 @@ function Main() {
               that each pet receives the love and attention they deserve while
               they await their forever families.
             </span>
-            <h3 class="homepageTitle">Connecting Hearts, Creating Families:</h3>
+            <h3 className="homepageTitle">Connecting Hearts, Creating Families:</h3>
             <span>
               Our ultimate goal is to be the matchmakers of joy, connecting the
               hearts of families with the unconditional love of our furry
@@ -32,14 +32,14 @@ function Main() {
               cat, or a charming bunny, Little Paws is where the journey of
               companionship begins.
             </span>
-            <h3 class="homepageTitle">Adopt, Don't Shop:</h3>
+            <h3 className="homepageTitle">Adopt, Don't Shop:</h3>
             <span>
               Choosing to adopt from Little Paws is not just about bringing a
               pet into your life; it's about making a compassionate choice. By
               adopting, you contribute to breaking the cycle of homelessness and
               give a deserving pet the chance to be part of a loving family.
             </span>
-            <h3 class="homepageTitle">Join Us in Making a Difference:</h3>
+            <h3 className="homepageTitle">Join Us in Making a Difference:</h3>
             <span>
               Every adoption is a celebration of love and hope. Explore our
               website to meet our adorable residents, learn about our adoption
@@ -47,7 +47,7 @@ function Main() {
               through adoption, volunteering, or donations, you can be a part of
               creating happy tales for our little friends.
             </span>
-            <div class="homepageTextFooter">
+            <div className="homepageTextFooter">
               <span>
                 Thank you for considering Little Paws as your partner in this
                 heartwarming journey. Together, let's make a difference—one paw

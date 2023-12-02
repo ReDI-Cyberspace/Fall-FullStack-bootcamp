@@ -1,13 +1,13 @@
-import './App.css';
-import Main from './components/Main';
-import Filters from './components/Filters';
-import Footer from './components/Footer';
+import "./App.css";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import SearchByName from "./components/SearchByName";
 
 function App() {
   return (
     <>
       <Main />
-      <Filters />
+      <SearchByName />
       <Footer />
     </>
   );
