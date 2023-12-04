@@ -4,7 +4,7 @@ import SearchByName from "./SearchByName";
 
 // Ref. https://www.youtube.com/watch?v=pQndRHoHd4Y
 function Filters() {
-  console.log(Data);
+
   const [pets, setPets] = useState(Data);
 
   const filteredResults = (petType) => {
@@ -13,8 +13,10 @@ function Filters() {
         return pet.type === petType;
       });
       setPets(filteredPets);
+      console.log("filteredPets", filteredPets);
     } else {
       setPets(Data);
+      console.log("Data", Data);
     }
   };
 
@@ -40,7 +42,14 @@ function Filters() {
           Reset
         </button>
         {pets.map((pet, index) => (
-          <li key={index}>{pet.name}</li>
+          <div key={index} className="card">
+            <img src={pet.imageURL} alt={pet.name} />
+            <div>
+              <li>{pet.name}</li>
+              <li>{pet.type}</li>
+              <p >{pet.description}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
