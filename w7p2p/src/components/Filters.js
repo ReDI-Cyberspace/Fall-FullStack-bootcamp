@@ -4,7 +4,6 @@ import SearchByName from "./SearchByName";
 
 // Ref. https://www.youtube.com/watch?v=pQndRHoHd4Y
 function Filters() {
-
   const [pets, setPets] = useState(Data);
 
   const filteredResults = (petType) => {
@@ -43,11 +42,17 @@ function Filters() {
         </button>
         {pets.map((pet, index) => (
           <div key={index} className="card">
-            <img src={pet.imageURL} alt={pet.name} />
+            <img
+              style={{ objectFit: "contain" }}
+              width={300}
+              height={300}
+              src={pet.imageURL}
+              alt={pet.name}
+            />
             <div>
               <li>{pet.name}</li>
               <li>{pet.type}</li>
-              <p >{pet.description}</p>
+              <p>{pet.description}</p>
             </div>
           </div>
         ))}
