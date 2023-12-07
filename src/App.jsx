@@ -228,7 +228,7 @@ function App() {
   };
 
   const clearCart = () => {
-    setCart([]); // Sepeti boş bir dizi olarak güncelle
+    setCart([]); 
     alertify.success("The order was placed successfully");
   };
 

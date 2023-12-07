@@ -12,7 +12,7 @@ export default function RootLayout(props) {
   return (
     <div className="root-layout">
       <header className="header">
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className="navbar navbar-expand-lg navbar-light p-0">
           <div className="container navbarContainer">
             <NavLink className="navbar-brand p-0" to="/">
               <img id="logo" src={Logo} alt="firma logo" />

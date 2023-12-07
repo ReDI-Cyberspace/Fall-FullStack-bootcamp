@@ -14,7 +14,7 @@ function Footer() {
   return (
     <footer className="footer mt-auto mt-5">
       <Container className="footeContainer">
-        <h5 className="text-center">
+        <h5 className="text-center m-0">
           © {date} Copyright created by Onur Tüfekci
           <a href="https://github.com/onurtufekci34">
             {" "}
