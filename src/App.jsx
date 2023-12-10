@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
+import ProduktDashboard from "./pages/ProduktDashboard";
 
 import RootLayout from "./layouts/RootLayout";
 
@@ -264,6 +265,7 @@ function App() {
             />
           }
         />
+        <Route path="dashboard" element={<ProduktDashboard initialProducts={initialProducts}/>}/>
         <Route path="*" element={<NotFound />} />
       </Route>
     )

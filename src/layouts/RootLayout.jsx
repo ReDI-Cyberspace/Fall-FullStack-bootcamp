@@ -53,6 +53,11 @@ export default function RootLayout(props) {
                     <FontAwesomeIcon icon={faCartShopping} size="lg" />{props.totalQuantity >0 && <span className="ms-2 text-success">{props.totalQuantity}</span>}
                   </NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="dashboard">
+                    Dashboard
+                  </NavLink>
+                </li>
               </ul>
             </div>
           </div>
