@@ -44,8 +44,7 @@ function Filters() {
           <div key={index} className="card">
             <img
               style={{ objectFit: "contain" }}
-              width={300}
-              height={300}
+              height={265}
               src={pet.imageURL}
               alt={pet.name}
             />

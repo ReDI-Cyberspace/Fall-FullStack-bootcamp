@@ -93,6 +93,7 @@ table.table-bordered > tbody > tr > td {
 
 .card {
   border: 1px solid #dac0a3;
+  width: 400px;
 }
 
 .activeTab {
