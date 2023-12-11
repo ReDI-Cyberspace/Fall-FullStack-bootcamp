@@ -1,0 +1,44 @@
+.activeTab {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.ourPetsTable {
+  margin: 2rem 4rem;
+  width: 90%;
+}
+
+.tableTitle {
+  background-color: #dac0a3;
+}
+
+table.table-bordered > thead > tr > th {
+  border: 1px solid #f8f0e5;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1a1613;
+}
+table.table-bordered > tbody > tr > td {
+  border: 1px solid #dac0a3;
+  text-align: center;
+  color: #1a1613;
+}
+
+.buttons {
+  margin-bottom: 2rem;
+}
+
+.ourPets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.ourPetsCards {
+  width: 90%;
+  margin: 3rem 0;
+}
+
+.card {
+  border: 1px solid #dac0a3;
+}

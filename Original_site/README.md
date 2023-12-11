@@ -1,0 +1,11 @@
+# BRANCH MAIN - ONLY TEACHERS
+
+### Colour patter of the project:
+
+#F8F0E5
+#EADBC8
+#DAC0A3
+#0F2C59
+#AE445A
+#113946
+#1a1613
