@@ -1,0 +1,126 @@
+.home-header {
+  letter-spacing: 0.3rem;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  border: 1px solid #dac0a3;
+  padding-top: 1rem;
+
+  .footer-list {
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.homepageContent {
+  display: flex;
+  justify-content: space-around;
+}
+
+.homepageTitle {
+  text-align: center;
+  margin-top: 1rem;
+  color: #1a1613;
+}
+
+.homepageText {
+  width: 55%;
+  padding: 3rem 5rem;
+  color: #1a1613;
+}
+
+.homepageCaroulse {
+  width: 45%;
+  align-self: center;
+}
+
+.myCarousel {
+  width: 800px;
+}
+
+.homepageTextFooter {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activeTab {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.ourPetsTable {
+  margin: 2rem 4rem;
+  width: 90%;
+}
+
+.tableTitle {
+  background-color: #dac0a3;
+}
+
+table.table-bordered > thead > tr > th {
+  border: 1px solid #f8f0e5;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1a1613;
+}
+table.table-bordered > tbody > tr > td {
+  border: 1px solid #dac0a3;
+  text-align: center;
+  color: #1a1613;
+}
+
+.buttons {
+  margin-bottom: 2rem;
+}
+
+.ourPets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.ourPetsCards {
+  width: 90%;
+  margin: 3rem 0;
+}
+
+.card {
+  border: 1px solid #dac0a3;
+  width: 400px;
+}
+
+.activeTab {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.contactForm {
+  border: 1px solid #dac0a3;
+  margin: 6rem;
+  padding: 5rem;
+}
+
+.sendButton {
+  background-color: #0f2c59;
+  border: none;
+}
+
+.sendButton:hover {
+  background-color: #113946;
+  border: none;
+}
+
+.centerBox {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-bottom: 1.5em;
+}
