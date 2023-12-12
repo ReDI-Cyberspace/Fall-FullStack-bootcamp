@@ -1,28 +1,33 @@
-* {
+
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /*font-family: "Audiowide", sans-serif;*/
   }
+  /*
   body {
     font-size: 16px;
     background-color: #ebe5d5;
     text-align: center;
-  }
+  }*/
   
    .card{
-    border: none !important;
+    /*border: 1px solid #3AA383 !important;*/
     border-top-right-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-   box-shadow:  7px 37px -8px #3AA383;
+    border-top-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+   box-shadow:  7px 37px -8px #3AA383 !important;
+   /*overflow: hidden;*/
+   background-color: rgb(245, 236, 209);
+
   } 
-  img{
+  .card-img-top{
     border-top-right-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
     border-top-left-radius: 20px !important; 
-    height: 200px;
+    height: 200px !important;
     
   }
   .card:hover 
@@ -31,7 +36,7 @@
   }
   
   .btn:hover{
-    background-color: #3AA383;
+    background-color: #96772e;
   }
  
   
@@ -46,6 +51,9 @@
       height: 160vh;
     }
   }
+
+
+  /*--------------------------------------------------------------------*/
 /*
   .card {
     width: 300px; 
@@ -74,10 +82,7 @@
 }
    */
   
-  
-  
-  
-  /* Stil für den Container der Kräuter *
+  /* Style für den Container der Kräuter *
 .herb {
   border: 1px solid #c14d4d;
   padding: 10px;
@@ -86,34 +91,40 @@
 
 }
 
-/* Stil für die Kräuterbilder *
+/* Style für die Kräuterbilder *
 .herb img {
   max-width: 100%;
   height: auto;
 }
 
-/* Stil für den Namen der Kräuter *
+/* Style für den Namen der Kräuter *
 .herb h2 {
   font-size: 1.5rem;
   margin-top: 10px;
 }
 
-/* Stil für den Preis der Kräuter *
+/* Style für den Preis der Kräuter *
 .herb h4 {
   font-size: 1rem;
   color: #007bff;
 }
 
-/* Stil für das Ablaufdatum der Kräuter *
+/* Style für das Ablaufdatum der Kräuter *
 .herb h4:last-child {
   color: #555;
 }
  
  */ 
-  
+  /*--------------------------------------------------------------------*/
+  #buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   .btn{
     position: relative;
-    background-color:#96772e;
+    background-color:#3AA383;
     border:none;
   }
 
@@ -130,7 +141,7 @@ h1, h2{
   padding: 10px 20px;
   margin: 10px 10px 30px 10px;
   border-radius: 8px;
-  width: 150px;
+  width: 200px;
 }
 
 .page-link{
@@ -139,8 +150,8 @@ h1, h2{
 }
 .disabled>.page-link{
   color:white !important;
-  background-color: #3AA383;
-  border: 1px solid#3AA383;
+  background-color: #3AA383 !important;
+  border: 1px solid#3AA383 !important;
 }
 
 .pagination{
