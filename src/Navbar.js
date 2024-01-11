@@ -27,7 +27,7 @@ const Navbar = () => {
  
      <ul >     
        <li >
-         <NavLink  style = {navLinkStyles} to='/' >Home</NavLink>
+         <NavLink  style = {navLinkStyles} exact to="/"  >Home</NavLink>
        </li>
        <li >
          <NavLink style = {navLinkStyles} to="/aboutUs">About Us</NavLink>

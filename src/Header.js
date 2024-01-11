@@ -36,7 +36,6 @@ const Header = () => {
             </ul>
       </nav>
       
-      <Navbar/>
        
       {/* {showForm && (<SingInForm/> )} */}
    

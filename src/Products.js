@@ -8,7 +8,7 @@ const Products=()=>{
         {
             id: 1,
             name:"Mint",
-            image:"/p2p_week7/images/3.jpg",
+            image:"/fall-fullstack-bootcamp/images/3.jpg",
             description:" Kraut",
             packaging:"1",
             weight: "1",
@@ -18,7 +18,7 @@ const Products=()=>{
         {
             id: 2,
             name:"Lavender",
-            image:"/p2p_week7/images/11.jpg",
+            image:"/fall-fullstack-bootcamp/images/11.jpg",
             description:"Kraut",
             packaging:"2",
             weight: "1",
@@ -28,7 +28,7 @@ const Products=()=>{
         {
             id: 3,
             name:"Rosemary",
-            image:"/p2p_week7/images/6.jpg",
+            image:"/fall-fullstack-bootcamp/images/6.jpg",
             description:"Kraut",
             packaging:"3",
             weight: "1",
@@ -38,7 +38,7 @@ const Products=()=>{
         {
             id: 4,
             name:"Parsley",
-            image:"/p2p_week7/images/9.jpg",
+            image:"/fall-fullstack-bootcamp/images/9.jpg",
             description:"Kraut ",
             packaging:"4",
             weight: "1",
@@ -48,7 +48,7 @@ const Products=()=>{
         {
             id: 5,
             name:"Basil",
-            image:"/p2p_week7/images/8.jpg",
+            image:"/fall-fullstack-bootcamp/images/8.jpg",
             description:"Kraut",
             packaging:"5",
             weight: "1",
@@ -58,7 +58,7 @@ const Products=()=>{
         {
             id: 6,
             name:"Camomile",
-            image:"/p2p_week7/images/1.jpg",
+            image:"/fall-fullstack-bootcamp/images/1.jpg",
             description:"Kraut",
             packaging:"6",
             weight: "1",
@@ -68,7 +68,7 @@ const Products=()=>{
         {
             id: 7,
             name:"Dill",
-            image:"/p2p_week7/images/17.jpg",
+            image:"/fall-fullstack-bootcamp/images/17.jpg",
             description:"Kraut",
             packaging:"",
             weight: "1",
@@ -78,7 +78,7 @@ const Products=()=>{
         {
             id: 8,
             name:"Cloves",
-            image:"/p2p_week7/images/14.jpg",
+            image:"/fall-fullstack-bootcamp/images/14.jpg",
             description:"Kraut",
             packaging:"8",
             weight: "1",
@@ -88,7 +88,7 @@ const Products=()=>{
         {
             id: 9,
             name:"Turmeric",
-            image:"/p2p_week7/images/18.jpg",
+            image:"/fall-fullstack-bootcamp/images/18.jpg",
             description:"Kraut",
             packaging:"9",
             weight: "1",
@@ -98,7 +98,7 @@ const Products=()=>{
         {
             id: 10,
             name:"Garlic",
-            image:"/p2p_week7/images/4.jpg",
+            image:"/fall-fullstack-bootcamp/images/4.jpg",
             description:"Kraut",
             packaging:"10",
             weight: "1",

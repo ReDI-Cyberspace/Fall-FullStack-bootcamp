@@ -16,20 +16,20 @@ import Home from './Home';
 function App() {
   
   return (
-  
+  <>
   
     <Router className="App">
       <Header/>
+      <Navbar/>
     
         <Routes>
-            <Route  index path='/'  element = {<Home/>}/>
-    
-             <Route path='singinform'  element = {<SingInForm/>}/>
-            <Route path='products'  element = {<Products/>}/> 
+            <Route path="/"  element = {<Home/>}/>
+            <Route path="singinform"  element = {<SingInForm/>}/>
+            <Route path="products"  element = {<Products/>}/> 
         </Routes>
       <Footer/>
     </Router>
-     
+    </>    
   );
 }
 
