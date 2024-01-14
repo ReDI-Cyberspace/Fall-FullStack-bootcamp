@@ -176,8 +176,8 @@ const ProduktDashboard = ({ initialProducts }) => {
               <div className="cardimage d-flex justify-content-center">
             <img src={product.image} className="card-img-top w-50" alt={product.description} />
           </div>
-                <h5 className="card-title">{product.title}</h5>
-                <p className="card-text">{product.description}</p>
+                <h5 className="card-title text-truncate">{product.title}</h5>
+                <p className="card-text text-truncate">{product.description}</p>
                 <p className="card-text">{product.category}</p>
                 <button className="btn btn-danger me-2" onClick={() => deleteProduct(product.id)}>Delete</button>
                 <button className="btn btn-primary" onClick={() => handleEditProduct(product)}>Edit</button>
