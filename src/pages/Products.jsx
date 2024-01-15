@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const buttons = [
   { id: "business", text: "Business Laptops" },
@@ -20,8 +20,6 @@ export default function Products(props) {
       ...prevState,
       [productId]: value,
     }));
-
-    
   };
 
   useEffect(() => {
@@ -51,10 +49,17 @@ export default function Products(props) {
 
   const renderCards = () => {
     return filteredProducts.map((item) => (
-      <div key={item.id} className="col-sm-4 d-flex align-items-center justify-content-center mb-5">
+      <div
+        key={item.id}
+        className="col-sm-4 d-flex align-items-center justify-content-center mb-5"
+      >
         <div id="card" className="card">
           <div className="cardimage d-flex justify-content-center">
-            <img src={item.image} className="card-img-top w-50" alt={item.description} />
+            <img
+              src={item.image}
+              className="card-img-top w-50"
+              alt={item.description}
+            />
           </div>
           <div className="card-body p-1">
             <div className="d-flex">
@@ -72,16 +77,23 @@ export default function Products(props) {
                 type="number"
                 name="number"
                 min="1"
-                value={productQuantities[item.id] !== undefined ? productQuantities[item.id] : 1}
-
+                value={
+                  productQuantities[item.id] !== undefined
+                    ? productQuantities[item.id]
+                    : 1
+                }
                 onChange={(e) => handleQuantityChange(e, item.id)}
                 id={`productQuantity-${item.id}`}
-                
-              /> 
+              />
               <button
                 type="button"
                 className="btn btn-primary mt-2"
-                onClick={() => props.addToCart(item.id, parseInt(productQuantities[item.id] || 1))}
+                onClick={() =>
+                  props.addToCart(
+                    item.id,
+                    parseInt(productQuantities[item.id] || 1)
+                  )
+                }
               >
                 Add to Cart
               </button>

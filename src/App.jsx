@@ -166,12 +166,9 @@ function App() {
         console.error("There was a problem fetching the data: ", error);
       }
     };
-  
+
     fetchData();
   }, []);
-  
-
-  
 
   const addToCart = (productId, quantity) => {
     const productToAdd = initialProducts.find(
@@ -229,7 +226,7 @@ function App() {
   };
 
   const clearCart = () => {
-    setCart([]); 
+    setCart([]);
     alertify.success("The order was placed successfully");
   };
 
@@ -265,7 +262,7 @@ function App() {
             />
           }
         />
-        <Route path="dashboard" element={<ProduktDashboard initialProducts={initialProducts}/>}/>
+        <Route path="dashboard" element={<ProduktDashboard />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     )

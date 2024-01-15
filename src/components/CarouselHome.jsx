@@ -28,21 +28,19 @@ import Carousel from "react-bootstrap/Carousel";
 
 function CarouselHome() {
   return (
-      <div className="carouselContainer">
-<Carousel fade className="w-25 d-flex justify-content-center">
-        <Carousel.Item >
+    <div className="carouselContainer">
+      <Carousel fade className="w-25 d-flex justify-content-center">
+        <Carousel.Item>
           <img src={Image1} alt="" className="w-100" />
         </Carousel.Item>
-        <Carousel.Item >
+        <Carousel.Item>
           <img src={Image2} alt="" className="w-100" />
         </Carousel.Item>
-        <Carousel.Item >
+        <Carousel.Item>
           <img src={Image3} alt="" className="w-100" />
         </Carousel.Item>
       </Carousel>
-      </div>
-      
-    
+    </div>
   );
 }
 

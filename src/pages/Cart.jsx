@@ -1,11 +1,11 @@
-import { useState,useEffect } from "react";
-import useWindowSize from 'react-use/lib/useWindowSize';
-import Confetti from 'react-confetti'
+import { useState, useEffect } from "react";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
 
 export default function Cart(props) {
   const cartItems = props.cart;
   const [orderSummary, setOrderSummary] = useState([]);
-  const [orderTotalAmout,setOrderTotalAmount] = useState(0)
+  const [orderTotalAmout, setOrderTotalAmount] = useState(0);
 
   const [showSummary, setShowSummary] = useState(false);
 
@@ -31,19 +31,17 @@ export default function Cart(props) {
 
   const handlePayment = () => {
     setOrderSummary([...cartItems]);
-    setOrderTotalAmount(totalAmount)
+    setOrderTotalAmount(totalAmount);
     setShowSummary(true);
     props.clearCart();
     setPaymentCompleted(true);
-
   };
 
   useEffect(() => {
     if (paymentCompleted) {
-     
       setTimeout(() => {
         setPaymentCompleted(false);
-      }, 6000); 
+      }, 6000);
     }
   }, [paymentCompleted]);
 
@@ -89,13 +87,12 @@ export default function Cart(props) {
           {cartItems.map((item) => (
             <div key={item.product.id} className=" mb-3">
               <div className="card flex-row">
-                
-                  <img
-                    src={item.product.image}
-                    className="card-img-top w-50 h-25"
-                    alt={item.product.title}
-                  />
-                
+                <img
+                  src={item.product.image}
+                  className="card-img-top w-50 h-25"
+                  alt={item.product.title}
+                />
+
                 <div className="card-body p-0">
                   <h5 className="card-title">{item.product.title}</h5>
                   <p className="card-text">{item.product.description}</p>

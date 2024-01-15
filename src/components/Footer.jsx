@@ -2,10 +2,6 @@ import { Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-
-
-
-
 function Footer() {
   const date = new Date().getFullYear();
 

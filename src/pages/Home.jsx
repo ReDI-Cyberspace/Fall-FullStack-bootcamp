@@ -4,7 +4,7 @@ import Subscription from "../components/Subscription";
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <CarouselHome />
       <Slogan />
       <Subscription />
