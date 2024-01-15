@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
-const ProduktDashboard = ({ initialProducts }) => {
-  const [products, setProducts] = useState(initialProducts);
+const ProduktDashboard = () => {
+  const [products, setProducts] = useState([]);
   const [newProduct, setNewProduct] = useState({
     title: '',
     price: 0,
@@ -17,6 +17,25 @@ const ProduktDashboard = ({ initialProducts }) => {
     category: '',
     image: '',
   });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/products");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        //console.log(data)
+        setProducts(data);
+        //console.log(initialProducts)
+      } catch (error) {
+        console.error("There was a problem fetching the data: ", error);
+      }
+    };
+  
+    fetchData();
+  }, []);
   
 
   const addProduct = async (event) => {
@@ -178,7 +197,11 @@ const ProduktDashboard = ({ initialProducts }) => {
           </div>
                 <h5 className="card-title text-truncate">{product.title}</h5>
                 <p className="card-text text-truncate">{product.description}</p>
+                <div className='d-flex justify-content-between'>
                 <p className="card-text">{product.category}</p>
+                <p className="card-text fs-5 text-danger">{product.price}€</p>
+                </div>
+                
                 <button className="btn btn-danger me-2" onClick={() => deleteProduct(product.id)}>Delete</button>
                 <button className="btn btn-primary" onClick={() => handleEditProduct(product)}>Edit</button>
               </div>
