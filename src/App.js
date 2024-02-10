@@ -2,13 +2,17 @@
 import './App.css';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route,Link,Navigate, Switch  } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
-import Products from './Products';
-import FilterFunc from './FilterFunc';
-import SingInForm from './SingInForm';
-import Navbar from './Navbar';
-import Home from './Home';
+import Footer from './components/Footer';
+import SignUpForm from './pages/SignUpForm';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import AllProductsList from './pages/AllProductsList';
+import ProductDetails from './pages/ProductDetails';
+import WishList from './pages/WishList';
+import User from './pages/User'
+import Contact from './pages/Contact';
+import SignIn from './pages/SignIn';
+import NotFound from './pages/NotFound'
 
 
 
@@ -16,20 +20,25 @@ import Home from './Home';
 function App() {
   
   return (
-  <>
-  
-    <Router className="App">
-      <Header/>
+
+    <div className="App">
+     
       <Navbar/>
-    
         <Routes>
-            <Route path="/"  element = {<Home/>}/>
-            <Route path="singinform"  element = {<SingInForm/>}/>
-            <Route path="products"  element = {<Products/>}/> 
+            <Route path="/fall-fullstack-bootcamp"  element = {<Home/>}/>
+            <Route path="/my-account/signupform"  element = {<SignUpForm/>}/>
+            <Route path="my-account"  element = {<SignIn/>}/>
+            <Route path="product-details"  element = {<ProductDetails/>}/>
+            <Route path="product-list"  element = {<AllProductsList/>}/>
+            <Route path="wishlist"  element = {<WishList/>}/>
+            <Route path="contact"  element = {<Contact/>}/>
+            <Route path="*" element={<NotFound></NotFound>}></Route>
+            <Route path="my-account/user" element={<User/>}></Route>
+
         </Routes>
       <Footer/>
-    </Router>
-    </>    
+    </div>
+   
   );
 }
 

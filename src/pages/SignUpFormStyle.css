@@ -1,0 +1,55 @@
+/*---------------- Sing In Form ----------*/
+.formContainer{
+    border: 1px solid  #A99B8A;
+    /* */
+    padding:30px;
+    box-shadow: inset 10px 11px 5px 0px #A99B8A;
+   margin: 50px;
+   color:var(--text-color);
+   
+  }
+  .formContainer h4{
+    color:#915a9e ;
+  }
+  .formContainer .col-md-6{
+    padding: 10px 50px;
+  }
+  .btn-form{
+    padding: 6px 25px;
+    color: white;
+    background-color:var(--button-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+  }
+  .btn-form:hover{
+  background-color: var(--button-hover-color);
+  }
+  
+  select#salutation, select#customer_type,.formContainer input {
+    color: var(--text-color);
+    border-color:var(--text-color);
+    border-radius: 8px;;
+  }
+  .formContainer select{
+    padding: 5px;
+   background-color:var(--background-color);
+  }
+  select:focus {
+   
+    outline: 1px solid rgb(90, 153, 90); 
+    background-color: white;
+    box-shadow: 0 3px 6px rgb(90, 153, 90);
+  }
+  
+  .form-control:focus-within {
+    border: 1px solid rgb(90, 153, 90);
+    box-shadow: 0 3px 6px rgb(90, 153, 90);
+    color:var(--text-color);
+  }
+  
+  form hr {
+    color: #6e1083 ;
+    
+    
+  }

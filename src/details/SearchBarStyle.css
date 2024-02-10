@@ -1,0 +1,24 @@
+/*---------------------Search Bar----------*/
+.custom-search-container input[type="text"] {
+    transition: border-color 0.3s ease; 
+    outline: none; 
+  }
+  
+  .custom-search-container:focus-within {
+    border: 1px solid rgb(90, 153, 90);
+    box-shadow: 0 3px 6px rgb(90, 153, 90);
+  }
+
+  @media (max-width: 730px) {
+    
+   .search-container{
+   float:inline-start;
+   margin-left: 50px;
+   margin-top: 12px;
+   border: 1px solid  rgba(79, 53, 48, 1);
+   cursor: pointer;
+   border-radius: 12px;
+ }
+
+   
+ }

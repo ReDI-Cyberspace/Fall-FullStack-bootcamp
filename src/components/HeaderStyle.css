@@ -1,0 +1,91 @@
+/*--------* Header *------*/
+.header {
+    height: var(--navbar-height);
+    background: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+  }
+  
+  .navbar1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar1 li {
+    margin-right: 30px; /* Abstand zwischen den Listenelementen */
+   
+  }
+  
+  .navbar1 li a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center; 
+    white-space: nowrap; /* Verhindert Zeilenumbrüche im Text */
+   }
+  .header a:hover {
+    color: var(--logo-spices-color) !important;
+  }
+  
+  #companyName .green{
+    font-family: "Kalam", sans-serif;
+    color: var(--logo-herbs-color);
+  }
+  
+  #companyName .orange{
+    font-family: "Kalam", sans-serif;
+    color:var(--logo-spices-color);
+  }
+  
+  #companyName{
+    font-size: 40px !important;
+    font-weight: bold;
+    color:rgba(112, 96, 94, 0.92);
+    font-family: "Kalam", sans-serif;
+    width: 100%;
+    margin-left: 50px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 24px; /* Beispiel-Schriftgröße */
+    padding-top: 20px;
+  }
+  
+  i{
+    padding-right: 5px;
+  }
+  
+
+  @media (max-width: 730px) {
+
+ #companyName{
+   
+   color:rgba(112, 96, 94, 0.92);
+   font-family: "Kalam", sans-serif;
+   width: 100%;
+   margin-left: 10px;
+   text-align: center;
+   }
+ }
+ 
+ @media (max-width: 500px) {
+   #companyName{
+     font-size: 14px !important;
+     font-weight: bold;
+     text-transform: uppercase;
+ 
+   }
+   
+ }
+   @media (min-width: 500px) and (max-width: 800px) {
+     #companyName{
+       font-size: 25px !important;
+       font-weight: bold;
+       text-transform: uppercase;
+   
+     }
+ }

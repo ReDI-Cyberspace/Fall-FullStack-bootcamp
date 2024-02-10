@@ -1,0 +1,83 @@
+/*---------------- Sing In Form ----------*/
+.formContainer-contact{
+    border: 1px solid  #A99B8A;
+    /* */
+    padding:30px;
+    box-shadow: inset 10px 11px 5px 0px #A99B8A;
+   margin: 50px 150px;
+   color:var(--text-color);
+   
+  }
+  .formContainer-contact h4{
+    color:#915a9e ;
+  }
+  /* .formContainer .col-md-6{
+    padding: 10px 50px;
+  } */
+  .btn-form{
+    padding: 6px 25px;
+    color: white;
+    background-color:var(--button-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+  }
+  .btn-form:hover{
+  background-color: var(--button-hover-color);
+  }
+  
+  select#salutation, textarea,.formContainer-contact input {
+    color: var(--text-color);
+    border-color:var(--text-color) !important;
+    
+    border-radius: 8px;;
+  }
+  .formContainer-contact textarea{
+    padding: 5px;
+   background-color:var(--background-color);
+  }
+
+  textarea:focus {
+   
+    outline: 1px solid rgb(90, 153, 90); 
+    background-color: white;
+    box-shadow: 0 3px 6px rgb(90, 153, 90);
+  }
+  
+  .form-control:focus-within {
+    border: 1px solid rgb(90, 153, 90);
+    box-shadow: 0 3px 6px rgb(90, 153, 90);
+    color:var(--text-color);
+  }
+  
+  form hr {
+    color: #6e1083 ;
+    
+    
+  }
+
+  .contact{
+    margin:50px 100px;
+  }
+
+  .line1, .line2 {
+    border-bottom: 20px solid rgba(212, 229, 215, 1);/* Hier kannst du die Farbe anpassen, z.B. #000 für Schwarz */
+    width: 100%; /* Du kannst die Breite anpassen oder auch eine feste Breite festlegen */
+   
+    height: 0; /* Die Höhe auf 0 setzen, da die Linie über die Border-Eigenschaft erstellt wird */
+  }
+  .line1{
+    margin-top: 15px;
+  }
+
+  .line2{
+    margin-bottom: 50px;
+  }
+  .contactTitle{
+    text-align: center;
+    color :rgba(226, 104, 35, 0.89);
+    margin-top: 30px;
+    font-weight: bold;
+    
+
+  }

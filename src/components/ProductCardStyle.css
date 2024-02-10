@@ -1,0 +1,85 @@
+/*------------ Products card ----------*/
+
+
+.card{
+    /* border: 1px solid #3AA383 !important; */
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+   /*overflow: hidden;*/
+   background-color: var(--background-color) !important;
+   transition:  box-shadow 0.3s, z-index 0.3s !important; 
+   color: var(--text-color) !important;
+  
+  } 
+  .card-img-top{
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 20px !important; 
+    height: 200px !important;
+  }
+  .card:hover 
+  {
+    box-shadow: 0px 1px 15px 1px var(--button-hover-color) !important;
+    border-color: var(--button-hover-color) !important; 
+    background-color: white !important;
+    transform: scale(1.01) !important; 
+    z-index: 1 !important;
+  }
+  
+  .btn{
+    position: relative !important;
+    background-color:var(--button-color) !important;
+    border:none !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s !important;
+  }
+  
+  .btn:hover{
+    background-color: var(--button-color)!important;
+  }
+  
+  .products-list{
+    color:rgba(79, 53, 48, 1);
+    text-align: center;
+  
+  }
+  .bg-color{
+  background-color: var(--button-hover-color);
+  }
+  .card-title{
+    color: var(--logo-spices-color);
+  }
+  .categories {
+    color: var(--text-color);
+    background: white !important;
+    border: inset 2px  var(--button-color);
+  
+  }
+  select option:checked,select  {
+    border: inset 2px  var(--button-color) !important;
+  }
+  .container.mt-5 h1{
+    color: var(--text-color);
+  }
+  
+  .product-heart{
+    text-align: right !important;
+    margin-right: 20px;
+    padding: 5px;
+}
+  /*-------------- Media Mobil----------------*/
+@media (max-width: 575px) {
+  body {
+      height: 380vh;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 768px) {
+  body {
+    height: 160vh;
+  }
+}
+
+
