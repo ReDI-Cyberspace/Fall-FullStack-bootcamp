@@ -3,7 +3,7 @@ function Main() {
     <div>
       <div>
         <h1 className="homepageTitle">
-          🐾 Welcome to Little Paws - Where Love Finds a Home 🐾
+          🐾 Yen Welcome to Little Paws - Where Love Finds a Home 🐾
         </h1>
         <div className="homepageContent">
           <div className="homepageText">
@@ -24,7 +24,9 @@ function Main() {
               that each pet receives the love and attention they deserve while
               they await their forever families.
             </span>
-            <h3 className="homepageTitle">Connecting Hearts, Creating Families:</h3>
+            <h3 className="homepageTitle">
+              Connecting Hearts, Creating Families:
+            </h3>
             <span>
               Our ultimate goal is to be the matchmakers of joy, connecting the
               hearts of families with the unconditional love of our furry
