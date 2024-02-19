@@ -3,7 +3,7 @@ function Main() {
     <div>
       <div>
         <h1 className="homepageTitle">
-          🐾 Carla Welcome to Little Paws - Where Love Finds a Home 🐾
+          🐾 Welcome to Little Paws - Where Love Finds a Home Carla 🐾
         </h1>
         <div className="homepageContent">
           <div className="homepageText">
