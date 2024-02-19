@@ -2,7 +2,7 @@ function AboutUs() {
   return (
     <>
       <h1>About Us</h1>
-      <p>ajskdahkashdkajshdskahdkjsahdksja</p>
+      <p>This story starts many years ago...</p>
     </>
   );
 }
