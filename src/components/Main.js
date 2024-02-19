@@ -7,7 +7,9 @@ function Main() {
         </h1>
         <div className="homepageContent">
           <div className="homepageText">
-            <span>
+            <span> .
+              git commit -m 
+              This change is for learning purposes
               At Little Paws, we believe that every furry (or not so much)
               friend deserves a chance at a loving and forever home. We are a
               dedicated shelter committed to rescuing and providing a safe haven
