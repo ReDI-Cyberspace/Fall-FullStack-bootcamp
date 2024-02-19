@@ -4,7 +4,7 @@ function Carousel() {
       <div className="myCarousel">
         <div
           id="carouselExampleIndicators"
-          className="carousel-slide"
+          className="carousel/slide"
           data-ride="carousel"
         //   style="display: block"
         >
