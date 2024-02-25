@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/fall-fullstack-bootcamp/static/css/main.2e1196a6.css",
+    "main.js": "/fall-fullstack-bootcamp/static/js/main.debc9e98.js",
+    "static/media/verschiedene-gewuerze-und-kraeuter.jpg": "/fall-fullstack-bootcamp/static/media/verschiedene-gewuerze-und-kraeuter.e14573bcbca387c54cbc.jpg",
+    "static/media/Kräuter und Gewürze kaufen.jpg": "/fall-fullstack-bootcamp/static/media/Kräuter und Gewürze kaufen.d3a6e4befc6436941f61.jpg",
+    "static/media/stilleben-mit-verschiedenen-krautern-gewurzen-und-olivenol-dyd8gr.jpg": "/fall-fullstack-bootcamp/static/media/stilleben-mit-verschiedenen-krautern-gewurzen-und-olivenol-dyd8gr.65453e2836d96bb7d700.jpg",
+    "index.html": "/fall-fullstack-bootcamp/index.html",
+    "main.2e1196a6.css.map": "/fall-fullstack-bootcamp/static/css/main.2e1196a6.css.map",
+    "main.debc9e98.js.map": "/fall-fullstack-bootcamp/static/js/main.debc9e98.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e1196a6.css",
+    "static/js/main.debc9e98.js"
+  ]
+}
