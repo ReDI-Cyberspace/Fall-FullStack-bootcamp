@@ -61,7 +61,7 @@ export default function Cart(props) {
           </thead>
           <tbody>
             {orderSummary.map((item) => (
-              <tr key={item.product.id}>
+              <tr key={item.product._id}>
                 <td>{item.product.title}</td>
                 <td>{item.product.description}</td>
                 <td>{item.quantity}</td>
@@ -85,7 +85,7 @@ export default function Cart(props) {
       <div className="row">
         <div className="carItems col-sm-9 mb-3 p-1">
           {cartItems.map((item) => (
-            <div key={item.product.id} className=" mb-3">
+            <div key={item.product._id} className=" mb-3">
               <div className="card flex-row">
                 <img
                   src={item.product.image}
@@ -106,14 +106,14 @@ export default function Cart(props) {
                     Quantity:{" "}
                     <button
                       className="btn btn-danger"
-                      onClick={() => handleDecrease(item.product.id)}
+                      onClick={() => handleDecrease(item.product._id)}
                     >
                       -
                     </button>{" "}
                     {item.quantity}{" "}
                     <button
                       className="btn btn-success"
-                      onClick={() => handleIncrease(item.product.id)}
+                      onClick={() => handleIncrease(item.product._id)}
                     >
                       +
                     </button>
@@ -121,7 +121,7 @@ export default function Cart(props) {
                   <div className="container d-flex flex-row-reverse">
                     <button
                       className="btn btn-danger mb-2"
-                      onClick={() => handleDelete(item.product.id)}
+                      onClick={() => handleDelete(item.product._id)}
                     >
                       delete
                     </button>

@@ -154,14 +154,15 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/products");
+        const response = await fetch("/api/products");
+        
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
         //console.log(data)
         setInitialProducts(data);
-        //console.log(initialProducts)
+        console.log(initialProducts)
       } catch (error) {
         console.error("There was a problem fetching the data: ", error);
       }
@@ -172,16 +173,16 @@ function App() {
 
   const addToCart = (productId, quantity) => {
     const productToAdd = initialProducts.find(
-      (product) => product.id === productId
+      (product) => product._id === productId
     );
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
-      const existingProduct = updatedCart.find((item) => item.id === productId);
+      const existingProduct = updatedCart.find((item) => item._id === productId);
       if (existingProduct) {
         existingProduct.quantity += quantity;
       } else {
         updatedCart.push({
-          id: productId,
+          _id: productId,
           quantity: quantity,
           product: productToAdd,
         });
@@ -196,7 +197,7 @@ function App() {
     setCart((prevCart) => {
       const updatedCart = prevCart
         .map((item) => {
-          if (item.id === productId) {
+          if (item._id === productId) {
             return { ...item, quantity: item.quantity - 1 };
           }
           return item;
@@ -210,7 +211,7 @@ function App() {
   const increaseQuantity = (productId) => {
     setCart((prevCart) => {
       const updatedCart = prevCart.map((item) => {
-        if (item.id === productId) {
+        if (item._id === productId) {
           return { ...item, quantity: item.quantity + 1 };
         }
         return item;
@@ -221,7 +222,7 @@ function App() {
   };
 
   const removeFromCart = (productId) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+    setCart((prevCart) => prevCart.filter((item) => item._id !== productId));
     alertify.error("Product deleted");
   };
 

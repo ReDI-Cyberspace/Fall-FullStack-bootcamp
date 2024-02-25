@@ -50,7 +50,7 @@ export default function Products(props) {
   const renderCards = () => {
     return filteredProducts.map((item) => (
       <div
-        key={item.id}
+        key={item._id}
         className="col-sm-4 d-flex align-items-center justify-content-center mb-5"
       >
         <div id="card" className="card">
@@ -78,20 +78,20 @@ export default function Products(props) {
                 name="number"
                 min="1"
                 value={
-                  productQuantities[item.id] !== undefined
-                    ? productQuantities[item.id]
+                  productQuantities[item._id] !== undefined
+                    ? productQuantities[item._id]
                     : 1
                 }
-                onChange={(e) => handleQuantityChange(e, item.id)}
-                id={`productQuantity-${item.id}`}
+                onChange={(e) => handleQuantityChange(e, item._id)}
+                id={`productQuantity-${item._id}`}
               />
               <button
                 type="button"
                 className="btn btn-primary mt-2"
                 onClick={() =>
                   props.addToCart(
-                    item.id,
-                    parseInt(productQuantities[item.id] || 1)
+                    item._id,
+                    parseInt(productQuantities[item._id] || 1)
                   )
                 }
               >

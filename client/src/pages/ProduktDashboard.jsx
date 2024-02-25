@@ -10,25 +10,18 @@ const ProduktDashboard = () => {
     image: "",
   });
 
-  const [editingProduct, setEditingProduct] = useState({
-    title: "",
-    price: 0,
-    description: "",
-    category: "",
-    image: "",
-  });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/products");
+        const response = await fetch("/api/products");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        //console.log(data)
+        
         setProducts(data);
-        //console.log(initialProducts)
+        
       } catch (error) {
         console.error("There was a problem fetching the data: ", error);
       }
@@ -36,9 +29,12 @@ const ProduktDashboard = () => {
 
     fetchData();
   }, []);
+  //console.log(products)
 
   const addProduct = async (event) => {
     event.preventDefault();
+    
+
     if (
       newProduct.title &&
       newProduct.price &&
@@ -46,24 +42,24 @@ const ProduktDashboard = () => {
       newProduct.category &&
       newProduct.image
     ) {
-      const newProductWithId = {
-        ...newProduct,
-        id: products.length,
-      };
+      console.log(newProduct)
 
+      const serverData = {
+        product: newProduct
+      };
       // Send a POST request to your API endpoint
       try {
-        const response = await fetch("http://localhost:3000/products", {
+        const response = await fetch("/api/products", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(newProductWithId),
+          body: JSON.stringify(serverData),
         });
 
         if (response.ok) {
           // If the POST request is successful, update the state with the new product
-          setProducts([...products, newProductWithId]);
+          setProducts([...products, newProduct]);
 
           // Reset the form fields
           setNewProduct({
@@ -85,8 +81,7 @@ const ProduktDashboard = () => {
   const deleteProduct = async (productId) => {
     // Send a DELETE request to your API endpoint
     try {
-      const response = await fetch(
-        `http://localhost:3000/products/${productId}`,
+      const response = await fetch(`/api/products/${productId}`,
         {
           method: "DELETE",
         }
@@ -95,7 +90,7 @@ const ProduktDashboard = () => {
       if (response.ok) {
         // If the DELETE request is successful, update the state to reflect the deletion
         const updatedProducts = products.filter(
-          (product) => product.id !== productId
+          (product) => product._id !== productId
         );
         setProducts(updatedProducts);
       } else {
@@ -108,53 +103,16 @@ const ProduktDashboard = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    if (editingProduct) {
-      setEditingProduct((prevEditingProduct) => ({
-        ...prevEditingProduct,
-        [name]: value,
-      }));
-    } else {
+    
       setNewProduct((prevNewProduct) => ({
         ...prevNewProduct,
-        [name]: value,
+        [name]:name ==='price' ? parseFloat(value) : value,
       }));
-    }
+    
   };
 
-  const handleEditProduct = (product) => {
-    setEditingProduct({ ...product });
-    window.scrollTo(0, 0);
-  };
 
-  const updateProduct = async () => {
-    // Send a PUT or PATCH request to your API endpoint
-    try {
-      const response = await fetch(
-        `http://localhost:3000/products/${editingProduct.id}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(editingProduct),
-        }
-      );
 
-      if (response.ok) {
-        // If the PUT request is successful, update the state to reflect the changes
-        const updatedProducts = products.map((product) =>
-          product.id === editingProduct.id ? editingProduct : product
-        );
-        console.log(updatedProducts);
-        setProducts(updatedProducts);
-        setEditingProduct(null);
-      } else {
-        console.error("Failed to update product. Server returned an error.");
-      }
-    } catch (error) {
-      console.error("Error sending PUT request:", error);
-    }
-  };
 
   return (
     <div className="container mt-4">
@@ -170,7 +128,7 @@ const ProduktDashboard = () => {
             type="text"
             name="title"
             placeholder="Title"
-            value={editingProduct ? editingProduct.title : newProduct.title}
+            value={ newProduct.title}
             onChange={handleInputChange}
           />
         </div>
@@ -184,7 +142,7 @@ const ProduktDashboard = () => {
             type="number"
             name="price"
             placeholder="Price"
-            value={editingProduct ? editingProduct.price : newProduct.price}
+            value={ newProduct.price}
             onChange={handleInputChange}
           />
         </div>
@@ -199,9 +157,7 @@ const ProduktDashboard = () => {
             name="description"
             placeholder="Description"
             value={
-              editingProduct
-                ? editingProduct.description
-                : newProduct.description
+              newProduct.description
             }
             onChange={handleInputChange}
           />
@@ -215,7 +171,7 @@ const ProduktDashboard = () => {
             className="form-select"
             name="category"
             value={
-              editingProduct ? editingProduct.category : newProduct.category
+               newProduct.category
             }
             onChange={handleInputChange}
           >
@@ -234,7 +190,7 @@ const ProduktDashboard = () => {
             type="text"
             name="image"
             placeholder="Image URL"
-            value={editingProduct ? editingProduct.image : newProduct.image}
+            value={newProduct.image}
             onChange={handleInputChange}
           />
         </div>
@@ -242,17 +198,13 @@ const ProduktDashboard = () => {
           <button className="btn btn-primary me-2" type="submit">
             Add Product
           </button>
-          {editingProduct && (
-            <button className="btn btn-primary" onClick={updateProduct}>
-              Save Changes
-            </button>
-          )}
+          
         </div>
       </form>
 
       <div className="row mt-4">
         {products.map((product) => (
-          <div key={product.id} className="col-lg-4 mb-3">
+          <div key={product._id} className="col-lg-4 mb-3">
             <div className="card">
               <div className="card-body">
                 <div className="cardimage d-flex justify-content-center">
@@ -271,16 +223,11 @@ const ProduktDashboard = () => {
 
                 <button
                   className="btn btn-danger me-2"
-                  onClick={() => deleteProduct(product.id)}
+                  onClick={() => deleteProduct(product._id)}
                 >
                   Delete
                 </button>
-                <button
-                  className="btn btn-primary"
-                  onClick={() => handleEditProduct(product)}
-                >
-                  Edit
-                </button>
+               
               </div>
             </div>
           </div>

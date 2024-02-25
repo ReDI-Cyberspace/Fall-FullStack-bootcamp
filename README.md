@@ -1,6 +1,6 @@
 # Creative Tech Shop
 
-This project is a web application built using React. 
+This project is a web application built using MERN Stack. 
 
 ## Installation
 
@@ -14,21 +14,14 @@ This project is a web application built using React.
 After installing project dependencies, start the project using the following command:
 
 ```bash
-json-server --watch ./data/db.json --port 3000
-
 npm run dev
 
 ```
 
 ## Project Structure
 ```   
-data/: db.json 
-src/: Source code of the project
-pages/: Page components
-layouts/: Page layouts
-components/: General components
-images/: Image files
-public/: Public files (favicon, index.html)
+client
+server
 ```
 
 ## Technologies Used
@@ -39,6 +32,9 @@ public/: Public files (favicon, index.html)
 -Bootstrap
 -React Bootstrap
 -Vite 
+-Nodejs
+-Expressjs
+-MongoDB
 ```
 ## Additional Information
 
