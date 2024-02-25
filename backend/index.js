@@ -7,16 +7,16 @@ const dotenv = require('dotenv').config();
 const app = express();
 const cors = require('cors');
 const port = process.env.PORT || 3001;
-// const path = require("path");
+const path = require("path");
 
 connectDB();
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-/* app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "build")));
 app.get("/", (req,res) => {
   res.sendFile(path.join(__dirname, "build/index.html"));
-}) */
+})
 app.use(cors());
 app.use(express.urlencoded({extended:false }));
 
