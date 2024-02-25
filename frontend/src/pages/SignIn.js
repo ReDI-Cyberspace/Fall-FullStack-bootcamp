@@ -1,20 +1,22 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 import {useNavigate, useLocation} from 'react-router-dom'
 import { Link } from 'react-router-dom';
-// import { isAuthenticated } from '../services/authService';
+import { isAuthenticated } from '../services/authService';
 
 import Advetreising from '../components/Advetreising';
 import CustomModal from '../components/CustomModal';
 
-const SingIn = ({handleLogin}) => {
+const SingIn = ({handleLogin,isAdmin,setIsAdmin}) => {
     const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
+   
     //---------------------------------
     const [formData, setFormData] = useState([]);
     const [signInData, setSignInData] = useState([]);
     const [token, setToken]=useState(localStorage.getItem('token'));
     const [loading, setLoading] = useState(false);
+  
    
    //----------------------------------------------------//
 //Change event handler for input
@@ -57,8 +59,12 @@ const response = await fetch('http://localhost:3001/my-account', {
   console.log(json.token);
   setToken(json.token);
   localStorage.setItem('token', json.token);
-  handleLogin(token);
-  navigate('/product-list')
+  handleLogin(token, json.role);
+  if(json.role === "admin"){
+  setIsAdmin(true);
+    navigate('/admin')
+  }else{navigate('/product-list')}
+  
 } catch (error) {
   console.error(error);
 } finally {

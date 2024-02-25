@@ -16,7 +16,7 @@ const router = express.Router();
 /* router.delete("/delete", authenticationMiddleware, UserController.deleteAccount); */
 
 // Registrierung
-router.post('/register', async (req, res) => {
+/* router.post('/register', async (req, res) => {
     try {
       const { username, password } = req.body;
   
@@ -42,9 +42,9 @@ router.post('/register', async (req, res) => {
       res.status(500).json({ message: 'Serverfehler.' });
     }
   });
-  
+   */
   // Anmeldung
-  router.post('/login', async (req, res) => {
+  /* router.post('/login', async (req, res) => {
     const { username, password } = req.body;
   
     const user = await UserModel.findOne({ username });
@@ -58,4 +58,4 @@ router.post('/register', async (req, res) => {
     // Hier wird der Token im Local Storage gespeichert
     res.json({ token });
   });
-  module.exports = router;
+  module.exports = router; */

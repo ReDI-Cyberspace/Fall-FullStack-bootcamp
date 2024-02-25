@@ -4,3 +4,5 @@ const isAuthenticated = () => {
   };
   
   export { isAuthenticated };
+
+  

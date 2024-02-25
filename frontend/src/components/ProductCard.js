@@ -12,11 +12,11 @@ const ProductCard = ({product}) => {
                     <div className='product-heart'>
                         <Heart product={product}/>
                     </div>
-                    <img src={product.image} className="card-img-top img-thumbnail" alt="..."/>
+                    <img src={product.imageURL} className="card-img-top img-thumbnail" alt="..."/>
                         <div className="card-body">
                             
-                            <h6 className="card-title fst-italic fw-bolder">{product.name.substring(0,15)}</h6>
-                            <h5><span className="badge bg-color">{product.price} €</span></h5>
+                            <h6 className="card-title fst-italic fw-bolder">{product.product_name.substring(0,15)}</h6>
+                            <h5><span className="badge bg-color">{product.standard_price} €</span></h5>
                             <p className="card-text"><small>{product.category}</small></p>
                             <Link  className="btn btn-primary" to="/product-details">Learn more</Link>
                         </div>

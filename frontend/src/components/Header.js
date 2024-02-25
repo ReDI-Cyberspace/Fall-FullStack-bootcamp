@@ -34,7 +34,7 @@ const Header = ({handleLogout}) => {
               </li>
               {isLoggedIn ? (
               <li >
-                <NavLink   style = {navLinkStyles} to='/fall-fullstack-bootcamp' onClick={handleLogout} ><i className="fa-solid fa-user"></i>Logout</NavLink>
+                <NavLink   style = {navLinkStyles} to='/' onClick={handleLogout} ><i className="fa-solid fa-user"></i>Logout</NavLink>
               </li>
               ) : (
               <li >

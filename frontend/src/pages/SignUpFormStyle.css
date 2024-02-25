@@ -29,7 +29,7 @@
   select#salutation, select#customer_type,.formContainer input {
     color: var(--text-color);
     border-color:var(--text-color);
-    border-radius: 8px;;
+    border-radius: 8px;
   }
   .formContainer select{
     padding: 5px;

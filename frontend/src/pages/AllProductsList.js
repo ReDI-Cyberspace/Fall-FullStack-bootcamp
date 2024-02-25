@@ -5,25 +5,27 @@ import './AllProductsListStyle.css'
 import Categories from '../components/Categories';
 
 
+
 const AllProductsList = () => {
 
     const [items, setItems]= useState([]);
     //-----------------------------------------
 
     useEffect(() => {
-      let  lsProducts = JSON.parse(localStorage.getItem('favoriteProducts'))  || [];
+     /*  let  lsProducts = JSON.parse(localStorage.getItem('favoriteProducts'))  || [];
       if(lsProducts.length  === 0){
         fetchData();
       }else{
         setItems(lsProducts);
-      }
+      } */
+      fetchData();
     },[]);
 
     //------------------------------------------
     
     const fetchData = async () => {
         try {
-          const response = await axios.get('http://localhost:3001/products'); 
+          const response = await axios.get('http://localhost:3001/product-list'); 
 
           localStorage.setItem('favoriteProducts', JSON.stringify(response.data)); 
           const lsProducts = JSON.parse(localStorage.getItem('favoriteProducts')) ;

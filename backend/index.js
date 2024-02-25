@@ -22,6 +22,7 @@ app.use(express.urlencoded({extended:false }));
 app.use(middleware.errorHandler);
 
 app.use('/my-account', require('./routes/userRoutes'));
+app.use('/', require('./routes/productRoutes'));
 
 /* app.use(bodyParser.json()); */
 
