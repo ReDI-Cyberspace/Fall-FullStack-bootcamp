@@ -5,7 +5,7 @@ import './HeartStyles.css';
 
 import axios from 'axios'
 
-const Heart = ({product}) => {
+const Heart = ({product, onRemove}) => {
 
   const [isFavorited, setIsFavorited] = useState(product.flagged);
 
@@ -14,18 +14,24 @@ const Heart = ({product}) => {
 
     const newFlag = !isFavorited;
           setIsFavorited(newFlag);
-    updateProductInLocalStorage(product.id,newFlag)
+    updateProductInLocalStorage(product._id,newFlag)
+
+    if (!newFlag && onRemove) {
+      onRemove(product._id);
+    }
   
   };
   
   //----------------------------------------------
   const updateProductInLocalStorage =(productId, flag)=>{ 
 
-      let  products = JSON.parse(localStorage.getItem('favoriteProducts')) || [];
-      const productIndex = products.findIndex(item=> item.id === product.id)
-            products[productIndex].flagged = flag;
-            localStorage.setItem('favoriteProducts', JSON.stringify(products));
-    }
+      let  products = JSON.parse(localStorage.getItem('favoriteProducts')) ;
+      const productIndex = products.findIndex(item=> item._id === product._id)
+    
+        products[productIndex].flagged = flag;
+        localStorage.setItem('favoriteProducts', JSON.stringify(products));
+      
+    };
 
   return (
     <div className="heart-container">

@@ -133,3 +133,6 @@ nav.nav-links ul {
  width: 100%;
  
 } */
+.date {
+  margin-top: -15px; /* oder einen anderen Wert nach Bedarf */
+}

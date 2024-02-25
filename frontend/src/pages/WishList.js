@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+
 import ProductCard from '../components/ProductCard';
 import './AllProductsListStyle.css'
 
@@ -15,6 +15,10 @@ const WishList = () => {
     setWishlist(wishlistData);
   }, []);
 
+  const handleRemoveFromWishlist = (productId) => {
+    // Aktualisieren Sie Ihren State, um das Produkt zu entfernen
+    setWishlist(wishlist.filter(item => item._id !== productId));
+  };
 //----------------------------------------------
   const getWishlistFromLocalStorage = () => {
     const  wishlist = JSON.parse(localStorage.getItem('favoriteProducts'));
@@ -28,10 +32,9 @@ const WishList = () => {
         <div className='container mt-5'>
             <div className="container">
                 <div className='row'>
-                {wishlist
-              .map((item) => (
+                {wishlist.map((item) => (
                 <div className='col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-3'>
-                  <ProductCard product={item} />
+                  <ProductCard product={item} onRemove={handleRemoveFromWishlist}/>
                 </div>
               ))}
                 </div>

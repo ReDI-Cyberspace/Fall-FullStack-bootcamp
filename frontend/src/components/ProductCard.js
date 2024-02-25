@@ -3,14 +3,14 @@ import { Link} from 'react-router-dom';
 import Heart from './../details/Heart';
 import './ProductCardStyle.css'
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product, onRemove}) => {
    
   return (
    
         <div>
                  <div className="card" >
                     <div className='product-heart'>
-                        <Heart product={product}/>
+                        <Heart product={product} onRemove={onRemove}/>
                     </div>
                     <img src={product.imageURL} className="card-img-top img-thumbnail" alt="..."/>
                         <div className="card-body">

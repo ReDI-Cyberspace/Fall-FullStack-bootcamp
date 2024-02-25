@@ -82,6 +82,10 @@ const productSchema = new mongoose.Schema({
 
 
   },
+  flagged:{
+    type: Boolean,
+    default: false,
+  }
   /* product_gallery: [String],
   is_default: {
     type: Boolean,

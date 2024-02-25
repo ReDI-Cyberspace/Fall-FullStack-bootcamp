@@ -11,21 +11,22 @@ const FilterFunc = () => {
 
 
     useEffect(() => {
-        let  lsProducts = JSON.parse(localStorage.getItem('favoriteProducts'))  || [];
-        if(lsProducts.length  === 0){
+         let  lsProducts = JSON.parse(localStorage.getItem('favoriteProducts'))  || [];
+        if(lsProducts.length  === 0){ 
           fetchData();
-        }else{
+         }else{
           setItems(lsProducts);
-        }
+        } 
       },[]);
 
 
     const fetchData = async () => {
         try {
-          const response = await axios.get('http://localhost:3001/products'); // Passe die URL entsprechend an
+          const response = await axios.get('http://localhost:3001/product-list'); 
           localStorage.setItem('favoriteProducts', JSON.stringify(response.data)); 
-          const lsProducts = JSON.parse(localStorage.getItem('favoriteProducts')) ;
+          const lsProducts = JSON.parse(localStorage.getItem('favoriteProducts')) ; 
           setItems(lsProducts);
+          
           
         } catch (error) {
           console.error('Error fetching data:', error);
@@ -38,8 +39,9 @@ const FilterFunc = () => {
 
     const filterItems = ()=>{  
         if(selectedCategory ==='all'){
-            setItems(items);
+          fetchData()
         } else{
+          
         const updateItems = items.filter((curItem)=>{
             return curItem.category === selectedCategory;
         });
@@ -48,6 +50,7 @@ const FilterFunc = () => {
     }
 // -------------Filter by Best before date for eating
  const filteredDate = (data, key, endDate )=>{ 
+
         endDate = new Date(endDate);
 
        const updateItems =  data.filter( d => {
@@ -59,31 +62,33 @@ const FilterFunc = () => {
     
 // -------------Sorted by Price 
     const sortedPrice = ()=>{
-        const updateItems = [...items].sort((a,b)=>a.price - b.price);
+    
+        const updateItems = [...items].sort((a,b)=>a.standard_price - b.standard_price);
         setItems(updateItems);
     }
 // -------------Sorted by Name of Products
     const sortedName = ()=>{
-        const updateItems = [...items].sort((a,b)=>a.name.localeCompare(b.name));
+    
+        const updateItems = [...items].sort((a,b)=>a.product_name.localeCompare(b.product_name));
         setItems(updateItems);
     }
 
 // -------------Reset all Settings
     const resetItems = ()=>{
-        
+    
         setItems([]);
     }
 
   return (
     <div className='container mt-5'>
-        <h1>Please select!</h1>
+        <h3>Please select!</h3>
         
         <select name="categories" className="categories btn mb-3" onChange={categoryItem}>
             
         <optgroup label="Categories"> 
             <option value="all">All Products</option>
             <option value="powder">Powders</option>
-            <option value="tea">Teas</option>
+            <option value="tea_blends">Teas</option>
             <option value="dried_herbs">Dried Herbs</option>
             <option value="grains">Grains</option>
         </optgroup>
@@ -93,21 +98,22 @@ const FilterFunc = () => {
         <button type="button" className="btn btn-secondary me-3 mb-3" onClick={()=>sortedPrice()}>Sort by Price</button>
         <button type="button" className="btn btn-success me-3 mb-3" onClick={()=>sortedName()}>Sort by Name</button>
         <button type="button" className="btn btn-danger me-3 mb-3" onClick={()=>filteredDate(items,'best_before_date','2025-12-31')}>Best before 2025</button>
-        <button type="button" className="btn btn-warning me-3 mb-3"onClick={()=>resetItems()}>Reset</button>
+        <button type="button" className="btn btn-warning me-3 mb-3" onClick={()=>resetItems()}>Reset</button>
        
         <hr></hr>
         <div className="container">
         <div className='row'>
             {items.map((val)=>(
-                 <div key={val.id} className='col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-3'>
+                 <div key={val._id} className='col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mb-3'>
                     <div className="card" >
-                         <img src={val.image} className="card-img-top img-thumbnail" alt="..."/>
+                         <img src={val.imageURL} className="card-img-top img-thumbnail" alt="..."/>
                          <div className='heart'><Heart product={val}/></div>
                          <div className="card-body">
                             
-                            <h6 className="card-title fst-italic fw-bolder">{val.name.substring(0,15)}</h6>
-                            <h5><span className="badge bg-color">{val.price} €</span></h5>
+                            <h6 className="card-title fst-italic fw-bolder">{val.product_name.substring(0,15)}</h6>
+                            <h5><span className="badge bg-color">{val.standard_price} €</span></h5>
                             <p className="card-text"><small>{val.category}</small></p>
+                            <p className="card-text date"><small>{new Date(val.best_before_date).toLocaleDateString('en-GB')}</small></p>
                             <a className="btn btn-primary" href="/">Learn more</a>
                          </div>
                     </div>

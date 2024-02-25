@@ -23,20 +23,13 @@ import { isAuthenticated } from './services/authService';
 function App() {
   
   const [loggedIn, setLoggedIn] = useState(isAuthenticated());
-const [isAdmin, setIsAdmin]= useState(false);
+  const [isAdmin, setIsAdmin]= useState(false);
 
   const handleLogin = (token) => {
-    // Setzen Sie den Anmeldestatus auf true
     setLoggedIn(true);
  
-
-  // Hier können Sie weitere Logik für den Login hinzufügen, z. B. Token speichern
-    
-
-    // Hier können Sie weitere Logik für den Login hinzufügen, z. B. Token speichern
   };
   const handleLogout = () => {
-    // Fügen Sie hier den Code zum Ausloggen hinzu, z.B. Token entfernen, State aktualisieren, etc.
     localStorage.removeItem('token');
     setLoggedIn(false);
     if(isAdmin){
@@ -60,7 +53,7 @@ const [isAdmin, setIsAdmin]= useState(false);
             <Route path="/wishlist"  element = {<WishList/>}/>
             <Route path="/contact"  element = {<Contact/>}/>
             <Route path="/*" element={<NotFound></NotFound>}></Route>
-            <Route path="/admin" element={<Admin/>}></Route>
+            <Route path="/admin" element={<Admin setIsAdmin={setIsAdmin}/>}></Route>
 
         </Routes>
       <Footer/>
