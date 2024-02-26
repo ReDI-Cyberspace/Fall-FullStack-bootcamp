@@ -7,7 +7,7 @@ This project is a web application built using MERN Stack.
 1. Clone the repository: `git clone https://github.com/ReDI-Cyberspace/Fall-FullStack-bootcamp.git`
 2. Navigate to the project directory: `cd project`
 3. Install dependencies: `npm install`
-4. Install json-server `npm install -g json-server`
+
 
 ## How to Run
 
