@@ -41,7 +41,7 @@ function App() {
   return (
 
     <div className="App">
-     |{isAdmin ? <NavAdmin handleLogout={handleLogout} setIsAdmin={setIsAdmin}/> : <Navbar handleLogout={handleLogout}  loggedIn={loggedIn }/> }
+     {isAdmin ? <NavAdmin handleLogout={handleLogout} setIsAdmin={setIsAdmin}/> : <Navbar handleLogout={handleLogout}  loggedIn={loggedIn }/> }
       
         <Routes>
             <Route path="/fall-fullstack-bootcamp"  element = {<Home/>}/>
