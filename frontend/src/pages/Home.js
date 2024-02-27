@@ -12,7 +12,7 @@ const  Home  = () => {
   
   return (
     <div> 
-     {/* <Advetreising/> */}
+     <Advetreising/>
     
       <h2 className='headline'> Harmony with Herbs & Spices</h2>
       {/* <h4 className='contactTitle'> C a t e g o r i e s</h4> */}
