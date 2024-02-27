@@ -11,7 +11,7 @@ const Advetreising = () => {
   return (
    
     <div style = {bildStyle}>
-        <img   style = {{ width: '100%', height: 'auto', display: 'block'}} src='images/brooke-lark-kXQ3J7_2fpc-unsplash.jpg' alt='Adverteising'/>
+        <img   style = {{ width: '100%', height: 'auto', display: 'block'}} src='/images/brooke-lark-kXQ3J7_2fpc-unsplash.jpg' alt='Adverteising'/>
     </div>
   )
 }
