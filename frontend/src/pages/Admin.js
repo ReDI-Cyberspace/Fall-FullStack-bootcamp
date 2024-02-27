@@ -31,7 +31,7 @@ const Admin = ({setIsAdmin}) => {
     try {
      
       axios
-        .post("http://localhost:3001/admin",formData )
+        .post(`${process.env.REACT_APP_API_URL}/admin`,formData )
         .then((result) => {
           console.log(result);
        

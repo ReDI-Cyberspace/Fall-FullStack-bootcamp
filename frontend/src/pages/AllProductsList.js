@@ -21,7 +21,7 @@ const AllProductsList = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/product-list");
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/product-list`);
 
       localStorage.setItem("favoriteProducts", JSON.stringify(response.data));
       const lsProducts = JSON.parse(localStorage.getItem("favoriteProducts"));

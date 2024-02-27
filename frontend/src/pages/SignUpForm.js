@@ -28,7 +28,7 @@ const SingUpForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/my-account/signupform", {
+      .post(`${process.env.REACT_APP_API_URL}/my-account/signupform`, {
         customer_type,
         salutation,
         first_name,
