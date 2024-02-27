@@ -2,12 +2,6 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const db=process.env.CONNECTION_STRING;
 
-// Connect to MongoDB
-/* mongoose.connect('mongodb://localhost/herbsdb', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}); */
-
 /* import mongoose from 'mongoose';*/
 
 const connectDB = async () => {

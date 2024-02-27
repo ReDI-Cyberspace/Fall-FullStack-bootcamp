@@ -43,7 +43,7 @@ function App() {
      {isAdmin ? <NavAdmin handleLogout={handleLogout} setIsAdmin={setIsAdmin}/> : <Navbar handleLogout={handleLogout}  loggedIn={loggedIn }/> }
       
         <Routes>
-            <Route path="/fall-fullstack-bootcamp"  element = {<Home/>}/>
+            {/* <Route path="/fall-fullstack-bootcamp"  element = {<Home/>}/> */}
             <Route path="/"  element = {<Home/>}/>
             <Route path="/my-account/signupform"  element = {<SignUpForm/>}/>
             <Route path="/my-account"  element = {<SignIn handleLogin={handleLogin} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/>}/>

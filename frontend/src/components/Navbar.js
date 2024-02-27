@@ -30,7 +30,7 @@ const Navbar = ({ handleLogout }) => {
  
      <ul >     
        <li >
-         <NavLink  style = {navLinkStyles} exact to="/fall-fullstack-bootcamp"  >Home</NavLink>
+         <NavLink  style = {navLinkStyles} exact to="/"  >Home</NavLink>
        </li>
        <li >
          <NavLink style = {navLinkStyles} to="/aboutUs">About Us</NavLink>
