@@ -6,7 +6,9 @@ function Footer() {
         <li>Privacy Centre</li>
         <li>Cookies</li>
         <li>Terms</li>
+        <li>ReDI School</li>
       </ul>
+
     </footer>
   );
 }
